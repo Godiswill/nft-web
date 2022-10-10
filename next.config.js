@@ -20,6 +20,9 @@ module.exports = isAnalyze
       })
     : {
           reactStrictMode: true,
+          images: {
+              unoptimized: true,
+          },
           webpack: (config, { dev }) => {
               if (dev) {
                   // Add this plugin only in dev mode
