@@ -8,7 +8,7 @@ export default function RoadMap() {
                 <title>Road Map</title>
             </Head>
             <div className="road-map">
-                <h2 className="rui-font text-center text-5xl pb-5">路线图活动</h2>
+                <h2 className="rui-font text-center text-2xl pb-5">路线图活动</h2>
                 <div className="pt-3 pb-3">
                     我们致力于打造一个web3世界中的顶级IP，为此我们制定了自己的计划，当我们销售额达100%时，我们将启动下面的计划。
                 </div>
@@ -22,7 +22,7 @@ export default function RoadMap() {
             </div>
             <style global jsx>{`
                 .road-map {
-                    width: 806px;
+                    width: 546px;
                     margin: 10% auto 0;
                     background: rgba(49, 49, 49, 0.55);
                     border: 2px solid white;
@@ -30,15 +30,15 @@ export default function RoadMap() {
                     padding: 30px 55px 42px;
                 }
                 .road-map h2 {
-                    border-bottom: 2px solid white;
+                    border-bottom: 1px solid white;
                 }
                 .road-map ol li {
                     border: 1px solid white;
                     border-radius: 3px;
-                    padding: 16px;
+                    padding: 12px;
                 }
                 .road-map li + li {
-                    margin-top: 20px;
+                    margin-top: 16px;
                 }
             `}</style>
         </Layout>

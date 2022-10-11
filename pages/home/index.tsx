@@ -45,20 +45,20 @@ export default function Home() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div style={{ width: 1024 }}>
-                            <h2 className="border-b-white border-b-2">合成豹子团队介绍</h2>
-                            <div className="mt-3 mb-8">
+                            <h2 className="border-b-white border-b pb-4">合成豹子团队介绍</h2>
+                            <div className="mt-6 mb-8">
                                 合成豹子项目由3位朋友创建，团队成员都来自于全球TOP5顶级游戏公司，成员都拥有多年游戏文化娱乐经验，对文化娱乐IP构建与打造具有专业背景。我们的愿景是打造web3世界中的顶级IP，在多个文化娱乐领域产生价值给人们带来快乐！
                             </div>
                             <div className="team flex justify-between">
                                 <div className="border border-white rounded-xl overflow-hidden">
                                     <Image
                                         src="/nft-web/images/nft/1.jpeg"
-                                        width={277}
-                                        height={277}
+                                        width={228}
+                                        height={228}
                                         alt="intro"
                                     />
                                     <div className="text-center p-6">
-                                        <div className="rui-font text-4xl border-b-2 border-white pb-3 mb-5">
+                                        <div className="rui-font text-xl border-b border-white pb-3 mb-5">
                                             xx
                                         </div>
                                         <div>创始人和艺术总监</div>
@@ -68,12 +68,12 @@ export default function Home() {
                                 <div className="border border-white rounded-xl overflow-hidden">
                                     <Image
                                         src="/nft-web/images/nft/2.jpeg"
-                                        width={277}
-                                        height={277}
+                                        width={228}
+                                        height={228}
                                         alt="intro"
                                     />
                                     <div className="text-center p-6">
-                                        <div className="rui-font text-4xl border-b-2 border-white pb-3 mb-5">
+                                        <div className="rui-font text-xl border-b border-white pb-3 mb-5">
                                             yy
                                         </div>
                                         <div>创始人和艺术总监</div>
@@ -83,12 +83,12 @@ export default function Home() {
                                 <div className="border border-white rounded-xl overflow-hidden">
                                     <Image
                                         src="/nft-web/images/nft/3.jpeg"
-                                        width={277}
-                                        height={277}
+                                        width={228}
+                                        height={228}
                                         alt="intro"
                                     />
                                     <div className="text-center p-6">
-                                        <div className="rui-font text-4xl border-b-2 border-white pb-3 mb-5">
+                                        <div className="rui-font text-xl border-b border-white pb-3 mb-5">
                                             zz
                                         </div>
                                         <div>创始人和艺术总监</div>
@@ -105,7 +105,7 @@ export default function Home() {
                     --swiper-pagination-bullet-vertical-gap: 16px;
                 }
                 .home .team > div {
-                    width: 277px;
+                    width: 228px;
                 }
                 .home-swiper {
                     width: 100%;
@@ -119,8 +119,7 @@ export default function Home() {
                     align-items: center;
                 }
                 .home-swiper .swiper-slide h2 {
-                    font-size: 66px;
-                    text-align: center;
+                    font-size: 28px;
                 }
                 .home-swiper .swiper-pagination-bullet {
                     height: 80px;

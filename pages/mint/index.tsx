@@ -7,8 +7,8 @@ export default function Mintx() {
             <Head>
                 <title>Mint </title>
             </Head>
-            <div className="mint-dialog">
-                <h2 className="rui-font text-center">MINT需知</h2>
+            <div className="mint-dialog pt-10 pb-10 pl-9 pr-9">
+                <h2 className="rui-font text-center text-2xl">MINT需知</h2>
                 <div className="desc">
                     <div>单个价格 0.05 ETH</div>
                     <div>最高 mint 数量 3 个</div>
@@ -32,16 +32,17 @@ export default function Mintx() {
                         <span className="rui-font">ETH</span>
                     </div>
                 </div>
-                <div className="text-center text-black btn rui-font">MINT NOW</div>
+                <div className="btn text-center text-white text-2xl pt-2 pb-2 rounded rui-font m-auto">
+                    MINT NOW
+                </div>
             </div>
             <style global jsx>{`
                 .mint-dialog {
-                    width: 806px;
+                    width: 546px;
                     margin: 10% auto 0;
                     background: rgba(49, 49, 49, 0.55);
-                    border: 2px solid white;
+                    border: 1px solid white;
                     border-radius: 2px;
-                    padding: 30px 55px 42px;
                 }
                 .desc {
                     border-top: 1px solid white;
@@ -59,11 +60,7 @@ export default function Mintx() {
                     height: 36px;
                 }
                 .btn {
-                    width: auto;
-                    margin: auto;
-                    padding: 10px 15px;
-                    background-color: #e5e5e5;
-                    border-radius: 4px;
+                    background: rgb(177, 16, 16);
                     width: 162px;
                 }
                 .real-mint span {

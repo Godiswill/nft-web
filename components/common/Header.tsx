@@ -3,8 +3,8 @@ import { DiscordIcon, OpenseaIcon, TwitterIcon, VectorIcon, YoutubeIcon } from '
 
 export default function Header() {
     return (
-        <header className="text-2xl px-8 py-5 flex justify-between items-center">
-            <h1 className="rui-font p-3 rounded">
+        <header className=" text-lg px-8 py-5 flex justify-between items-center">
+            <h1 className="rui-font rounded">
                 <Link href="/">合成豹子</Link>
             </h1>
             <div className="navigator flex items-center">
@@ -52,8 +52,8 @@ export default function Header() {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    padding: 0 18px;
-                    height: 44px;
+                    padding: 0 12px;
+                    height: 30px;
                     border-radius: 4px;
                 }
                 .navigator > div:hover {
@@ -70,7 +70,7 @@ export default function Header() {
             <style global jsx>
                 {`
                     .navigator > div svg {
-                        height: 24px;
+                        height: 20px;
                     }
                 `}
             </style>

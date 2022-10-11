@@ -19,8 +19,8 @@ export default function Page() {
 
             <style jsx>{`
                 .btn {
-                    width: 641px;
-                    height: 83px;
+                    width: 400px;
+                    height: 54px;
                 }
             `}</style>
         </Layout>
