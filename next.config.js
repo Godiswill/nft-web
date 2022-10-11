@@ -26,6 +26,7 @@ module.exports = isAnalyze
            * Replace `nextjs-github-pages` with your Github repo project name.
            */
           assetPrefix: isGithubPages ? '/nft-web/' : undefined,
+          basePath: '/nft-web',
           images: {
               unoptimized: true,
           },

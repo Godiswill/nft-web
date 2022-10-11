@@ -52,7 +52,7 @@ export default function Home() {
                             <div className="team flex justify-between">
                                 <div className="border border-white rounded-xl overflow-hidden">
                                     <Image
-                                        src="/images/nft/1.jpeg"
+                                        src="/nft-web/images/nft/1.jpeg"
                                         width={277}
                                         height={277}
                                         alt="intro"
@@ -67,7 +67,7 @@ export default function Home() {
                                 </div>
                                 <div className="border border-white rounded-xl overflow-hidden">
                                     <Image
-                                        src="/images/nft/2.jpeg"
+                                        src="/nft-web/images/nft/2.jpeg"
                                         width={277}
                                         height={277}
                                         alt="intro"
@@ -82,7 +82,7 @@ export default function Home() {
                                 </div>
                                 <div className="border border-white rounded-xl overflow-hidden">
                                     <Image
-                                        src="/images/nft/3.jpeg"
+                                        src="/nft-web/images/nft/3.jpeg"
                                         width={277}
                                         height={277}
                                         alt="intro"
