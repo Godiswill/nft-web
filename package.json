@@ -6,6 +6,8 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
+    "build-github": "GITHUB=true next build",
+    "export-github": "GITHUB=true next export",
     "analyze-dev": "ANALYZE=true next dev",
     "analyze": "ANALYZE=true next build"
   },

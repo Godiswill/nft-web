@@ -1,5 +1,6 @@
 const ESLintPlugin = require('eslint-webpack-plugin');
 const isAnalyze = process.env.ANALYZE === 'true';
+const isGithubPages = process.env.GITHUB === 'true';
 
 module.exports = isAnalyze
     ? require('@next/bundle-analyzer')({
@@ -20,6 +21,11 @@ module.exports = isAnalyze
       })
     : {
           reactStrictMode: true,
+          /**
+           * Tell Next.js where the `public` folder is.
+           * Replace `nextjs-github-pages` with your Github repo project name.
+           */
+          assetPrefix: isGithubPages ? '/nft-web/' : '',
           images: {
               unoptimized: true,
           },
