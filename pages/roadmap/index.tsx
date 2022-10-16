@@ -23,6 +23,7 @@ export default function RoadMap() {
             <style global jsx>{`
                 .road-map-bg {
                     background: linear-gradient(
+                        to right,
                         rgba(154, 0, 67, 1) 0%,
                         rgba(55, 0, 73, 1) 54.051%,
                         rgba(0, 78, 110, 1) 100%

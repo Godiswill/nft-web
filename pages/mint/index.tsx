@@ -39,6 +39,7 @@ export default function Mintx() {
             <style global jsx>{`
                 .mint {
                     background: linear-gradient(
+                        to right,
                         rgba(0, 138, 175, 1) 0%,
                         rgba(147, 18, 68, 1) 43.744%,
                         rgba(150, 0, 46, 1) 52.728%,

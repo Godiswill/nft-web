@@ -239,6 +239,7 @@ export default function Home() {
                     justify-content: center;
                     align-items: center;
                     background: linear-gradient(
+                        to right,
                         rgba(0, 107, 110, 1) 0%,
                         rgba(41, 0, 73, 1) 44.804%,
                         rgba(27, 150, 163, 1) 100%
