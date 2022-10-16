@@ -11,18 +11,11 @@ export default function Page() {
             </Head>
             <div className="h-full flex items-end">
                 <Link href="/home">
-                    <div className="rui-font cursor-pointer btn flex justify-center items-center ml-auto mr-auto mb-14 rounded text-white bg-red-600 text-2xl">
+                    <div className="rui-font cursor-pointer w-[25rem] h-14 flex justify-center items-center ml-auto mr-auto mb-14 rounded bg-[#B11010] text-white text-2xl">
                         开始探索
                     </div>
                 </Link>
             </div>
-
-            <style jsx>{`
-                .btn {
-                    width: 400px;
-                    height: 54px;
-                }
-            `}</style>
         </Layout>
     );
 }

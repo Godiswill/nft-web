@@ -10,6 +10,26 @@ import { Mousewheel, Pagination, Scrollbar } from 'swiper';
 import Layout from '@/components/Layout';
 import { TwitterIcon } from '@/components/svg';
 
+const teams = [
+    {
+        img: '/nft-web/images/nft/1.jpeg',
+        name: 'xx',
+        position: '创始人和艺术总监',
+    },
+    {
+        img: '/nft-web/images/nft/2.jpeg',
+        name: 'yy',
+        position: '创始人和艺术总监',
+    },
+    {
+        img: '/nft-web/images/nft/3.jpeg',
+        name: 'zz',
+        position: '创始人和艺术总监',
+    },
+];
+
+const teamIntroWidth = 228;
+
 export default function Home() {
     return (
         <Layout className="tiger-common">
@@ -73,7 +93,7 @@ export default function Home() {
                             </div>
                             <div className="flex-1 text-center ml-8">
                                 <div className="inline-block">
-                                    <div className="inline-block rounded-2xl border-2 border-white backdrop-opacity-[.08] backdrop-invert">
+                                    <div className="inline-block rounded-2xl border-2 border-white bg-white bg-opacity-[.08]">
                                         <Image
                                             src="/nft-web/images/slide/2.png"
                                             width={300}
@@ -88,7 +108,7 @@ export default function Home() {
                             </div>
                             <div className="flex-1 text-center">
                                 <div className="inline-block">
-                                    <div className="inline-block rounded-2xl border-2 border-white backdrop-opacity-[.08] backdrop-invert">
+                                    <div className="inline-block rounded-2xl border-2 border-white bg-white bg-opacity-[.08]">
                                         <Image
                                             src="/nft-web/images/slide/3.png"
                                             width={300}
@@ -166,57 +186,33 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="w-1/4">
+                        <div className="w-3/4">
                             <h2 className="border-b-white border-b pb-4">合成豹子团队介绍</h2>
                             <div className="mt-6 mb-8">
                                 合成豹子项目由3位朋友创建，团队成员都来自于全球TOP5顶级游戏公司，成员都拥有多年游戏文化娱乐经验，对文化娱乐IP构建与打造具有专业背景。我们的愿景是打造web3世界中的顶级IP，在多个文化娱乐领域产生价值给人们带来快乐！
                             </div>
-                        </div>
-                        <div className="team flex w-1/2 justify-between ml-12">
-                            <div className="border border-white rounded-xl overflow-hidden">
-                                <Image
-                                    src="/nft-web/images/nft/1.jpeg"
-                                    width={228}
-                                    height={228}
-                                    alt="intro"
-                                />
-                                <div className="text-center p-6">
-                                    <div className="rui-font text-xl border-b border-white pb-3 mb-5">
-                                        xx
+                            <div className="team flex justify-between ml-12">
+                                {teams.map((it) => (
+                                    <div
+                                        key={it.name}
+                                        className="border border-white rounded-xl overflow-hidden"
+                                        style={{ width: teamIntroWidth }}
+                                    >
+                                        <Image
+                                            src={it.img}
+                                            width={teamIntroWidth}
+                                            height={teamIntroWidth}
+                                            alt="intro"
+                                        />
+                                        <div className="text-center p-6">
+                                            <div className="rui-font text-xl border-b border-white pb-3 mb-5">
+                                                {it.name}
+                                            </div>
+                                            <div>{it.position}</div>
+                                            <TwitterIcon className="m-auto mt-9" />
+                                        </div>
                                     </div>
-                                    <div>创始人和艺术总监</div>
-                                    <TwitterIcon className="m-auto mt-9" />
-                                </div>
-                            </div>
-                            <div className="border border-white rounded-xl overflow-hidden">
-                                <Image
-                                    src="/nft-web/images/nft/2.jpeg"
-                                    width={228}
-                                    height={228}
-                                    alt="intro"
-                                />
-                                <div className="text-center p-6">
-                                    <div className="rui-font text-xl border-b border-white pb-3 mb-5">
-                                        yy
-                                    </div>
-                                    <div>创始人和艺术总监</div>
-                                    <TwitterIcon className="m-auto mt-9" />
-                                </div>
-                            </div>
-                            <div className="border border-white rounded-xl overflow-hidden">
-                                <Image
-                                    src="/nft-web/images/nft/3.jpeg"
-                                    width={228}
-                                    height={228}
-                                    alt="intro"
-                                />
-                                <div className="text-center p-6">
-                                    <div className="rui-font text-xl border-b border-white pb-3 mb-5">
-                                        zz
-                                    </div>
-                                    <div>创始人和艺术总监</div>
-                                    <TwitterIcon className="m-auto mt-9" />
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </SwiperSlide>
@@ -225,9 +221,6 @@ export default function Home() {
             <style global jsx>{`
                 :root {
                     --swiper-pagination-bullet-vertical-gap: 16px;
-                }
-                .home .team > div {
-                    width: 228px;
                 }
                 .home-swiper {
                     width: 100%;

@@ -3,7 +3,7 @@ import { DiscordIcon, OpenseaIcon, TwitterIcon, VectorIcon, YoutubeIcon } from '
 
 export default function Header() {
     return (
-        <header className=" text-lg px-8 py-5 flex justify-between items-center">
+        <header className="text-lg px-8 py-5 flex justify-between items-center">
             <h1 className="rui-font rounded">
                 <Link href="/">合成豹子</Link>
             </h1>
