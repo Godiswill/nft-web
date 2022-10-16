@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 
 export default function Mintx() {
     return (
-        <Layout className="tiger-common">
+        <Layout className="tiger-common mint">
             <Head>
                 <title>Mint </title>
             </Head>
@@ -37,10 +37,17 @@ export default function Mintx() {
                 </div>
             </div>
             <style global jsx>{`
+                .mint {
+                    background: linear-gradient(
+                        rgba(0, 138, 175, 1) 0%,
+                        rgba(147, 18, 68, 1) 43.744%,
+                        rgba(150, 0, 46, 1) 52.728%,
+                        rgba(25, 0, 99, 1) 100%
+                    );
+                }
                 .mint-dialog {
                     width: 546px;
                     margin: 10% auto 0;
-                    background: rgba(49, 49, 49, 0.55);
                     border: 1px solid white;
                     border-radius: 2px;
                 }

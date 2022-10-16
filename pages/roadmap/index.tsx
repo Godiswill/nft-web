@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 
 export default function RoadMap() {
     return (
-        <Layout className="tiger-common">
+        <Layout className="tiger-common road-map-bg">
             <Head>
                 <title>Road Map</title>
             </Head>
@@ -21,10 +21,16 @@ export default function RoadMap() {
                 </ol>
             </div>
             <style global jsx>{`
+                .road-map-bg {
+                    background: linear-gradient(
+                        rgba(154, 0, 67, 1) 0%,
+                        rgba(55, 0, 73, 1) 54.051%,
+                        rgba(0, 78, 110, 1) 100%
+                    );
+                }
                 .road-map {
                     width: 546px;
                     margin: 10% auto 0;
-                    background: rgba(49, 49, 49, 0.55);
                     border: 2px solid white;
                     border-radius: 2px;
                     padding: 30px 55px 42px;
