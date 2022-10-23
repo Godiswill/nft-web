@@ -8,7 +8,7 @@ export default function Mintx() {
                 <title>Mint </title>
             </Head>
             <div className="mint-dialog pt-10 pb-10 pl-9 pr-9">
-                <h2 className="rui-font text-center text-2xl">MINT需知</h2>
+                <h2 className="font-[RuiYan] text-center text-2xl">MINT需知</h2>
                 <div className="desc">
                     <div>单个价格 0.05 ETH</div>
                     <div>最高 mint 数量 3 个</div>
@@ -23,16 +23,16 @@ export default function Mintx() {
                 </div>
                 <div className="flex justify-between mt-8 mb-10 real-mint text-base">
                     <div className="mb-2">
-                        选择mint数量：<span className="rui-font">-</span>
-                        <span className="rui-font">2</span>
-                        <span className="rui-font">+</span>
+                        选择mint数量：<span className="font-[RuiYan]">-</span>
+                        <span className="font-[RuiYan]">2</span>
+                        <span className="font-[RuiYan]">+</span>
                     </div>
                     <div>
-                        价格：<span className="rui-font">0.1</span>
-                        <span className="rui-font">ETH</span>
+                        价格：<span className="font-[RuiYan]">0.1</span>
+                        <span className="font-[RuiYan]">ETH</span>
                     </div>
                 </div>
-                <div className="btn text-center text-white text-2xl pt-2 pb-2 rounded rui-font m-auto">
+                <div className="btn text-center text-white text-2xl pt-2 pb-2 rounded font-[RuiYan] m-auto">
                     MINT NOW
                 </div>
             </div>

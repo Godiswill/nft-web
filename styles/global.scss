@@ -3,20 +3,8 @@
     src: url("/nft-web/font/rui.ttf"); //引入字体位置
 }
 
-.rui-font {
-    font-family: "RuiYan";
-}
-
 body {
     background-color: #1A161D;
-}
-
-.bg-e5e5e5 {
-    background-color: #e5e5e5;
-}
-
-.bg-b5b5b5 {
-    background-color: #b5b5b5;
 }
 
 .tiger {
@@ -31,7 +19,7 @@ body {
         }
 
         .navigator>div {
-            border: 1px solid rgb(255, 255, 255);
+            border: 1px solid white;
 
             a {
                 display: inline-block;
@@ -41,24 +29,12 @@ body {
         .navigator>div:hover {
             background-color: rgba(255, 255, 255, 0.26);
         }
-
-        .navigator>div+div {
-            margin-left: 15px;
-        }
     }
 }
 
 .tiger-common {
     header {
         background-color: white;
-
-        .navigator>div:hover {
-            background-color: #b5b5b5;
-        }
-
-        .navigator>div+div {
-            margin-left: 15px;
-        }
     }
 
     main {

@@ -8,7 +8,7 @@ export default function RoadMap() {
                 <title>Road Map</title>
             </Head>
             <div className="road-map">
-                <h2 className="rui-font text-center text-2xl pb-5">路线图活动</h2>
+                <h2 className="font-[RuiYan] text-center text-2xl pb-5">路线图活动</h2>
                 <div className="pt-3 pb-3">
                     我们致力于打造一个web3世界中的顶级IP，为此我们制定了自己的计划，当我们销售额达100%时，我们将启动下面的计划。
                 </div>

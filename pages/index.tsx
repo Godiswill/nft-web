@@ -11,7 +11,7 @@ export default function Page() {
             </Head>
             <div className="h-full flex items-end">
                 <Link href="/home">
-                    <div className="rui-font cursor-pointer w-[25rem] h-14 flex justify-center items-center ml-auto mr-auto mb-14 rounded bg-[#B11010] text-white text-2xl">
+                    <div className="font-[RuiYan] cursor-pointer lg:w-[17.3rem] lg:h-9 lg:mb-20 2xl:h-14 2xl:w-[25rem] 2xl:mb-44 flex justify-center items-center ml-auto mr-auto rounded bg-[#B11010] text-white">
                         开始探索
                     </div>
                 </Link>

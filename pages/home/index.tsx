@@ -53,7 +53,7 @@ export default function Home() {
                 >
                     <SwiperSlide className="world-outlook">
                         <div className="absolute top-3/4 w-2/4">
-                            <h2 className="rui-font text-5xl border-b border-b-white pb-8 mt text-center">
+                            <h2 className="font-[RuiYan] text-5xl border-b border-b-white pb-8 mt text-center">
                                 世界观
                             </h2>
                             <div className="mt-7">
@@ -64,26 +64,26 @@ export default function Home() {
                     <SwiperSlide>
                         <div className="flex justify-center items-center pl-36 pr-36">
                             <div className="flex-1">
-                                <h2 className="rui-font pb-7 mb-8 border-b border-b-white">
+                                <h2 className="font-[RuiYan] pb-7 mb-8 border-b border-b-white">
                                     项目介绍
                                 </h2>
                                 <div>
                                     <div>
                                         合成豹子nft项目一共由12060张独一无二的nft图像组成。这12060张nft图片一共由6030张为圆形豹，和6030张为豹子头组成。
                                     </div>
-                                    <div className="rui-font border-t border-t-white mt-3 mb-4 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white mt-3 mb-4 pt-4">
                                         售卖规则：
                                     </div>
                                     <div>
                                         我们会在公开售卖期间售卖6030个圆形豹，而豹子头只能通过使用圆形豹nft图片来合成获取。
                                     </div>
-                                    <div className="rui-font border-t border-t-white mt-3 mb-4 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white mt-3 mb-4 pt-4">
                                         圆形豹：
                                     </div>
                                     <div>
                                         每张圆形豹NFT图片都由上，左，右3个不同方位的圆形豹组成，且每个方位的头部种类均不一样。
                                     </div>
-                                    <div className="rui-font border-t border-t-white mt-3 mb-4 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white mt-3 mb-4 pt-4">
                                         豹子头：
                                     </div>
                                     <div>
@@ -101,7 +101,7 @@ export default function Home() {
                                             alt=""
                                         />
                                     </div>
-                                    <div className="rui-font border-t border-t-white text-xl mt-9 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white text-xl mt-9 pt-4">
                                         圆形豹
                                     </div>
                                 </div>
@@ -116,7 +116,7 @@ export default function Home() {
                                             alt=""
                                         />
                                     </div>
-                                    <div className="rui-font border-t border-t-white text-xl mt-9 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white text-xl mt-9 pt-4">
                                         豹子头
                                     </div>
                                 </div>
@@ -126,26 +126,26 @@ export default function Home() {
                     <SwiperSlide>
                         <div className="flex justify-center items-center pl-36 pr-36">
                             <div className="flex-1">
-                                <h2 className="rui-font pb-7 mb-8 border-b border-b-white">
+                                <h2 className="font-[RuiYan] pb-7 mb-8 border-b border-b-white">
                                     合成豹子
                                 </h2>
                                 <div>
                                     <div>
                                         合成功能将在所有圆形豹NFT图片全部售出后开放，可持有满足合成条件的圆形豹NFT图片在官网的合成端口里上传图片合成豹子头NFT图片。
                                     </div>
-                                    <div className="rui-font border-t border-t-white mt-3 mb-4 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white mt-3 mb-4 pt-4">
                                         合成条件：
                                     </div>
                                     <div>
                                         每张圆形豹NFT图片都由上，左，右3个不同方位不同颜色的圆形豹部位组成。如果3张圆形豹NFT图片里分别带有不同方位相同颜色的圆形豹部位就能合成一张相同颜色的豹子头。
                                     </div>
-                                    <div className="rui-font border-t border-t-white mt-3 mb-4 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white mt-3 mb-4 pt-4">
                                         多张合成：
                                     </div>
                                     <div>
                                         如果3张图片里有多组满足合成条件，那么即可合成多个豹子头。
                                     </div>
-                                    <div className="rui-font border-t border-t-white mt-3 mb-4 pt-4">
+                                    <div className="font-[RuiYan] border-t border-t-white mt-3 mb-4 pt-4">
                                         合成规则：
                                     </div>
                                     <div>
@@ -168,7 +168,7 @@ export default function Home() {
                     <SwiperSlide>
                         <div className="flex justify-center items-center pl-36 pr-36">
                             <div className="flex-1">
-                                <h2 className="rui-font pb-7 mb-8 border-b border-b-white">
+                                <h2 className="font-[RuiYan] pb-7 mb-8 border-b border-b-white">
                                     三个愿望
                                 </h2>
                                 <div>当集齐18顶至尊皇冠的人，豹神就能满足他的三个愿望......</div>
@@ -205,7 +205,7 @@ export default function Home() {
                                             alt="intro"
                                         />
                                         <div className="text-center p-6">
-                                            <div className="rui-font text-xl border-b border-white pb-3 mb-5">
+                                            <div className="font-[RuiYan] text-xl border-b border-white pb-3 mb-5">
                                                 {it.name}
                                             </div>
                                             <div>{it.position}</div>

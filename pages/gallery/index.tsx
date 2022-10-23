@@ -7,7 +7,7 @@ export default function RoadMap() {
             <Head>
                 <title>gallery</title>
             </Head>
-            <div className="gallery rui-font text-center">
+            <div className="gallery font-[RuiYan] text-center">
                 <h2 className="text-center text-7xl pb-5 pt-36">已全部售罄!</h2>
                 <div className="pt-3 pb-3 pl-3 pr-3 mt-24 btn rounded text-white text-center text-2xl m-auto w-fit">
                     前往 OPENSEA 购买
