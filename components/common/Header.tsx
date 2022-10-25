@@ -31,7 +31,7 @@ export default function Header() {
             <div className="navigator flex items-center">
                 {paths.map((it) => (
                     <div
-                        key={it.name}
+                        key={it.path}
                         className={`flex justify-center items-center pl-3 pr-3 ml-3 h-8 rounded hover:bg-[#b5b5b5] ${
                             router.pathname === it.path ? 'bg-[#b5b5b5]' : ''
                         }`}

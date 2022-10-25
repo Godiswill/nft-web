@@ -97,6 +97,17 @@ function Intro({
     );
 }
 
+const processList = [
+    {
+        src: '/nft-web/images/intro/skin.png',
+        title: '圆形豹',
+    },
+    {
+        src: '/nft-web/images/intro/tiger.png',
+        title: '豹子头',
+    },
+];
+
 export default function Home() {
     return (
         <Layout className="tiger-common">
@@ -129,67 +140,56 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex justify-between items-center lg:w-[62rem]">
+                        <div className="flex justify-between items-center lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={projectIntro} />
-                            <div className="flex text-center">
-                                <div>
-                                    <div className="lg:w-72 lg:h-72 relative">
-                                        <Image
-                                            src="/nft-web/images/intro/skin.png"
-                                            layout="fill"
-                                            objectFit="cover"
-                                            alt="skin"
-                                        />
+                            <div className="flex justify-between text-center lg:w-[37rem] 2xl:w-[52rem]">
+                                {processList.map((it) => (
+                                    <div key={it.src}>
+                                        <div className="lg:w-72 lg:h-72 2xl:w-96 2xl:h-96 relative">
+                                            <Image
+                                                src={it.src}
+                                                layout="fill"
+                                                objectFit="cover"
+                                                alt={it.title}
+                                            />
+                                        </div>
+                                        <div className="font-[RuiYan] border-t border-t-white 2xl:text-xl pt-4 lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
+                                            {it.title}
+                                        </div>
                                     </div>
-                                    <div className="font-[RuiYan] border-t border-t-white 2xl:text-xl pt-4 lg:w-56 m-auto">
-                                        圆形豹
-                                    </div>
-                                </div>
-                                <div>
-                                    <div className="inline-block lg:w-72 lg:h-72 relative">
-                                        <Image
-                                            src="/nft-web/images/intro/tiger.png"
-                                            layout="fill"
-                                            objectFit="cover"
-                                            alt="tiger"
-                                        />
-                                    </div>
-                                    <div className="font-[RuiYan] border-t border-t-white 2xl:text-xl pt-4 lg:w-56 m-auto">
-                                        豹子头
-                                    </div>
-                                </div>
+                                ))}
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex justify-between items-center lg:w-[62rem]">
+                        <div className="flex justify-between items-center lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={mintIntro} />
-                            <div className="lg:ml-20 lg:w-[40rem] lg:h-[40rem] relative">
+                            <div className="lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
                                     src="/nft-web/images/intro/mint.png"
                                     layout="fill"
-                                    objectFit="cover"
+                                    objectFit="contain"
                                     alt="mint"
                                 />
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex justify-between items-center h-full lg:w-[62rem]">
+                        <div className="flex justify-between items-center h-full lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={wishIntro} />
-                            <div className="flex-1 h-full relative">
+                            <div className="lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
                                     src="/nft-web/images/intro/wish.png"
                                     layout="fill"
-                                    objectFit="cover"
+                                    objectFit="contain"
                                     alt="mint"
                                 />
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="lg:w-[62rem]">
-                            <h2 className="border-b-white border-b pb-4 lg:text-2xl">
+                        <div className="lg:w-[62rem] 2xl:w-[92rem]">
+                            <h2 className="border-b-white border-b pb-4 lg:text-2xl 2xl:text-4xl">
                                 合成豹子团队介绍
                             </h2>
                             <div className="mt-5 mb-8">
@@ -201,7 +201,7 @@ export default function Home() {
                                         key={it.name}
                                         className="border border-white rounded-xl overflow-hidden"
                                     >
-                                        <div className="w-40 h-40 relative">
+                                        <div className="lg:w-40 lg:h-40 2xl:w-56 2xl:h-56 relative">
                                             <Image
                                                 src={it.img}
                                                 layout="fill"
