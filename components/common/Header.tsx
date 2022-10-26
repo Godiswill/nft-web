@@ -11,7 +11,7 @@ const paths = [
     { path: 'https://opensea.com', components: <OpenseaIcon /> },
     { path: 'https://discord.com', components: <DiscordIcon /> },
     { path: 'https://twitter.com', components: <TwitterIcon /> },
-    { path: 'https://vector.com', components: <VectorIcon /> },
+    { path: 'https://www.instagram.com', components: <VectorIcon /> },
     { path: 'https://youtube.com', components: <YoutubeIcon /> },
 ];
 

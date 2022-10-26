@@ -3,13 +3,13 @@ import Layout from '@/components/Layout';
 
 export default function Mintx() {
     return (
-        <Layout className="tiger-common mint">
+        <Layout className="tiger-common" mainClassName="flex-center">
             <Head>
                 <title>Mint </title>
             </Head>
-            <div className="mint-dialog pt-10 pb-10 pl-9 pr-9">
+            <div className="dialog">
                 <h2 className="font-[RuiYan] text-center text-2xl">MINT需知</h2>
-                <div className="desc">
+                <div className="border-t border-t-white mt-7 mb-5 py-3">
                     <div>单个价格 0.05 ETH</div>
                     <div>最高 mint 数量 3 个</div>
                 </div>
@@ -24,12 +24,12 @@ export default function Mintx() {
                 <div className="flex justify-between mt-8 mb-10 real-mint text-base">
                     <div className="mb-2">
                         选择mint数量：<span className="font-[RuiYan]">-</span>
-                        <span className="font-[RuiYan]">2</span>
+                        <span className="font-[RuiYan] ml-1 mr-1">2</span>
                         <span className="font-[RuiYan]">+</span>
                     </div>
                     <div>
                         价格：<span className="font-[RuiYan]">0.1</span>
-                        <span className="font-[RuiYan]">ETH</span>
+                        <span className="font-[RuiYan] ml-1">ETH</span>
                     </div>
                 </div>
                 <div className="btn text-center text-white text-2xl pt-2 pb-2 rounded font-[RuiYan] m-auto">
@@ -37,27 +37,6 @@ export default function Mintx() {
                 </div>
             </div>
             <style global jsx>{`
-                .mint {
-                    background: linear-gradient(
-                        to right,
-                        rgba(0, 138, 175, 1) 0%,
-                        rgba(147, 18, 68, 1) 43.744%,
-                        rgba(150, 0, 46, 1) 52.728%,
-                        rgba(25, 0, 99, 1) 100%
-                    );
-                }
-                .mint-dialog {
-                    width: 546px;
-                    margin: 10% auto 0;
-                    border: 1px solid white;
-                    border-radius: 2px;
-                }
-                .desc {
-                    border-top: 1px solid white;
-                    border-bottom: 1px solid white;
-                    margin: 27px 0 20px;
-                    padding: 10px 0;
-                }
                 .user-input input {
                     background-color: transparent;
                     width: 100%;
@@ -76,9 +55,6 @@ export default function Mintx() {
                     border-radius: 2px 0 0 2px;
                     padding: 2px 4px;
                     color: black;
-                }
-                .real-mint span + span {
-                    margin-left: 1px;
                 }
             `}</style>
         </Layout>

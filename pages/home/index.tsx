@@ -110,7 +110,7 @@ const processList = [
 
 export default function Home() {
     return (
-        <Layout className="tiger-common">
+        <Layout className="tiger-common" mainClassName="home-bg">
             <Head>
                 <title>Index</title>
             </Head>
@@ -192,10 +192,10 @@ export default function Home() {
                             <h2 className="border-b-white border-b pb-4 lg:text-2xl 2xl:text-4xl">
                                 合成豹子团队介绍
                             </h2>
-                            <div className="mt-5 mb-8">
+                            <div className="mt-5 mb-10">
                                 合成豹子项目由3位朋友创建，团队成员都来自于全球TOP5顶级游戏公司，成员都拥有多年游戏文化娱乐经验，对文化娱乐IP构建与打造具有专业背景。我们的愿景是打造web3世界中的顶级IP，在多个文化娱乐领域产生价值给人们带来快乐！
                             </div>
-                            <div className="flex justify-between">
+                            <div className="flex justify-around">
                                 {teams.map((it) => (
                                     <div
                                         key={it.name}
@@ -227,6 +227,19 @@ export default function Home() {
                 :root {
                     --swiper-pagination-bullet-vertical-gap: 16px;
                 }
+                .home-bg {
+                    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain
+                            fixed,
+                        linear-gradient(
+                            to right top,
+                            rgba(0, 107, 110, 1) 0%,
+                            rgba(41, 0, 73, 1) 44.804%,
+                            rgba(27, 150, 163, 1) 100%
+                        );
+                }
+                .world-outlook {
+                    background: url('/nft-web/images/slide/1.jpg') no-repeat 0 100% / cover;
+                }
                 .home-swiper {
                     width: 100%;
                     height: 100%;
@@ -236,14 +249,6 @@ export default function Home() {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain
-                            fixed,
-                        linear-gradient(
-                            to right,
-                            rgba(0, 107, 110, 1) 0%,
-                            rgba(41, 0, 73, 1) 44.804%,
-                            rgba(27, 150, 163, 1) 100%
-                        );
                 }
                 .home-swiper .swiper-pagination-bullet {
                     height: 80px;
@@ -257,10 +262,6 @@ export default function Home() {
                     left: 38px;
                     top: 50%;
                     transform: translate3d(0px, -50%, 0);
-                }
-
-                .home-swiper .world-outlook {
-                    background: url('/nft-web/images/slide/1.jpg') no-repeat 0 100% / cover;
                 }
             `}</style>
         </Layout>

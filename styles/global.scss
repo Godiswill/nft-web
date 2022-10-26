@@ -7,6 +7,10 @@ body {
     background-color: #1A161D;
 }
 
+.flex-center {
+    @apply flex justify-center items-center;
+}
+
 .tiger {
     background: url('/nft-web/images/bg.jpg') no-repeat 0 100% / cover;
 
@@ -34,11 +38,39 @@ body {
 
 .tiger-common {
     header {
-        background-color: white;
+        @apply bg-white;
     }
 
     main {
-        color: white;
+        @apply text-white;
+    }
+
+    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain fixed,
+    linear-gradient(to top right,
+        rgba(0, 138, 175, 1) 0%,
+        rgba(147, 18, 68, 1) 43.744%,
+        rgba(150, 0, 46, 1) 52.728%,
+        rgba(25, 0, 99, 1) 100%);
+
+}
+
+.dialog {
+    @apply pt-10 pb-10 pl-9 pr-9 border border-white;
+
+    ol li {
+        @apply border border-white rounded p-3;
+
+        &~li {
+            @apply mt-4;
+        }
+    }
+
+    @screen lg {
+        @apply w-[28rem];
+    }
+
+    @screen 2xl {
+        @apply w-[34rem];
     }
 
 }
