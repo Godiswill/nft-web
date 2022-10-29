@@ -1,0 +1,19 @@
+.navigator {
+    @apply flex-col absolute top-20;
+
+    @screen md {
+        @apply static flex flex-row items-center;
+
+        &>div {
+            @apply flex justify-center items-center pl-3 pr-3 ml-3 h-8 border border-white rounded;
+
+            &:hover {
+                @apply bg-[#b5b5b5];
+            }
+        }
+    }
+
+    &>div svg {
+        height: 1.25rem;
+    }
+}

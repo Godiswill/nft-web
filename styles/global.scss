@@ -12,7 +12,11 @@ body {
 }
 
 .tiger {
-    background: url('/nft-web/images/bg.jpg') no-repeat 0 100% / cover;
+    background: url('/nft-web/images/bg_m.jpg') no-repeat center / cover;
+
+    @screen md {
+        background-image: url('/nft-web/images/bg.jpg');
+    }
 
     header {
         color: white;
