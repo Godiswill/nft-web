@@ -116,7 +116,7 @@ export default function Home() {
             </Head>
             <div className="home h-full overflow-hidden">
                 <Swiper
-                    // direction="vertical"
+                    direction="vertical"
                     // effect="fade"
                     slidesPerView={1}
                     // freeMode={true}
