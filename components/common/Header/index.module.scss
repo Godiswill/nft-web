@@ -1,19 +1,41 @@
 .navigator {
-    @apply flex-col absolute top-20;
+    @apply px-8 py-5;
 
     @screen md {
-        @apply static flex flex-row items-center;
+        @apply flex justify-between items-center;
 
-        &>div {
-            @apply flex justify-center items-center pl-3 pr-3 ml-3 h-8 border border-white rounded;
+    }
 
-            &:hover {
-                @apply bg-[#b5b5b5];
+    .menu {
+        @apply flex-col absolute top-20 hidden;
+
+        @screen md {
+            @apply static flex flex-row items-center;
+
+            &>div {
+                @apply flex justify-center items-center pl-3 pr-3 ml-3 h-8 border border-white rounded;
+
+                &:hover {
+                    @apply bg-[#b5b5b5];
+                }
             }
         }
     }
 
-    &>div svg {
+    svg {
         height: 1.25rem;
+    }
+
+    .mobileMenu {
+        @apply px-8 py-5 fixed z-10 top-0 right-0 bottom-0 left-0 text-white;
+        background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain fixed,
+            linear-gradient(to right top,
+                rgba(0, 107, 110, 1) 0%,
+                rgba(41, 0, 73, 1) 44.804%,
+                rgba(27, 150, 163, 1) 100%);
+
+        svg {
+            height: 1.8rem;
+        }
     }
 }

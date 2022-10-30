@@ -140,12 +140,12 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex justify-between items-center lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col md:flex-row justify-between items-center w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={projectIntro} />
                             <div className="flex justify-between text-center lg:w-[37rem] 2xl:w-[52rem]">
                                 {processList.map((it) => (
                                     <div key={it.src}>
-                                        <div className="lg:w-72 lg:h-72 2xl:w-96 2xl:h-96 relative">
+                                        <div className="w-32 h-32 lg:w-72 lg:h-72 2xl:w-96 2xl:h-96 relative">
                                             <Image
                                                 src={it.src}
                                                 layout="fill"
@@ -223,47 +223,6 @@ export default function Home() {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <style global jsx>{`
-                :root {
-                    --swiper-pagination-bullet-vertical-gap: 16px;
-                }
-                .home-bg {
-                    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain
-                            fixed,
-                        linear-gradient(
-                            to right top,
-                            rgba(0, 107, 110, 1) 0%,
-                            rgba(41, 0, 73, 1) 44.804%,
-                            rgba(27, 150, 163, 1) 100%
-                        );
-                }
-                .world-outlook {
-                    background: url('/nft-web/images/slide/1.jpg') no-repeat 0 100% / cover;
-                }
-                .home-swiper {
-                    width: 100%;
-                    height: 100%;
-                }
-                .home-swiper .swiper-slide {
-                    position: relative;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-                .home-swiper .swiper-pagination-bullet {
-                    height: 80px;
-                    width: 5px;
-                    background: white;
-                    border-radius: 34px;
-                }
-                .home-swiper .swiper-pagination-vertical.swiper-pagination-bullets,
-                .home-swiper .swiper-vertical > .swiper-pagination-bullets {
-                    right: auto;
-                    left: 38px;
-                    top: 50%;
-                    transform: translate3d(0px, -50%, 0);
-                }
-            `}</style>
         </Layout>
     );
 }

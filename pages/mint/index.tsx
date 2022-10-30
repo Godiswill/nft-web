@@ -1,13 +1,29 @@
 import Head from 'next/head';
 import Layout from '@/components/Layout';
 
-export default function Mintx() {
+const text = [
+    { title: '发售时间：', items: ['2022/12/30'] },
+    { title: '发售价格：', items: ['白名单：待定', '公售：0.05ETH'] },
+    {
+        title: '发售数量：',
+        items: ['总量6030张圆形豹，实际发售数量5600张', '白名单数量：1200张', '公售数量：4400张'],
+    },
+    {
+        title: '权益：',
+        items: [
+            '1.合成权益：购买圆形豹NFT后，将能免费合成豹子头NFT，豹子头NFT里包含至尊皇冠，合成豹子头NFT将有机会获取至尊皇冠版豹子头，当集齐18种至尊皇冠后将能获得3个愿望。',
+            '2.会员权益：待定',
+        ],
+    },
+];
+
+export default function Mint() {
     return (
         <Layout className="tiger-common" mainClassName="flex-center">
             <Head>
                 <title>Mint </title>
             </Head>
-            <div className="dialog">
+            {/* <div className="dialog">
                 <h2 className="font-[RuiYan] text-center text-2xl">MINT需知</h2>
                 <div className="border-t border-t-white mt-7 mb-5 py-3">
                     <div>单个价格 0.05 ETH</div>
@@ -35,6 +51,17 @@ export default function Mintx() {
                 <div className="btn text-center text-white text-2xl pt-2 pb-2 rounded font-[RuiYan] m-auto">
                     MINT NOW
                 </div>
+            </div> */}
+            <div className="dialog">
+                <h2 className="font-[RuiYan] text-center text-2xl mb-6">发售信息</h2>
+                {text.map((it) => (
+                    <div key={it.title} className="border-t border-t-white py-2">
+                        <div className="font-[RuiYan] mb-2">{it.title}</div>
+                        {it.items.map((t) => (
+                            <div key={t}>{t}</div>
+                        ))}
+                    </div>
+                ))}
             </div>
             <style global jsx>{`
                 .user-input input {

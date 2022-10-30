@@ -101,3 +101,63 @@ export function YoutubeIcon({ fill = 'currentColor' }) {
         </svg>
     );
 }
+
+export function MenuIcon({ fill = 'currentColor' }) {
+    return (
+        <svg
+            width="46.000000"
+            height="14.000000"
+            viewBox="0 0 46 14"
+            fill={fill}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <line
+                x1="-1.500000"
+                y1="0.000000"
+                x2="44.500000"
+                y2="0.000000"
+                stroke={fill}
+                stroke-width="3.000000"
+            />
+            <line
+                x1="-1.500000"
+                y1="11.000000"
+                x2="44.500000"
+                y2="11.000000"
+                stroke={fill}
+                stroke-width="3.000000"
+            />
+            <defs />
+        </svg>
+    );
+}
+
+export function CloseIcon({ fill = 'currentColor' }) {
+    return (
+        <svg
+            width="65.053833"
+            height="65.053833"
+            viewBox="0 0 65.0538 65.0538"
+            fill={fill}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <line
+                x1="14.763489"
+                y1="14.763428"
+                x2="47.290405"
+                y2="47.290283"
+                stroke={fill}
+                stroke-width="3.000000"
+            />
+            <line
+                x1="14.763489"
+                y1="47.290283"
+                x2="47.290405"
+                y2="14.763428"
+                stroke={fill}
+                stroke-width="3.000000"
+            />
+            <defs />
+        </svg>
+    );
+}

@@ -1,0 +1,55 @@
+:root {
+    --swiper-pagination-bullet-vertical-gap: 16px;
+}
+
+.home-bg {
+    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain fixed,
+        linear-gradient(to right top,
+            rgba(0, 107, 110, 1) 0%,
+            rgba(41, 0, 73, 1) 44.804%,
+            rgba(27, 150, 163, 1) 100%);
+}
+
+.world-outlook {
+    background: url('/nft-web/images/slide/1_m.jpg') no-repeat center / cover;
+
+    @screen md {
+        background: url('/nft-web/images/slide/1.jpg') no-repeat 0 100% / cover;
+    }
+}
+
+.home-swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.home-swiper .swiper-slide {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-swiper .swiper-pagination-bullet {
+    height: 80px;
+    width: 2px;
+
+    @screen md {
+        width: 4px;
+    }
+
+    background: white;
+    border-radius: 34px;
+}
+
+.home-swiper .swiper-pagination-vertical.swiper-pagination-bullets,
+.home-swiper .swiper-vertical>.swiper-pagination-bullets {
+    right: auto;
+    top: 50%;
+    transform: translate3d(0px, -50%, 0);
+    left: 1rem;
+
+    @screen md {
+        left: 38px;
+    }
+}

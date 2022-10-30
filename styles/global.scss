@@ -20,7 +20,11 @@ body {
 
     header {
         color: white;
-        border-bottom: 1px solid white;
+
+        @screen md {
+            @apply border-b border-b-white;
+        }
+
 
         img {
             fill: white;
