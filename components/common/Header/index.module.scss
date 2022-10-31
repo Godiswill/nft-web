@@ -1,7 +1,7 @@
 .navigator {
     @apply px-8 py-5;
 
-    @screen md {
+    @screen lg {
         @apply flex justify-between items-center;
 
     }
@@ -9,7 +9,7 @@
     .menu {
         @apply flex-col absolute top-20 hidden;
 
-        @screen md {
+        @screen lg {
             @apply static flex flex-row items-center;
 
             &>div {

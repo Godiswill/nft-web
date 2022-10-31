@@ -79,14 +79,14 @@ function Intro({
 }) {
     return (
         <div className="lg:w-80 2xl:w-[28rem]">
-            <h2 className="font-[RuiYan] lg:text-2xl lg:pb-2 lg:mb-2 2xl:text-4xl 2xl:pb-3 2xl:mb-3 border-b border-b-white">
+            <h2 className="font-[RuiYan] pb-2 mb-2 lg:text-2xl 2xl:text-4xl 2xl:pb-3 2xl:mb-3 border-b border-b-white">
                 {data.title}
             </h2>
-            <div>
+            <div className="text-sm lg:text-base">
                 <div>{data.desc}</div>
                 {data.items?.map((it) => (
                     <React.Fragment key={it.title}>
-                        <div className="font-[RuiYan] border-t border-t-white lg:mt-2 lg:mb-2 lg:pt-2 2xl:mt-3 2xl:mb-3 2xl:pt-3">
+                        <div className="font-[RuiYan] border-t border-t-white mt-2 mb-2 pt-2 2xl:mt-3 2xl:mb-3 2xl:pt-3">
                             {it.title}
                         </div>
                         <div>{it.desc}</div>
@@ -130,22 +130,22 @@ export default function Home() {
                     className="h-full w-hull home-swiper"
                 >
                     <SwiperSlide className="world-outlook">
-                        <div className="absolute top-3/4 w-2/4">
-                            <h2 className="font-[RuiYan] lg:text-2xl 2xl:text-5xl border-b border-b-white pb-8 mt text-center">
+                        <div className="absolute bottom-[10%] w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                            <h2 className="font-[RuiYan] text-lg lg:text-2xl 2xl:text-5xl border-b border-b-white pb-3 text-center">
                                 世界观
                             </h2>
-                            <div className="mt-7">
+                            <div className="mt-2 text-sm lg:text-base">
                                 很久以前，有一个豹神，它从海里，森林里，沙漠里，雪山里，沼泽里，等18个地方，找到了18个自然界里珍贵的宝石，用它们打造了18顶至尊皇冠，它靠这18顶至尊皇冠的神力......
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col md:flex-row justify-between items-center w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col lg:flex-row justify-between items-center w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={projectIntro} />
-                            <div className="flex justify-between text-center lg:w-[37rem] 2xl:w-[52rem]">
+                            <div className="flex justify-between text-center w-full mt-4 lg:w-[37rem] 2xl:w-[52rem]">
                                 {processList.map((it) => (
                                     <div key={it.src}>
-                                        <div className="w-32 h-32 lg:w-72 lg:h-72 2xl:w-96 2xl:h-96 relative">
+                                        <div className="w-36 h-36 lg:w-72 lg:h-72 2xl:w-96 2xl:h-96 relative">
                                             <Image
                                                 src={it.src}
                                                 layout="fill"
@@ -153,7 +153,7 @@ export default function Home() {
                                                 alt={it.title}
                                             />
                                         </div>
-                                        <div className="font-[RuiYan] border-t border-t-white 2xl:text-xl pt-4 lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
+                                        <div className="font-[RuiYan] border-t border-t-white 2xl:text-xl pt-4 w-[8rem] lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
                                             {it.title}
                                         </div>
                                     </div>
@@ -162,9 +162,9 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex justify-between items-center lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={mintIntro} />
-                            <div className="lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
+                            <div className="w-64 h-64 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
                                     src="/nft-web/images/intro/mint.png"
                                     layout="fill"
@@ -175,33 +175,33 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex justify-between items-center h-full lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col-reverse lg:flex-row justify-around lg:justify-between items-center h-full w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={wishIntro} />
-                            <div className="lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
+                            <div className="w-full  h-3/5 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
                                     src="/nft-web/images/intro/wish.png"
                                     layout="fill"
-                                    objectFit="contain"
+                                    objectFit="cover"
                                     alt="mint"
                                 />
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="lg:w-[62rem] 2xl:w-[92rem]">
-                            <h2 className="border-b-white border-b pb-4 lg:text-2xl 2xl:text-4xl">
+                        <div className="w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                            <h2 className="font-[RuiYan] border-b-white border-b pb-3 lg:text-2xl 2xl:text-4xl">
                                 合成豹子团队介绍
                             </h2>
-                            <div className="mt-5 mb-10">
+                            <div className="mt-2 mb-10">
                                 合成豹子项目由3位朋友创建，团队成员都来自于全球TOP5顶级游戏公司，成员都拥有多年游戏文化娱乐经验，对文化娱乐IP构建与打造具有专业背景。我们的愿景是打造web3世界中的顶级IP，在多个文化娱乐领域产生价值给人们带来快乐！
                             </div>
-                            <div className="flex justify-around">
+                            <div className="flex flex-col lg:flex-row justify-around">
                                 {teams.map((it) => (
                                     <div
                                         key={it.name}
-                                        className="border border-white rounded-xl overflow-hidden"
+                                        className="border mb-3 flex lg:flex-col border-white rounded-xl overflow-hidden"
                                     >
-                                        <div className="lg:w-40 lg:h-40 2xl:w-56 2xl:h-56 relative">
+                                        <div className="w-24 h-24 lg:w-40 lg:h-40 2xl:w-56 2xl:h-56 relative">
                                             <Image
                                                 src={it.img}
                                                 layout="fill"
@@ -209,12 +209,12 @@ export default function Home() {
                                                 alt="intro"
                                             />
                                         </div>
-                                        <div className="p-3 text-center">
-                                            <div className="font-[RuiYan] text-xl border-b border-white pb-3 mb-5">
+                                        <div className="flex flex-1 justify-around items-center lg:flex-col lg:p-3 text-center">
+                                            <div className="font-[RuiYan] text-base border-r pr-2 lg:border-r-0  lg:text-xl lg:border-b border-white lg:pb-3 lg:mb-5">
                                                 {it.name}
                                             </div>
-                                            <div className="text-sm">{it.position}</div>
-                                            <TwitterIcon className="m-auto mt-20" />
+                                            <div className="text-xs lg:text-sm">{it.position}</div>
+                                            <TwitterIcon className="lg:m-auto lg:mt-20" />
                                         </div>
                                     </div>
                                 ))}

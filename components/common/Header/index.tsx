@@ -52,12 +52,12 @@ export default function Header() {
                 <h1
                     className={`font-[RuiYan] rounded flex justify-between items-center ${
                         router.pathname === '/'
-                            ? 'pl-3 pr-3 pt-1 pb-1 md:border md:border-white md:bg-white md:bg-opacity-25'
+                            ? 'pl-3 pr-3 pt-1 pb-1 lg:border lg:border-white lg:bg-white lg:bg-opacity-25'
                             : ''
                     }`}
                 >
                     <Link href="/">合成豹子</Link>
-                    <div className="md:hidden" onClick={() => setShowMMenu(true)}>
+                    <div className="lg:hidden" onClick={() => setShowMMenu(true)}>
                         <MenuIcon />
                     </div>
                 </h1>
@@ -71,7 +71,7 @@ export default function Header() {
                         >
                             {it.components ? (
                                 <>
-                                    <span className="md:hidden">{it.name}</span>
+                                    <span className="lg:hidden">{it.name}</span>
                                     <a
                                         href={it.path}
                                         target="_blank"
@@ -105,7 +105,7 @@ export default function Header() {
                                 <div key={it.path} className={`border-b border-b-white pb-4 mb-4`}>
                                     {it.components ? (
                                         <div className="flex justify-between">
-                                            <span className="md:hidden">{it.name}</span>
+                                            <span className="lg:hidden">{it.name}</span>
                                             <a
                                                 href={it.path}
                                                 target="_blank"

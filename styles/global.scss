@@ -14,14 +14,14 @@ body {
 .tiger {
     background: url('/nft-web/images/bg_m.jpg') no-repeat center / cover;
 
-    @screen md {
+    @screen lg {
         background-image: url('/nft-web/images/bg.jpg');
     }
 
     header {
         color: white;
 
-        @screen md {
+        @screen lg {
             @apply border-b border-b-white;
         }
 
