@@ -79,10 +79,10 @@ function Intro({
 }) {
     return (
         <div className="lg:w-80 2xl:w-[28rem]">
-            <h2 className="font-[RuiYan] pb-2 mb-2 lg:text-2xl 2xl:text-4xl 2xl:pb-3 2xl:mb-3 border-b border-b-white">
+            <h2 className="font-[RuiYan] pb-4 mb-2 text-base lg:text-xl 2xl:pb-5 2xl:mb-3 border-b border-b-white">
                 {data.title}
             </h2>
-            <div className="text-sm lg:text-base">
+            <div>
                 <div>{data.desc}</div>
                 {data.items?.map((it) => (
                     <React.Fragment key={it.title}>
@@ -131,10 +131,10 @@ export default function Home() {
                 >
                     <SwiperSlide className="world-outlook">
                         <div className="absolute bottom-[10%] w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
-                            <h2 className="font-[RuiYan] text-lg lg:text-2xl 2xl:text-5xl border-b border-b-white pb-3 text-center">
+                            <h2 className="font-[RuiYan] text-base lg:text-xl border-b border-b-white pb-4 text-center">
                                 世界观
                             </h2>
-                            <div className="mt-2 text-sm lg:text-base">
+                            <div className="mt-2">
                                 很久以前，有一个豹神，它从海里，森林里，沙漠里，雪山里，沼泽里，等18个地方，找到了18个自然界里珍贵的宝石，用它们打造了18顶至尊皇冠，它靠这18顶至尊皇冠的神力......
                             </div>
                         </div>
@@ -153,7 +153,7 @@ export default function Home() {
                                                 alt={it.title}
                                             />
                                         </div>
-                                        <div className="font-[RuiYan] border-t border-t-white 2xl:text-xl pt-4 w-[8rem] lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
+                                        <div className="font-[RuiYan] border-t border-t-white text-base 2xl:text-lg pt-4 w-[8rem] lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
                                             {it.title}
                                         </div>
                                     </div>
@@ -189,10 +189,10 @@ export default function Home() {
                     </SwiperSlide>
                     <SwiperSlide>
                         <div className="w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
-                            <h2 className="font-[RuiYan] border-b-white border-b pb-3 lg:text-2xl 2xl:text-4xl">
+                            <h2 className="font-[RuiYan] border-b-white border-b pb-4 text-base lg:text-xl">
                                 合成豹子团队介绍
                             </h2>
-                            <div className="mt-2 mb-10">
+                            <div className="mt-2 mb-14">
                                 合成豹子项目由3位朋友创建，团队成员都来自于全球TOP5顶级游戏公司，成员都拥有多年游戏文化娱乐经验，对文化娱乐IP构建与打造具有专业背景。我们的愿景是打造web3世界中的顶级IP，在多个文化娱乐领域产生价值给人们带来快乐！
                             </div>
                             <div className="flex flex-col lg:flex-row justify-around">
@@ -210,7 +210,7 @@ export default function Home() {
                                             />
                                         </div>
                                         <div className="flex flex-1 justify-around items-center lg:flex-col lg:p-3 text-center">
-                                            <div className="font-[RuiYan] text-base border-r pr-2 lg:border-r-0  lg:text-xl lg:border-b border-white lg:pb-3 lg:mb-5">
+                                            <div className="font-[RuiYan] text-base border-r pr-2 lg:border-r-0 lg:pr-0  lg:text-xl lg:border-b border-white lg:pb-3 lg:mb-5">
                                                 {it.name}
                                             </div>
                                             <div className="text-xs lg:text-sm">{it.position}</div>

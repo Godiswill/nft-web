@@ -19,7 +19,7 @@ const text = [
 
 export default function Mint() {
     return (
-        <Layout className="tiger-common" mainClassName="flex-center">
+        <Layout className="tiger-common">
             <Head>
                 <title>Mint </title>
             </Head>
@@ -52,16 +52,18 @@ export default function Mint() {
                     MINT NOW
                 </div>
             </div> */}
-            <div className="dialog">
-                <h2 className="font-[RuiYan] text-center text-2xl mb-6">发售信息</h2>
-                {text.map((it) => (
-                    <div key={it.title} className="border-t border-t-white py-2">
-                        <div className="font-[RuiYan] mb-2">{it.title}</div>
-                        {it.items.map((t) => (
-                            <div key={t}>{t}</div>
-                        ))}
-                    </div>
-                ))}
+            <div className="dialog-wrap">
+                <div className="dialog">
+                    <h2 className="font-[RuiYan] text-center text-xl mb-6">发售信息</h2>
+                    {text.map((it) => (
+                        <div key={it.title} className="border-t border-t-white py-2">
+                            <div className="font-[RuiYan] mb-2">{it.title}</div>
+                            {it.items.map((t) => (
+                                <div key={t}>{t}</div>
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </div>
             <style global jsx>{`
                 .user-input input {

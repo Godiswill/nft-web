@@ -50,7 +50,7 @@ export default function Header() {
         <>
             <header className={`${styles.navigator}`}>
                 <h1
-                    className={`font-[RuiYan] rounded flex justify-between items-center ${
+                    className={`font-[RuiYan] rounded flex flex-1 lg:flex-none justify-between items-center ${
                         router.pathname === '/'
                             ? 'pl-3 pr-3 pt-1 pb-1 lg:border lg:border-white lg:bg-white lg:bg-opacity-25'
                             : ''
@@ -100,12 +100,12 @@ export default function Header() {
                                 <CloseIcon />
                             </div>
                         </h1>
-                        <div className="font-[RuiYan] mt-20">
+                        <div className="font-[RuiYan] mt-10">
                             {paths.map((it) => (
                                 <div key={it.path} className={`border-b border-b-white pb-4 mb-4`}>
                                     {it.components ? (
                                         <div className="flex justify-between">
-                                            <span className="lg:hidden">{it.name}</span>
+                                            <span className="uppercase lg:hidden">{it.name}</span>
                                             <a
                                                 href={it.path}
                                                 target="_blank"

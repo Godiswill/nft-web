@@ -32,12 +32,7 @@
 
 .home-swiper .swiper-pagination-bullet {
     height: 80px;
-    width: 2px;
-
-    @screen lg {
-        width: 4px;
-    }
-
+    width: 3px;
     background: white;
     border-radius: 34px;
 }
@@ -50,6 +45,6 @@
     left: 1rem;
 
     @screen lg {
-        left: 38px;
+        left: 32px;
     }
 }

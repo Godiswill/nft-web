@@ -12,10 +12,7 @@ export default function Layout({
     return (
         <div className={className}>
             <Header />
-            <main
-                className={mainClassName}
-                style={{ height: 'calc(100vh - 71px)', overflowY: 'auto' }}
-            >
+            <main className={`h-[calc(100vh-56px)] overflow-y-auto ${mainClassName}`}>
                 {children}
             </main>
         </div>

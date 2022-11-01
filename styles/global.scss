@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #1A161D;
+    @apply bg-[#1A161D] text-sm;
 }
 
 .flex-center {
@@ -59,6 +59,11 @@ body {
         rgba(147, 18, 68, 1) 43.744%,
         rgba(150, 0, 46, 1) 52.728%,
         rgba(25, 0, 99, 1) 100%);
+
+}
+
+.dialog-wrap {
+    @apply flex justify-center items-center px-6 h-full;
 
 }
 

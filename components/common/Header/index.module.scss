@@ -1,10 +1,5 @@
 .navigator {
-    @apply px-8 py-5;
-
-    @screen lg {
-        @apply flex justify-between items-center;
-
-    }
+    @apply px-8 h-14 flex justify-between items-center;
 
     .menu {
         @apply flex-col absolute top-20 hidden;
@@ -13,7 +8,7 @@
             @apply static flex flex-row items-center;
 
             &>div {
-                @apply flex justify-center items-center pl-3 pr-3 ml-3 h-8 border border-white rounded;
+                @apply flex justify-center items-center pl-3 pr-3 ml-3 h-7 border border-white rounded;
 
                 &:hover {
                     @apply bg-[#b5b5b5];
@@ -23,7 +18,7 @@
     }
 
     svg {
-        height: 1.25rem;
+        @apply h-4 w-4;
     }
 
     .mobileMenu {
@@ -35,7 +30,7 @@
                 rgba(27, 150, 163, 1) 100%);
 
         svg {
-            height: 1.8rem;
+            @apply h-4 w-4;
         }
     }
 }
