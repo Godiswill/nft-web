@@ -117,7 +117,7 @@ export function MenuIcon({ fill = 'currentColor' }) {
                 x2="44.500000"
                 y2="0.000000"
                 stroke={fill}
-                stroke-width="3.000000"
+                strokeWidth="3.000000"
             />
             <line
                 x1="-1.500000"
@@ -125,7 +125,7 @@ export function MenuIcon({ fill = 'currentColor' }) {
                 x2="44.500000"
                 y2="11.000000"
                 stroke={fill}
-                stroke-width="3.000000"
+                strokeWidth="3.000000"
             />
             <defs />
         </svg>
@@ -147,7 +147,7 @@ export function CloseIcon({ fill = 'currentColor' }) {
                 x2="47.290405"
                 y2="47.290283"
                 stroke={fill}
-                stroke-width="3.000000"
+                strokeWidth="3.000000"
             />
             <line
                 x1="14.763489"
@@ -155,7 +155,7 @@ export function CloseIcon({ fill = 'currentColor' }) {
                 x2="47.290405"
                 y2="14.763428"
                 stroke={fill}
-                stroke-width="3.000000"
+                strokeWidth="3.000000"
             />
             <defs />
         </svg>

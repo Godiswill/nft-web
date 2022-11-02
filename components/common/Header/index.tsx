@@ -102,7 +102,7 @@ export default function Header() {
                         </h1>
                         <div className="font-[RuiYan] mt-10">
                             {paths.map((it) => (
-                                <div key={it.path} className={`border-b border-b-white pb-4 mb-4`}>
+                                <div key={it.name} className={`border-b border-b-white pb-4 mb-4`}>
                                     {it.components ? (
                                         <div className="flex justify-between">
                                             <span className="uppercase lg:hidden">{it.name}</span>

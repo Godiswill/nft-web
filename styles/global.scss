@@ -3,6 +3,13 @@
     src: url("/nft-web/font/rui.ttf"); //引入字体位置
 }
 
+html,
+body,
+#__next,
+#__next>div {
+    @apply h-full;
+}
+
 body {
     @apply bg-[#1A161D] text-sm;
 }

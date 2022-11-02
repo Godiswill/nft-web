@@ -79,7 +79,7 @@ function Intro({
 }) {
     return (
         <div className="lg:w-80 2xl:w-[28rem]">
-            <h2 className="font-[RuiYan] pb-4 mb-2 text-base lg:text-xl 2xl:pb-5 2xl:mb-3 border-b border-b-white">
+            <h2 className="font-[RuiYan] pb-2 lg:pb-4 mb-2 lg:text-xl 2xl:pb-5 2xl:mb-3 border-b border-b-white">
                 {data.title}
             </h2>
             <div>
@@ -89,7 +89,7 @@ function Intro({
                         <div className="font-[RuiYan] border-t border-t-white mt-2 mb-2 pt-2 2xl:mt-3 2xl:mb-3 2xl:pt-3">
                             {it.title}
                         </div>
-                        <div>{it.desc}</div>
+                        <div className="text-xs lg:text-sm">{it.desc}</div>
                     </React.Fragment>
                 ))}
             </div>
@@ -130,17 +130,17 @@ export default function Home() {
                     className="h-full w-hull home-swiper"
                 >
                     <SwiperSlide className="world-outlook">
-                        <div className="absolute bottom-[10%] w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
-                            <h2 className="font-[RuiYan] text-base lg:text-xl border-b border-b-white pb-4 text-center">
+                        <div className="absolute bottom-[10%] w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
+                            <h2 className="font-[RuiYan] lg:text-xl border-b border-b-white pb-4 text-center">
                                 世界观
                             </h2>
-                            <div className="mt-2">
+                            <div className="mt-2 text-xs lg:text-sm">
                                 很久以前，有一个豹神，它从海里，森林里，沙漠里，雪山里，沼泽里，等18个地方，找到了18个自然界里珍贵的宝石，用它们打造了18顶至尊皇冠，它靠这18顶至尊皇冠的神力......
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col lg:flex-row justify-between items-center w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col lg:flex-row justify-between items-center w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={projectIntro} />
                             <div className="flex justify-between text-center w-full mt-4 lg:w-[37rem] 2xl:w-[52rem]">
                                 {processList.map((it) => (
@@ -153,7 +153,7 @@ export default function Home() {
                                                 alt={it.title}
                                             />
                                         </div>
-                                        <div className="font-[RuiYan] border-t border-t-white text-base 2xl:text-lg pt-4 w-[8rem] lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
+                                        <div className="font-[RuiYan] border-t border-t-white 2xl:text-lg pt-4 w-[8rem] lg:mt-3 lg:w-64 2xl:mt-5 2xl:w-[21rem] m-auto">
                                             {it.title}
                                         </div>
                                     </div>
@@ -162,7 +162,7 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={mintIntro} />
                             <div className="w-64 h-64 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
@@ -175,20 +175,20 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col-reverse lg:flex-row justify-around lg:justify-between items-center h-full w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col-reverse lg:flex-row justify-around lg:justify-between items-center h-full w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={wishIntro} />
                             <div className="w-full  h-3/5 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
                                     src="/nft-web/images/intro/wish.png"
                                     layout="fill"
-                                    objectFit="cover"
+                                    objectFit="contain"
                                     alt="mint"
                                 />
                             </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="w-3/4 lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
                             <h2 className="font-[RuiYan] border-b-white border-b pb-4 text-base lg:text-xl">
                                 合成豹子团队介绍
                             </h2>
