@@ -162,7 +162,7 @@ export default function Home() {
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="flex flex-col lg:flex-row lg:justify-between items-center w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
+                        <div className="flex flex-col pt-16 lg:pt-0 lg:flex-row lg:justify-between items-center w-4/5 lg:w-[62rem] 2xl:w-[92rem]">
                             <Intro data={mintIntro} />
                             <div className="w-64 h-64 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
