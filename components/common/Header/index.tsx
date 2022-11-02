@@ -46,60 +46,67 @@ export default function Header() {
     useEffect(() => {
         setShowMMenu(false);
     }, [path]);
+
+    console.log(styles);
     return (
         <>
-            <header className={`${styles.navigator}`}>
-                <h1
-                    className={`font-[RuiYan] rounded flex flex-1 lg:flex-none justify-between items-center ${
-                        router.pathname === '/'
-                            ? 'pl-3 pr-3 pt-1 pb-1 lg:border lg:border-white lg:bg-white lg:bg-opacity-25'
-                            : ''
-                    }`}
-                >
-                    <Link href="/">合成豹子</Link>
-                    <div className="lg:hidden" onClick={() => setShowMMenu(true)}>
-                        <MenuIcon />
+            <header>
+                <div className={`${styles.navigator}`}>
+                    <h1
+                        className={`font-[RuiYan] rounded ${
+                            router.pathname === '/'
+                                ? 'pl-3 pr-3 pt-1 pb-1 lg:border lg:border-white lg:bg-white lg:bg-opacity-25'
+                                : ''
+                        }`}
+                    >
+                        <Link href="/">合成豹子</Link>
+                    </h1>
+                    <div className={styles.menu}>
+                        {paths.map((it) => (
+                            <div
+                                key={it.name}
+                                className={` ${router.pathname === it.path ? 'bg-[#b5b5b5]' : ''} ${
+                                    it.path ? 'cursor-pointer' : 'cursor-not-allowed'
+                                }`}
+                            >
+                                {it.components ? (
+                                    <>
+                                        <span className="lg:hidden">{it.name}</span>
+                                        <a
+                                            href={it.path}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="flex items-center"
+                                        >
+                                            {it.components}
+                                        </a>
+                                    </>
+                                ) : it.path ? (
+                                    <Link href={it.path}>{it.name}</Link>
+                                ) : (
+                                    <span>{it.name}</span>
+                                )}
+                            </div>
+                        ))}
                     </div>
-                </h1>
-                <div className={styles.menu}>
-                    {paths.map((it) => (
-                        <div
-                            key={it.name}
-                            className={` ${router.pathname === it.path ? 'bg-[#b5b5b5]' : ''} ${
-                                it.path ? 'cursor-pointer' : 'cursor-not-allowed'
-                            }`}
-                        >
-                            {it.components ? (
-                                <>
-                                    <span className="lg:hidden">{it.name}</span>
-                                    <a
-                                        href={it.path}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="flex items-center"
-                                    >
-                                        {it.components}
-                                    </a>
-                                </>
-                            ) : it.path ? (
-                                <Link href={it.path}>{it.name}</Link>
-                            ) : (
-                                <span>{it.name}</span>
-                            )}
-                        </div>
-                    ))}
                 </div>
-
-                {showMMenu && (
-                    <div className={`${styles.mobileMenu}`}>
-                        <h1 className={`font-[RuiYan] rounded flex justify-between`}>
-                            <Link className="bg-[#B11010]" href="/">
-                                合成豹子
-                            </Link>
+                <div className={`${styles.mobileNavigator} ${showMMenu ? styles.showBG : ''}`}>
+                    <div className={`font-[RuiYan] rounded h-14 flex justify-between items-center`}>
+                        <h1 className="bg-[#B11010] px-3 py-1 rounded">
+                            <Link href="/">合成豹子</Link>
+                        </h1>
+                        {showMMenu ? (
                             <div onClick={() => setShowMMenu(false)}>
                                 <CloseIcon />
                             </div>
-                        </h1>
+                        ) : (
+                            <div className="lg:hidden" onClick={() => setShowMMenu(true)}>
+                                <MenuIcon />
+                            </div>
+                        )}
+                    </div>
+
+                    {showMMenu && (
                         <div className="font-[RuiYan] mt-10">
                             {paths.map((it) => (
                                 <div key={it.name} className={`border-b border-b-white pb-4 mb-4`}>
@@ -121,8 +128,8 @@ export default function Header() {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                )}
+                    )}
+                </div>
             </header>
         </>
     );

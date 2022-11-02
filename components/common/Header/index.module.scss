@@ -1,5 +1,9 @@
 .navigator {
-    @apply px-8 h-14 flex justify-between items-center;
+    @apply px-8 h-14 hidden justify-between items-center;
+
+    @screen lg {
+        @apply flex;
+    }
 
     .menu {
         @apply flex-col absolute top-20 hidden;
@@ -20,17 +24,25 @@
     svg {
         @apply h-4 w-4;
     }
+}
 
-    .mobileMenu {
-        @apply px-8 py-5 fixed z-10 top-0 right-0 bottom-0 left-0 text-white;
+.mobileNavigator {
+    @apply px-6 text-white fixed w-full z-10;
+
+    @screen lg {
+        @apply hidden;
+    }
+
+    &.showBG {
+        @apply h-full;
         background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain fixed,
             linear-gradient(to right top,
                 rgba(0, 107, 110, 1) 0%,
                 rgba(41, 0, 73, 1) 44.804%,
                 rgba(27, 150, 163, 1) 100%);
+    }
 
-        svg {
-            @apply h-4 w-4;
-        }
+    svg {
+        @apply h-7 w-7;
     }
 }

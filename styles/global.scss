@@ -75,7 +75,7 @@ body {
 }
 
 .dialog {
-    @apply pt-10 pb-10 pl-9 pr-9 border border-white;
+    @apply p-4 border border-white;
 
     ol li {
         @apply border border-white rounded p-3;
@@ -86,7 +86,7 @@ body {
     }
 
     @screen lg {
-        @apply w-[28rem];
+        @apply p-10 w-[28rem];
     }
 
     @screen 2xl {
