@@ -1,6 +1,6 @@
 @font-face {
     font-family: "RuiYan"; //字体名字
-    src: url("/nft-web/font/rui.ttf"); //引入字体位置
+    src: url("/font/rui.ttf"); //引入字体位置
 }
 
 html,
@@ -19,10 +19,10 @@ body {
 }
 
 .tiger {
-    background: url('/nft-web/images/bg_m.jpg') no-repeat center / cover;
+    background: url('/images/bg_m.jpg') no-repeat center / cover;
 
     @screen lg {
-        background-image: url('/nft-web/images/bg.jpg');
+        background-image: url('/images/bg.jpg');
     }
 
     header {
@@ -60,7 +60,7 @@ body {
         @apply text-white;
     }
 
-    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain fixed,
+    background: url(/images/intro/wave.svg) no-repeat right center / contain fixed,
     linear-gradient(to top right,
         rgba(0, 138, 175, 1) 0%,
         rgba(147, 18, 68, 1) 43.744%,

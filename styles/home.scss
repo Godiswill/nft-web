@@ -3,7 +3,7 @@
 }
 
 .home-bg {
-    background: url(/nft-web/images/intro/wave.svg) no-repeat right center / contain fixed,
+    background: url(/images/intro/wave.svg) no-repeat right center / contain fixed,
         linear-gradient(to right top,
             rgba(0, 107, 110, 1) 0%,
             rgba(41, 0, 73, 1) 44.804%,
@@ -11,10 +11,10 @@
 }
 
 .world-outlook {
-    background: url('/nft-web/images/slide/1_m.jpg') no-repeat center / cover;
+    background: url('/images/slide/1_m.jpg') no-repeat center / cover;
 
     @screen lg {
-        background: url('/nft-web/images/slide/1.jpg') no-repeat center / cover;
+        background: url('/images/slide/1.jpg') no-repeat center / cover;
     }
 }
 

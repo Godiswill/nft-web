@@ -25,8 +25,8 @@ module.exports = isAnalyze
            * Tell Next.js where the `public` folder is.
            * Replace `nextjs-github-pages` with your Github repo project name.
            */
-          assetPrefix: isGithubPages ? '/nft-web/' : undefined,
-          basePath: '/nft-web',
+          //   assetPrefix: isGithubPages ? '/nft-web/' : undefined, // 注释 github 配置，所有资源需要加前缀
+          //   basePath: '/nft-web',
           images: {
               unoptimized: true,
           },

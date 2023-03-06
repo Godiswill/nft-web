@@ -13,17 +13,17 @@ import { TwitterIcon } from '@/components/svg';
 
 const teams = [
     {
-        img: '/nft-web/images/nft/1.jpeg',
+        img: '/images/nft/1.jpeg',
         name: 'xx',
         position: '创始人和艺术总监',
     },
     {
-        img: '/nft-web/images/nft/2.jpeg',
+        img: '/images/nft/2.jpeg',
         name: 'yy',
         position: '创始人和艺术总监',
     },
     {
-        img: '/nft-web/images/nft/3.jpeg',
+        img: '/images/nft/3.jpeg',
         name: 'zz',
         position: '创始人和艺术总监',
     },
@@ -99,11 +99,11 @@ function Intro({
 
 const processList = [
     {
-        src: '/nft-web/images/intro/skin.png',
+        src: '/images/intro/skin.png',
         title: '圆形豹',
     },
     {
-        src: '/nft-web/images/intro/tiger.png',
+        src: '/images/intro/tiger.png',
         title: '豹子头',
     },
 ];
@@ -166,7 +166,7 @@ export default function Home() {
                             <Intro data={mintIntro} />
                             <div className="w-64 h-64 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
-                                    src="/nft-web/images/intro/mint.png"
+                                    src="/images/intro/mint.png"
                                     layout="fill"
                                     objectFit="contain"
                                     alt="mint"
@@ -179,7 +179,7 @@ export default function Home() {
                             <Intro data={wishIntro} />
                             <div className="w-full  h-3/5 lg:w-[37rem] lg:h-[37rem] 2xl:w-[52rem] 2xl:h-[52rem] relative">
                                 <Image
-                                    src="/nft-web/images/intro/wish.png"
+                                    src="/images/intro/wish.png"
                                     layout="fill"
                                     objectFit="contain"
                                     alt="mint"
