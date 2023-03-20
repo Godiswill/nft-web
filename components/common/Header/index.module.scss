@@ -6,16 +6,16 @@
     }
 
     .menu {
-        @apply flex-col absolute top-20 hidden;
+        @apply ml-20 flex-1 flex-col justify-between absolute top-20 hidden;
 
         @screen lg {
             @apply static flex flex-row items-center;
 
             &>div {
-                @apply flex justify-center items-center pl-3 pr-3 ml-3 h-7 border border-white rounded;
+                @apply flex justify-center items-center ml-3 h-7;
 
                 &:hover {
-                    @apply bg-[#b5b5b5];
+                    // @apply bg-[#b5b5b5];
                 }
             }
         }
