@@ -110,7 +110,10 @@ const processList = [
 
 export default function Home() {
     return (
-        <Layout className="tiger-common" mainClassName="home-bg">
+        <Layout
+            className="tiger-common"
+            mainClassName="lg:h-[calc(100%-56px)] overflow-y-auto home-bg"
+        >
             <Head>
                 <title>Index</title>
             </Head>

@@ -19,10 +19,11 @@ body {
 }
 
 .tiger {
-    background: url('/images/bg_m.jpg') no-repeat center / cover;
+    // background: url('/images/bg_m.jpg') no-repeat center / cover;
 
     @screen lg {
-        background-image: url('/images/bg.jpg');
+        @apply bg-[#15141a];
+        // background-image: url('/images/bg.jpg');
     }
 
     header {

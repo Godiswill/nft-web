@@ -12,11 +12,7 @@ export default function Layout({
     return (
         <div className={className}>
             <Header />
-            <main
-                className={`h-full lg:h-[calc(100%-56px)] overflow-y-auto ${mainClassName || ''}`}
-            >
-                {children}
-            </main>
+            <main className={`${mainClassName || ''}`}>{children}</main>
         </div>
     );
 }

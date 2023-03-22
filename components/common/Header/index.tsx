@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import {
@@ -13,27 +14,27 @@ import {
 import styles from './index.module.scss';
 
 const paths = [
-    { path: '/home', name: 'HOME' },
-    { path: '/roadmap', name: 'ROADMAP' },
-    { path: '/mint', name: 'BUY' },
+    { path: '', name: 'HOME' },
+    { path: '', name: 'ROADMAP' },
+    { path: '', name: 'BUY' },
     { path: '', name: 'SYNTHESIS' },
     // { path: '/gallery', name: '画廊' },
     { path: '', name: 'GALLERY' },
     // { path: '/404', name: '合成' },
     { path: 'https://opensea.com', name: 'opensea', components: <OpenseaIcon /> },
-    { path: 'https://discord.gg/zXmcZ5dgR7', name: 'discord', components: <DiscordIcon /> },
+    { path: '', name: 'discord', components: <DiscordIcon /> },
     {
-        path: 'https://twitter.com/syntheticleopa?s=11&t=LYu5K-LvqG14Xi0U-ULAfw',
+        path: '',
         name: 'twitter',
         components: <TwitterIcon />,
     },
     {
-        path: 'https://www.instagram.com/syntheticleopard/',
+        path: '',
         name: 'instagram',
         components: <VectorIcon />,
     },
     {
-        path: 'https://youtube.com/channel/UCVvRG1VjJSsu6b-mWigoK3Q',
+        path: '',
         name: 'youtube',
         components: <YoutubeIcon />,
     },
@@ -53,7 +54,9 @@ export default function Header() {
             <header>
                 <div className={`${styles.navigator} bg-[#15141a] text-white`}>
                     <h1 className={`font-[Osiris] text-xl text-[#D7C19A] rounded`}>
-                        <Link href="/">LEOPARD GOD</Link>
+                        <Link href="/">
+                            <Image src="/images/root/lg.png" width={140} height={13} alt="logo" />
+                        </Link>
                     </h1>
                     <div className={styles.menu}>
                         {paths.map((it) => (
