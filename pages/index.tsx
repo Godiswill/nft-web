@@ -333,6 +333,16 @@ export default function Page() {
                         />
                     </div>
                 </div>
+                <h1 className="text-5xl pt-14 pb-5">ROADMAP</h1>
+                <div className="relative h-[44rem] w-[35rem] mx-auto my-6 rounded-2xl overflow-hidden">
+                    <Image
+                        src="/images/root/forest-leopard.jpg"
+                        layout="fill"
+                        objectFit="cover"
+                        alt="forest leopard"
+                    />
+                </div>
+                <h2 className="text-xl text-[#D7C19A] pb-4">ROADMAP 1.0 STAGE</h2>
             </div>
         </Layout>
     );
