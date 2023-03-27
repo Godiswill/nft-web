@@ -1,6 +1,16 @@
+import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '../components/Layout';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+// import required modules
+import { FreeMode, Pagination } from 'swiper';
+import Layout from '@/components/Layout';
+import { TwitterIcon } from '@/components/svg';
 
 export default function Page() {
     return (
@@ -342,7 +352,115 @@ export default function Page() {
                         alt="forest leopard"
                     />
                 </div>
-                <h2 className="text-xl text-[#D7C19A] pb-4">ROADMAP 1.0 STAGE</h2>
+                <div className="w-[60rem] mx-auto">
+                    {[
+                        {
+                            name: 'ROADMAP 1.0 STAGE',
+                            items: [
+                                {
+                                    title: 'OPERATIONAL ACTIVITIES ON SOCIAL MEDIA',
+                                    desc: 'Use LEOPARD GOD-exclusive social media, Twitter, Instagram and Youtube promotion to advertise our project.',
+                                },
+                                {
+                                    title: 'BUILD COMMUNITIES',
+                                    desc: 'Build Discord community channel for users to build our communities.',
+                                },
+                                {
+                                    title: 'LAUNCH THE OFFICIAL WEBSITE',
+                                    desc: 'The official website of LEOPARD GOD is on service, the website we open mint, where you can purchase your own NFT, or use round leopard NFT to merge a new leopard god NFT. In addition, you can join our official social media channels and communities through the official website. You can also go to our official opensea link through the official website to trade in the secondary market.',
+                                },
+                                {
+                                    title: 'WL PRESALE',
+                                    desc: 'The project party will invite active users in the community to join in the WL, and set presale (time undetermined) for WL users. Through WL presale, it is more likely for users to buy at a lower price and also spend less time gaining NFT.',
+                                },
+                                {
+                                    title: 'OPEN PUBLIC SALE',
+                                    desc: 'You can go to our official website to mint after the opening of the public sale (time to be determined). All you need to do is to connect your wallet address to the LEOPARD GOD website in order to purchase your own LEOPARD GOD series NFT.',
+                                },
+                                {
+                                    title: 'OPEN MERGENCE SYSTEM',
+                                    desc: 'After the merger system is opened, you can go to our official website to merge the new leopard god NFT with your round leopard NFT for free.',
+                                },
+                                {
+                                    title: 'OPEN BONUS SYSTEM',
+                                    desc: 'After the bonus system is opened, you can participate in our monthly-hold lucky draw. Besides, the supreme crown prize is waiting for you. As long as you have collected all the six supreme crowns, you can carry the supreme crown prize home, so as to gain more fun and proceeds.',
+                                },
+                            ],
+                        },
+                        {
+                            name: 'ROADMAP 2.0 STAGE',
+                            items: [
+                                {
+                                    title: 'BUILD A FASHION BRAND',
+                                    desc: 'We hope to build a powerful fashion brand around the LEOPARD GOD series. We will develop characteristic products around clothing, cool fun, artwork and so on.',
+                                },
+                                {
+                                    title: 'ISSUE TOKENS',
+                                    desc: 'Considering our long-term development goals, we will issue our own tokens. We will hand out free tokens to holders of the LEOPARD GOD NFT series.',
+                                },
+                                {
+                                    title: 'DEVELOP NEW BLOCKCHAIN GAMES',
+                                    desc: 'Most of our team members come from the world&apos; TOP5 game developers, who have rich experience in game development. We will follow up on the development of new blockchain games and provide more project benefits to our early supporters.',
+                                },
+                            ],
+                        },
+                    ].map(({ name, items }) => (
+                        <React.Fragment key={name}>
+                            <h2 className="text-xl text-[#D7C19A] py-6 border-b border-b-[#5F5E5F]">
+                                ROADMAP 1.0 STAGE
+                            </h2>
+                            {items.map(({ title, desc }) => (
+                                <div
+                                    key={title}
+                                    className="text-left flex justify-between items-center border-b py-4 border-b-[#5F5E5F]"
+                                >
+                                    <div className="w-60 text-2xl">{title}</div>
+                                    <div className="w-96">{desc}</div>
+                                    <div className="rounded-[50%] w-11 h-11 border border-[#D5BFB2]"></div>
+                                </div>
+                            ))}
+                        </React.Fragment>
+                    ))}
+                    <div className="w-36 mx-auto my-9 py-2 border border-[#575757] rounded-3xl">
+                        STAY TUNED
+                    </div>
+                </div>
+                <div className="w-[64rem] mx-auto">
+                    <h1 className="text-5xl pt-14 pb-5">THE TEAM</h1>
+                    <h2 className="text-[#D7C19A] pb-8">LEOPARD GOD SERIES-NFT</h2>
+                    <Swiper
+                        slidesPerView={3}
+                        spaceBetween={30}
+                        freeMode={true}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        modules={[FreeMode, Pagination]}
+                        className="mySwiper"
+                    >
+                        {[
+                            { name: 'ZK', title: 'Technical Director and Founder' },
+                            { name: 'GH', title: 'Art Director and Founder' },
+                            { name: 'L', title: 'Marketing Director and Founder' },
+                        ].map(({ name, title }, index) => (
+                            <SwiperSlide key={name}>
+                                <div className="w-72 h-[30rem] rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
+                                    <div className="relative w-64 h-64 rounded-3xl overflow-hidden">
+                                        <Image
+                                            layout="fill"
+                                            objectFit="cover"
+                                            src={`/images/nft/${index + 1}.jpeg`}
+                                            alt="CTO"
+                                        />
+                                    </div>
+                                    <div>{name}</div>
+                                    <div>{title}</div>
+                                    <TwitterIcon />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
             </div>
         </Layout>
     );
