@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { FreeMode, Pagination } from 'swiper';
 import Layout from '@/components/Layout';
-import { TwitterIcon } from '@/components/svg';
+import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon } from '@/components/svg';
 
 export default function Page() {
     return (
@@ -27,7 +27,7 @@ export default function Page() {
                     alt="Leopard God Universe"
                 />
             </div>
-            <div className="text-white text-center">
+            <div className="text-white text-center pb-4">
                 <h1 className="text-5xl pt-14 pb-5">LEOPARD GOD SERIES NFT</h1>
                 <h2 className="text-xl text-[#D7C19A] pb-8">
                     THE FIRST-EVER COLLECTED AND MERGE NFT PROJECT
@@ -436,12 +436,13 @@ export default function Page() {
                             clickable: true,
                         }}
                         modules={[FreeMode, Pagination]}
-                        className="mySwiper"
+                        className="team-wiper"
                     >
                         {[
                             { name: 'ZK', title: 'Technical Director and Founder' },
                             { name: 'GH', title: 'Art Director and Founder' },
                             { name: 'L', title: 'Marketing Director and Founder' },
+                            { name: 'Jane', title: 'Operation Director and Founder' },
                         ].map(({ name, title }, index) => (
                             <SwiperSlide key={name}>
                                 <div className="w-72 h-[30rem] rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
@@ -450,16 +451,46 @@ export default function Page() {
                                             layout="fill"
                                             objectFit="cover"
                                             src={`/images/nft/${index + 1}.jpeg`}
-                                            alt="CTO"
+                                            alt={title}
                                         />
                                     </div>
                                     <div>{name}</div>
                                     <div>{title}</div>
-                                    <TwitterIcon />
+                                    <TwitterIcon className="w-5 h-5" />
+                                    <button className="bg-[#5293FE] px-4 py-1 rounded-2xl">
+                                        Follow
+                                    </button>
                                 </div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+                <div className="w-[64rem] h-52 flex justify-between items-center mx-auto my-10 py-8 border-t border-b border-[#5F5E5F]">
+                    <div className="flex-1 flex h-full flex-col justify-between text-left">
+                        <div className="flex">
+                            <div className="w-12 h-12 rounded-[50rem] bg-white/20"></div>
+                            <div className="ml-3">
+                                <div className="text-[#8393AF]">Mail</div>
+                                <div>0xleopardgod@gmail.com</div>
+                            </div>
+                        </div>
+                        <div>©2023 3×3Lab</div>
+                    </div>
+                    <div className="flex-1">
+                        <Image src="/images/root/logo.png" width={122} height={114} alt="logo" />{' '}
+                    </div>
+                    <div className="flex-1 flex h-full flex-col justify-between items-end text-right">
+                        <div className="flex justify-between w-44">
+                            <TwitterIcon className="h-5 w-5" />
+                            <DiscordIcon className="h-5 w-5" />
+                            <OpenseaIcon className="h-5 w-5" />
+                            <YoutubeIcon className="h-5 w-5" />
+                        </div>
+                        <div>
+                            <div>TERMS & CONDITIONS</div>
+                            <div>INTRODUCTION DOCUMENT</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </Layout>

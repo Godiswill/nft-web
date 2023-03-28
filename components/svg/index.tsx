@@ -1,6 +1,7 @@
-export function DiscordIcon({ fill = 'currentColor' }) {
+export function DiscordIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
+            className={className}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -22,9 +23,10 @@ export function DiscordIcon({ fill = 'currentColor' }) {
     );
 }
 
-export function OpenseaIcon({ fill = 'currentColor' }) {
+export function OpenseaIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
+            className={className}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -66,9 +68,10 @@ export function TwitterIcon({ fill = 'currentColor', className = '' }) {
     );
 }
 
-export function VectorIcon({ fill = 'currentColor' }) {
+export function VectorIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
+            className={className}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -84,9 +87,10 @@ export function VectorIcon({ fill = 'currentColor' }) {
     );
 }
 
-export function YoutubeIcon({ fill = 'currentColor' }) {
+export function YoutubeIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
+            className={className}
             width="33.916748"
             height="23.742798"
             viewBox="0 0 33.9167 23.7428"
@@ -102,9 +106,10 @@ export function YoutubeIcon({ fill = 'currentColor' }) {
     );
 }
 
-export function MenuIcon({ fill = 'currentColor' }) {
+export function MenuIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
+            className={className}
             width="46.000000"
             height="14.000000"
             viewBox="0 0 46 14"
@@ -132,9 +137,10 @@ export function MenuIcon({ fill = 'currentColor' }) {
     );
 }
 
-export function CloseIcon({ fill = 'currentColor' }) {
+export function CloseIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
+            className={className}
             width="65.053833"
             height="65.053833"
             viewBox="0 0 65.0538 65.0538"

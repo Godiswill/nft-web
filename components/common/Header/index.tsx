@@ -48,12 +48,11 @@ export default function Header() {
         setShowMMenu(false);
     }, [path]);
 
-    console.log(styles);
     return (
         <>
             <header>
                 <div className={`${styles.navigator} bg-[#15141a] text-white`}>
-                    <h1 className={`font-[Osiris] text-xl text-[#D7C19A] rounded`}>
+                    <h1 className={`text-xl text-[#D7C19A] rounded w-36`}>
                         <Link href="/">
                             <Image src="/images/root/lg.png" width={140} height={13} alt="logo" />
                         </Link>
@@ -62,7 +61,7 @@ export default function Header() {
                         {paths.map((it) => (
                             <div
                                 key={it.name}
-                                className={` ${
+                                className={`${
                                     router.pathname === it.path ? 'font-bold border-b-2' : ''
                                 } ${it.path ? 'cursor-pointer' : 'cursor-not-allowed'}`}
                             >
@@ -88,7 +87,7 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={`${styles.mobileNavigator} ${showMMenu ? styles.showBG : ''}`}>
-                    <div className={`font-[RuiYan] rounded h-14 flex justify-between items-center`}>
+                    <div className={`rounded h-14 flex justify-between items-center`}>
                         <h1 className="bg-[#B11010] px-3 py-1 rounded">
                             <Link href="/">合成豹子</Link>
                         </h1>
@@ -104,7 +103,7 @@ export default function Header() {
                     </div>
 
                     {showMMenu && (
-                        <div className="font-[RuiYan] mt-10">
+                        <div className="mt-10">
                             {paths.map((it) => (
                                 <div key={it.name} className={`border-b border-b-white pb-4 mb-4`}>
                                     {it.components ? (

@@ -6,13 +6,16 @@
     }
 
     .menu {
-        @apply ml-32 flex-1 flex-col justify-between absolute top-20 hidden;
+        @apply flex-col absolute top-20 hidden;
 
         @screen lg {
-            @apply static flex flex-row items-center;
+            @apply static flex flex-row;
 
             &>div {
-                @apply flex justify-center items-center h-7;
+                @apply ml-9 flex justify-center items-center h-7;
+                @screen xl {
+                    @apply ml-16;
+                }
 
                 &:hover {
                     // @apply bg-[#b5b5b5];
