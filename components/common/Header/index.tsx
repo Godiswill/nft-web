@@ -4,39 +4,39 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import {
     DiscordIcon,
-    OpenseaIcon,
+    LangIcon,
     TwitterIcon,
-    VectorIcon,
     YoutubeIcon,
     MenuIcon,
     CloseIcon,
+    WalletIcon,
 } from '../../svg';
 import styles from './index.module.scss';
 
 const paths = [
     { path: '', name: 'HOME' },
     { path: '', name: 'ROADMAP' },
-    { path: '', name: 'BUY' },
+    { path: 'https://opensea.com', name: 'BUY' },
     { path: '', name: 'SYNTHESIS' },
     // { path: '/gallery', name: '画廊' },
     { path: '', name: 'GALLERY' },
     // { path: '/404', name: '合成' },
-    { path: 'https://opensea.com', name: 'opensea', components: <OpenseaIcon /> },
-    { path: '', name: 'discord', components: <DiscordIcon /> },
+    { path: '', name: 'wallet', components: <WalletIcon /> },
     {
         path: '',
         name: 'twitter',
         components: <TwitterIcon />,
     },
-    {
-        path: '',
-        name: 'instagram',
-        components: <VectorIcon />,
-    },
+    { path: '', name: 'discord', components: <DiscordIcon /> },
     {
         path: '',
         name: 'youtube',
         components: <YoutubeIcon />,
+    },
+    {
+        path: '',
+        name: 'language',
+        components: <LangIcon />,
     },
 ];
 

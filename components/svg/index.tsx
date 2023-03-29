@@ -167,3 +167,80 @@ export function CloseIcon({ fill = 'currentColor', className = '' }) {
         </svg>
     );
 }
+
+export function WalletIcon({ fill = 'currentColor', className = '' }) {
+    return (
+        <svg
+            className={className}
+            width="32.000000"
+            height="32.000000"
+            viewBox="0 0 32 32"
+            fill={fill}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M23.3918 4L8.60522 4C5.83521 4 4.4502 4 3.57764 4.84561C3.55493 4.86749 3.53271 4.88971 3.51099 4.91226C2.66528 5.78488 2.66528 7.16992 2.66528 9.94L2.66528 22.06C2.66528 24.8301 2.66528 26.2151 3.51099 27.0877C3.53271 27.1103 3.55493 27.1325 3.57764 27.1544C4.4502 28 5.83521 28 8.60522 28L23.9985 28C26.1848 28 27.2778 28 28.0527 27.4575C28.3394 27.2567 28.5886 27.0074 28.7893 26.7207C29.332 25.9459 29.332 24.8528 29.332 22.6667L21.332 22.6667C19.1228 22.6667 17.332 20.8758 17.332 18.6667C17.332 16.4575 19.1228 14.6667 21.332 14.6667L29.332 14.6667L29.332 9.94C29.332 7.16989 29.332 5.78485 28.4863 4.91226C28.4644 4.88971 28.4421 4.86749 28.4197 4.84561C27.5471 4 26.1621 4 23.3918 4ZM9.89014 10.4998L13.8901 10.4998C14.4502 10.4998 14.8901 10.9398 14.8901 11.4998C14.8901 12.0598 14.4502 12.4998 13.8901 12.4998L9.89014 12.4998C9.33032 12.4998 8.89014 12.0598 8.89014 11.4998C8.89014 10.9398 9.33032 10.4998 9.89014 10.4998Z"
+                clip-rule="evenodd"
+                fill-rule="evenodd"
+                fill="#FFFFFF"
+                fill-opacity="1.000000"
+            />
+            <path
+                d="M21.3333 18.6667L22.6667 18.6667"
+                stroke="#FFFFFF"
+                stroke-width="2.000000"
+                stroke-linecap="round"
+            />
+            <defs />
+        </svg>
+    );
+}
+
+export function EnvelopeIcon({ fill = 'currentColor', className = '' }) {
+    return (
+        <svg
+            className={className}
+            width="24.000000"
+            height="24.000000"
+            viewBox="0 0 24 24"
+            fill={fill}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M21 5.25L21 18C21 18.1992 20.9209 18.3896 20.7803 18.5303C20.6396 18.6709 20.449 18.75 20.25 18.75L3.75 18.75C3.55103 18.75 3.36035 18.6709 3.21973 18.5303C3.0791 18.3896 3 18.1992 3 18L3 5.25L21 5.25Z"
+                stroke="#FFFFFF"
+                stroke-width="2.000000"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M21 5.25L12 13.5L3 5.25"
+                stroke="#000000"
+                stroke-width="2.000000"
+                stroke-linejoin="round"
+                stroke-linecap="round"
+            />
+            <defs />
+        </svg>
+    );
+}
+
+export function LangIcon({ fill = 'currentColor', className = '' }) {
+    return (
+        <svg
+            className={className}
+            width="32.000000"
+            height="32.000000"
+            viewBox="0 0 32 32"
+            fill={fill}
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                d="M29.3335 28.6667L23.677 12.8333L18.0208 28.6667M19.6353 25.5L27.7158 25.5M9.93872 3.33334L9.93872 9.66669M2.6665 23.1251C9.93896 23.1251 15.0718 16.1505 15.5972 9.66669L2.66821 9.66669M14.7876 22.3334C10.3247 22.3334 6.70679 18.789 6.70679 14.4167"
+                stroke="#FFFFFF"
+                stroke-width="2.000000"
+                stroke-linejoin="round"
+            />
+            <defs />
+        </svg>
+    );
+}

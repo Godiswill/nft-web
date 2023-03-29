@@ -10,7 +10,7 @@ import 'swiper/css/pagination';
 // import required modules
 import { FreeMode, Pagination } from 'swiper';
 import Layout from '@/components/Layout';
-import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon } from '@/components/svg';
+import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon, EnvelopeIcon } from '@/components/svg';
 
 export default function Page() {
     return (
@@ -468,7 +468,9 @@ export default function Page() {
                 <div className="w-[64rem] h-52 flex justify-between items-center mx-auto my-10 py-8 border-t border-b border-[#5F5E5F]">
                     <div className="flex-1 flex h-full flex-col justify-between text-left">
                         <div className="flex">
-                            <div className="w-12 h-12 rounded-[50rem] bg-white/20"></div>
+                            <div className="flex justify-center items-center w-12 h-12 rounded-[50rem] bg-white/20">
+                                <EnvelopeIcon className="text-white" />
+                            </div>
                             <div className="ml-3">
                                 <div className="text-[#8393AF]">Mail</div>
                                 <div>0xleopardgod@gmail.com</div>
@@ -477,7 +479,7 @@ export default function Page() {
                         <div>©2023 3×3Lab</div>
                     </div>
                     <div className="flex-1">
-                        <Image src="/images/root/logo.png" width={122} height={114} alt="logo" />{' '}
+                        <Image src="/images/root/logo.png" width={122} height={114} alt="logo" />
                     </div>
                     <div className="flex-1 flex h-full flex-col justify-between items-end text-right">
                         <div className="flex justify-between w-44">
@@ -488,7 +490,14 @@ export default function Page() {
                         </div>
                         <div>
                             <div>TERMS & CONDITIONS</div>
-                            <div>INTRODUCTION DOCUMENT</div>
+                            <div>
+                                <a
+                                    className="hover:text-sky-400"
+                                    href="https://docs.leopardgod.com"
+                                >
+                                    INTRODUCTION DOCUMENT
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
