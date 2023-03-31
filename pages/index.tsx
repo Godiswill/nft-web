@@ -162,8 +162,8 @@ export default function Page() {
                             <Image
                                 layout="fill"
                                 objectFit="contain"
-                                src="/images/root/etthereum.png"
-                                alt="etthereum"
+                                src="/images/root/ethereum.png"
+                                alt="ethereum"
                             />
                         </div>
                     </div>

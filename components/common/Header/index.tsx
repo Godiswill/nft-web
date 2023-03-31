@@ -52,11 +52,9 @@ export default function Header() {
         <>
             <header>
                 <div className={`${styles.navigator} bg-[#15141a] text-white`}>
-                    <h1 className={`text-xl text-[#D7C19A] rounded w-36`}>
-                        <Link href="/">
-                            <Image src="/images/root/lg.png" width={140} height={13} alt="logo" />
-                        </Link>
-                    </h1>
+                    <Link href="/">
+                        <Image src="/images/root/lg.png" width={140} height={13} alt="logo" />
+                    </Link>
                     <div className={styles.menu}>
                         {paths.map((it) => (
                             <div
@@ -87,10 +85,10 @@ export default function Header() {
                     </div>
                 </div>
                 <div className={`${styles.mobileNavigator} ${showMMenu ? styles.showBG : ''}`}>
-                    <div className={`rounded h-14 flex justify-between items-center`}>
-                        <h1 className="bg-[#B11010] px-3 py-1 rounded">
-                            <Link href="/">合成豹子</Link>
-                        </h1>
+                    <div className={`text-[#D7C19A] h-14 flex justify-between items-center`}>
+                        <Link href="/">
+                            <Image src="/images/root/lg_m.png" width={159} height={15} alt="logo" />
+                        </Link>
                         {showMMenu ? (
                             <div onClick={() => setShowMMenu(false)}>
                                 <CloseIcon />
