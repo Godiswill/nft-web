@@ -224,20 +224,20 @@ export function EnvelopeIcon({ fill = 'currentColor', className = '' }) {
     );
 }
 
-export function LangIcon({ fill = 'currentColor', className = '' }) {
+export function LangIcon({ className = '' }) {
     return (
         <svg
             className={className}
-            width="32.000000"
-            height="32.000000"
-            viewBox="0 0 32 32"
-            fill={fill}
+            width="18.000000"
+            height="18.000000"
+            viewBox="0 0 18 18"
+            fill="none"
             xmlns="http://www.w3.org/2000/svg"
         >
             <path
-                d="M29.3335 28.6667L23.677 12.8333L18.0208 28.6667M19.6353 25.5L27.7158 25.5M9.93872 3.33334L9.93872 9.66669M2.6665 23.1251C9.93896 23.1251 15.0718 16.1505 15.5972 9.66669L2.66821 9.66669M14.7876 22.3334C10.3247 22.3334 6.70679 18.789 6.70679 14.4167"
+                d="M16.5 16.125L13.3181 7.21872L10.1365 16.125M11.0447 14.3438L15.5901 14.3438M5.59033 1.875L5.59033 5.4375M1.49976 13.0078C5.59058 13.0078 8.47778 9.08463 8.77319 5.4375L1.50073 5.4375M8.31787 12.5626C5.80737 12.5626 3.77246 10.5688 3.77246 8.10944"
                 stroke="#FFFFFF"
-                stroke-width="2.000000"
+                stroke-width="1.500000"
                 stroke-linejoin="round"
             />
             <defs />

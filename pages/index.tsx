@@ -14,7 +14,7 @@ import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon, EnvelopeIcon } from
 
 export default function Page() {
     return (
-        <Layout className="tiger" mainClassName="">
+        <Layout className="tiger" mainClassName="home">
             <Head>
                 <title>Leopard God</title>
                 {/*<link rel="icon" href="/favicon.ico" />*/}
@@ -28,10 +28,8 @@ export default function Page() {
                 />
             </div>
             <div className="text-white text-center pb-4">
-                <h1 className="text-5xl pt-14 pb-5">LEOPARD GOD SERIES NFT</h1>
-                <h2 className="text-xl text-[#D7C19A] pb-8">
-                    THE FIRST-EVER COLLECTED AND MERGE NFT PROJECT
-                </h2>
+                <h1 className="pt-14 pb-5">LEOPARD GOD SERIES NFT</h1>
+                <h2 className="pb-8">THE FIRST-EVER COLLECTED AND MERGE NFT PROJECT</h2>
                 <div className="relative h-[20rem]">
                     <Image
                         src="/images/root/skin.jpg"
@@ -46,7 +44,7 @@ export default function Page() {
                     merger rewards and a very highly playable project experience, so that users can
                     highly participate and enjoy it.
                 </p>
-                <h1 className="mt-8 text-5xl">NFT ARTWORK INTRODUCTION</h1>
+                <h1 className="mt-8">NFT ARTWORK INTRODUCTION</h1>
                 <p className="w-[64rem] mx-auto px-[10rem] py-6 font-light">
                     The LEOPARD GOD series NFT consists of 10000 round leopard NFT and 10000 leopard
                     god NFT. The former needs to be minted by pre-sale and formula, while the latter
@@ -96,7 +94,7 @@ export default function Page() {
                         alt="worldview"
                     />
                 </div>
-                <h1 className="text-5xl">THE STORY OF WORLD VIEW</h1>
+                <h1>THE STORY OF WORLD VIEW</h1>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     The Leopard God was born in the early chaos of the universe. At that time, the
                     universe was in a haze, nothing but endless nothingness. So the Leopard God
@@ -126,8 +124,8 @@ export default function Page() {
                     order to protect all the living beings in the world he created, the Leopard God
                     fought fiercely against the God of Nothingne
                 </p>
-                <h1 className="text-5xl py-6">MERGED SYSTEM</h1>
-                <h2 className="text-[#D7C19A]">SUMMON THE LEOPARD GOD</h2>
+                <h1 className="py-6">MERGED SYSTEM</h1>
+                <h2>SUMMON THE LEOPARD GOD</h2>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     The soul of the Leopard God is divided into three parts: courage, kindness, and
                     wisdom, which are sealed in different places. As long as you collect all the
@@ -142,7 +140,7 @@ export default function Page() {
                         alt="schematic diagram"
                     />
                 </div>
-                <h1 className="text-5xl py-6">THE BENEFITS OF MERGE LEOPARD GOD NFT</h1>
+                <h1 className="py-6">THE BENEFITS OF MERGE LEOPARD GOD NFT</h1>
                 <div className="w-[64rem] mx-auto py-4">
                     <h2 className="flex items-center pb-4">
                         GAIN MUCH HIGHER BONUSES: <div className="flex-1 h-px bg-[#848484] ml-8" />
@@ -199,7 +197,7 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <h1 className="text-5xl py-6">RULE OF MERGER</h1>
+                <h1 className="py-6">RULE OF MERGER</h1>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     Each round leopard NFT image consists of 3 round leopard parts in different
                     colors and directions of top, left and right. In the round leopard NFT images,
@@ -222,7 +220,7 @@ export default function Page() {
                         alt="merge"
                     />
                 </div>
-                <h1 className="text-5xl py-6">REPEATED SYNTHESIS RULE</h1>
+                <h1 className="py-6">REPEATED SYNTHESIS RULE</h1>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     In the 3 round leopard NFT images below, there are 2 sets of round leopard parts
                     of the same color in different directions, then they can merge 2 leopard god NFT
@@ -249,8 +247,8 @@ export default function Page() {
                         alt="merge3"
                     />
                 </div>
-                <h1 className="text-5xl pt-14 pb-5">BONUS SYSTEM</h1>
-                <h2 className="text-xl text-[#D7C19A] pb-8">BREAK THE SEAL OF THE LEOPARD GOD</h2>
+                <h1 className="pt-14 pb-5">BONUS SYSTEM</h1>
+                <h2 className="pb-8">BREAK THE SEAL OF THE LEOPARD GOD</h2>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     Unseal the Leopard God: Once you have collected all 6 Supreme crowns, you can
                     unseal the Leopard God. and those who unseal will also get rich rewards.
@@ -263,14 +261,14 @@ export default function Page() {
                         alt="supreme-crown"
                     />
                 </div>
-                <h1 className="text-5xl pt-14 pb-5">BONUS SYSTEM COMPONENTS</h1>
+                <h1 className="pt-14 pb-5">BONUS SYSTEM COMPONENTS</h1>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     The bonus system is designed to bring more fun and benefits to community
                     users.Our bonus system consists of two parts, one is the bonus pool system, the
                     other is the lucky draw system.
                 </p>
                 <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="text-xl text-[#D7C19A] pb-4">BONUS POOL SYSTEM</h2>
+                    <h2 className="pb-4">BONUS POOL SYSTEM</h2>
                     <p className="font-light">
                         The bonus system is designed to bring more fun and benefits to community
                         users.Our bonus system consists of two parts, one is the bonus pool system,
@@ -278,7 +276,7 @@ export default function Page() {
                     </p>
                 </div>
                 <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="text-xl text-[#D7C19A] pb-4">LUCKY DRAW SYSTEM</h2>
+                    <h2 className="pb-4">LUCKY DRAW SYSTEM</h2>
                     <p className="font-light">
                         The lucky draw system is designed to promote user transactions. In the
                         system, we have designed three kinds of awards, namely, the monthly lucky
@@ -292,7 +290,7 @@ export default function Page() {
                     </p>
                 </div>
                 <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="text-xl text-[#D7C19A] pb-4">MONTHLY ROUND LEOPARD AWARD</h2>
+                    <h2 className="pb-4">MONTHLY ROUND LEOPARD AWARD</h2>
                     <p className="font-light">
                         As long as you own the round leopard NFT, you will be able to participate in
                         the lucky draw for round leopard NFT users four times a month on the 6th,
@@ -303,7 +301,7 @@ export default function Page() {
                     </p>
                 </div>
                 <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="text-xl text-[#D7C19A] pb-4">MONTHLY LEOPARD GOD AWARD</h2>
+                    <h2 className="pb-4">MONTHLY LEOPARD GOD AWARD</h2>
                     <p className="font-light">
                         If you hold a leopard god NFT, you will be able to participate in a monthly
                         lucky draw for leopard god NFT users on the 27th monthly. with the bonus
@@ -313,7 +311,7 @@ export default function Page() {
                     </p>
                 </div>
                 <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="text-xl text-[#D7C19A] pb-4">SUPREME CROWN AWARD</h2>
+                    <h2 className="pb-4">SUPREME CROWN AWARD</h2>
                     <p className="font-light">
                         If you collect all leopard god NFT with six supreme crowns, then you can
                         receive the Crown Award, which can be received only once a month, on the
@@ -323,7 +321,7 @@ export default function Page() {
                         accumulated into the bonus pool of the next month.
                     </p>
                 </div>
-                <h1 className="text-5xl pt-14 pb-5">FLOW CHART OF BONUS DISTRIBUTION</h1>
+                <h1 className="pt-14 pb-5">FLOW CHART OF BONUS DISTRIBUTION</h1>
                 <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
                     Attention: The supreme crown bonuses and monthly lucky draw bonuses come from
                     not only the accumulated funds--automatically deducted 4% ETH of transaction
@@ -343,7 +341,7 @@ export default function Page() {
                         />
                     </div>
                 </div>
-                <h1 className="text-5xl pt-14 pb-5">ROADMAP</h1>
+                <h1 className="pt-14 pb-5">ROADMAP</h1>
                 <div className="relative h-[44rem] w-[35rem] mx-auto my-6 rounded-2xl overflow-hidden">
                     <Image
                         src="/images/root/forest-leopard.jpg"
@@ -406,9 +404,7 @@ export default function Page() {
                         },
                     ].map(({ name, items }) => (
                         <React.Fragment key={name}>
-                            <h2 className="text-xl text-[#D7C19A] py-6 border-b border-b-[#5F5E5F]">
-                                ROADMAP 1.0 STAGE
-                            </h2>
+                            <h2 className="py-6 border-b border-b-[#5F5E5F]">{name}</h2>
                             {items.map(({ title, desc }) => (
                                 <div
                                     key={title}
@@ -426,8 +422,8 @@ export default function Page() {
                     </div>
                 </div>
                 <div className="w-[64rem] mx-auto">
-                    <h1 className="text-5xl pt-14 pb-5">THE TEAM</h1>
-                    <h2 className="text-[#D7C19A] pb-8">LEOPARD GOD SERIES-NFT</h2>
+                    <h1 className="pt-14 pb-5">THE TEAM</h1>
+                    <h2 className="pb-8">LEOPARD GOD SERIES-NFT</h2>
                     <Swiper
                         slidesPerView={3}
                         spaceBetween={30}
