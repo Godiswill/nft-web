@@ -11,7 +11,7 @@ import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper';
 import Layout from '@/components/Layout';
 import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon, EnvelopeIcon } from '@/components/svg';
-
+import Divider from '@/components/common/Divider';
 export default function Page() {
     return (
         <Layout className="tiger" mainClassName="home">
@@ -19,74 +19,82 @@ export default function Page() {
                 <title>Leopard God</title>
                 {/*<link rel="icon" href="/favicon.ico" />*/}
             </Head>
-            <div className="relative h-[46rem]">
+            <div className="relative h-[234px] lg:h-[736px]">
                 <Image
-                    src="/images/root/universe.jpg"
+                    src="/images/root/universe_m.jpg"
+                    // srcset="/images/root/universe_m.jpg 960w, /images/root/universe.jpg 1024w"
                     layout="fill"
                     objectFit="cover"
                     alt="Leopard God Universe"
                 />
             </div>
             <div className="text-white text-center pb-4">
-                <h1 className="pt-14 pb-5">LEOPARD GOD SERIES NFT</h1>
-                <h2 className="pb-8">THE FIRST-EVER COLLECTED AND MERGE NFT PROJECT</h2>
-                <div className="relative h-[20rem]">
+                <h1>LEOPARD GOD SERIES NFT</h1>
+                <h2>THE FIRST-EVER COLLECTED AND MERGE NFT PROJECT</h2>
+                <div className="relative h-[91px] lg:h-[320px]">
                     <Image
                         src="/images/root/skin.jpg"
+                        // srcset="/images/root/universe_m.jpg 960w, /images/root/universe.jpg 1024w"
                         layout="fill"
                         objectFit="cover"
                         alt="lg-skin"
                     />
                 </div>
-                <p className="w-[64rem] mx-auto px-[10rem] py-6 font-light border-b	border-[#848484]">
+                <p>
                     The LEOPARD GOD series-NFT is the first merged and collected NFT project, which
                     aims to encourage users to collect and merge by providing them with generous
                     merger rewards and a very highly playable project experience, so that users can
                     highly participate and enjoy it.
                 </p>
+                <Divider />
                 <h1 className="mt-8">NFT ARTWORK INTRODUCTION</h1>
-                <p className="w-[64rem] mx-auto px-[10rem] py-6 font-light">
+                <p>
                     The LEOPARD GOD series NFT consists of 10000 round leopard NFT and 10000 leopard
                     god NFT. The former needs to be minted by pre-sale and formula, while the latter
                     can only be merged and minted by round leopard NFT for free.
                 </p>
-                <div className="w-[62rem] mx-auto flex justify-center pt-4 pb-9">
-                    <div className="border-r border-[#616161] pr-16">
-                        <Image
-                            className="rounded-2xl"
-                            src="/images/root/leopard.gif"
-                            height={315}
-                            width={315}
-                            alt="leopard"
-                        />
-                        <div className="bg-[#D7C19A] p-1 w-72 mx-auto rounded-sm text-black my-4">
+                <div className="lg:w-[992px] lg:mx-auto flex justify-center pt-4 pb-9">
+                    <div>
+                        <div className="relative rounded-2xl w-44 h-44 lg:w-80 lg:h-80">
+                            <Image
+                                className="rounded-2xl"
+                                src="/images/root/leopard.gif"
+                                layout="fill"
+                                objectFit="cover"
+                                alt="leopard"
+                            />
+                        </div>
+                        <div className="bg-[#D7C19A] p-1 text-xs lg:text-sm w-36 lg:w-72 mx-auto rounded-sm text-black my-4">
                             ROUND LEOPARD NFT
                         </div>
-                        <div className="w-96">
+                        <div className="w-44 lg:w-80">
                             As the initial minted NFT, the total number of round leopard NFT is
                             10000, with each piece consisting of three round leopard parts with
                             different colors in different directions and also different backgrounds.
                         </div>
                     </div>
-                    <div className="pl-16">
-                        <Image
-                            className="rounded-2xl"
-                            src="/images/root/leopardgod.gif"
-                            height={315}
-                            width={315}
-                            alt="leopardgod"
-                        />
-                        <div className="bg-[#D7C19A] p-1 w-72 mx-auto rounded-sm text-black my-4">
+                    <Divider className="mx-4 lg:mx-10" vertical />
+                    <div>
+                        <div className="relative rounded-2xl w-44 h-44 lg:w-80 lg:h-80">
+                            <Image
+                                className="rounded-2xl"
+                                src="/images/root/leopardgod.gif"
+                                layout="fill"
+                                objectFit="cover"
+                                alt="leopardgod"
+                            />
+                        </div>
+                        <div className="bg-[#D7C19A] p-1 text-xs lg:text-sm w-36 lg:w-72 mx-auto rounded-sm text-black my-4">
                             LEOPARD GOD NFT
                         </div>
-                        <div className="w-96">
+                        <div className="w-44 lg:w-80">
                             The leopard god NFT can only be minted by round leopard NFT mergence,
                             with a total of 10000. Each leopard god NFT image is made up of a
                             different crown, head, glasses, and background.
                         </div>
                     </div>
                 </div>
-                <div className="relative h-[50rem]">
+                <div className="relative h-64 lg:h-[800px]">
                     <Image
                         src="/images/root/worldview.jpg"
                         layout="fill"
@@ -94,8 +102,8 @@ export default function Page() {
                         alt="worldview"
                     />
                 </div>
-                <h1>THE STORY OF WORLD VIEW</h1>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <h1>THE STORY OF LEOPARD GOD</h1>
+                <p>
                     The Leopard God was born in the early chaos of the universe. At that time, the
                     universe was in a haze, nothing but endless nothingness. So the Leopard God
                     decided to create a world. He created our world with six elements in the
@@ -122,11 +130,26 @@ export default function Page() {
                     leaving a world of nothingness. The God of Nothingness came from nothingness to
                     the world created by Leopard God, trying to make everything disappear. But in
                     order to protect all the living beings in the world he created, the Leopard God
-                    fought fiercely against the God of Nothingne
+                    fought fiercely against the God of Nothingness. Unfortunately, the God of
+                    Nothingness was so powerful that he disassembled the Leopard God&apos;s soul
+                    into three parts, namely, courage, goodness, and wisdom, and sealed them in
+                    different places, making it difficult for the Leopard God to resurrect. But at
+                    the last moment, the Leopard God played his best cards--the six supreme crowns,
+                    whose strong power drove the God of Nothingness away and made him falling into
+                    the abyss of endless dark void, so that he could no longer set foot in the world
+                    created by the Leopard God. However, those six supreme crowns disappeared with
+                    the God of Nothingness. No one knows their whereabouts. Without supreme crowns,
+                    the world will lose stability and balance. That means natural disasters
+                    including tsunamis, plant withering, sandstorms, heavy snow, scorching sun, and
+                    earthquakes would ravage the world again. So, in order to get everything back on
+                    track, a group of kind and brave humans are dedicated to finding the six supreme
+                    crowns of the Leopard God. It is only the strong power of the six supreme crowns
+                    that can break the seal of the leopard God, restoring a balanced and harmonious
+                    world.
                 </p>
                 <h1 className="py-6">MERGED SYSTEM</h1>
                 <h2>SUMMON THE LEOPARD GOD</h2>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     The soul of the Leopard God is divided into three parts: courage, kindness, and
                     wisdom, which are sealed in different places. As long as you collect all the
                     three parts of the soul, you can summon the Leopard God.
@@ -141,12 +164,12 @@ export default function Page() {
                     />
                 </div>
                 <h1 className="py-6">THE BENEFITS OF MERGE LEOPARD GOD NFT</h1>
-                <div className="w-[64rem] mx-auto py-4">
+                <div className="lg:w-[1024px] lg:mx-auto p-4">
                     <h2 className="flex items-center pb-4">
                         GAIN MUCH HIGHER BONUSES: <div className="flex-1 h-px bg-[#848484] ml-8" />
                     </h2>
-                    <div className="flex">
-                        <div className="flex-1 font-light text-left py-4 pr-8">
+                    <div className="flex flex-col lg:flex-row">
+                        <div className="flex-1 font-light text-left py-4 lg:pr-8">
                             As long as you hold the round leopard NFT or the leopard god NFT, you
                             can participate in the monthly-held lucky draw. However, the monthly
                             lucky draw amount of the leopard god NFT will be 4 times that of the
@@ -158,7 +181,7 @@ export default function Page() {
                             income sources.
                             <div>LUCKY DRAW</div>
                         </div>
-                        <div className="relative flex-1">
+                        <div className="relative h-40 lg:h-auto lg:flex-1">
                             <Image
                                 layout="fill"
                                 objectFit="contain"
@@ -168,13 +191,13 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <div className="w-[64rem] mx-auto py-4">
+                <div className="lg:w-[1024px] lg:mx-auto p-4">
                     <h2 className="flex items-center pb-4">
                         <div className="flex-1 h-px bg-[#848484] mr-8" />
                         BE ABLE TO CLAIM THE SUPREME CROWN PRIZE:
                     </h2>
-                    <div className="flex">
-                        <div className="relative flex-1">
+                    <div className="flex flex-col-reverse lg:flex-row">
+                        <div className="relative h-40 lg:h-auto lg:flex-1">
                             <Image
                                 layout="fill"
                                 objectFit="contain"
@@ -182,7 +205,7 @@ export default function Page() {
                                 alt="crown"
                             />
                         </div>
-                        <div className="flex-1 font-light text-left py-4 pl-8">
+                        <div className="flex-1 font-light text-left py-4 lg:pl-8">
                             In order to encourage users to collect and merge, we have set up a very
                             generous prize: the Supreme Crown Prize. As long as you win the prize, a
                             very generous bonus will be given to you. The prerequisite for receiving
@@ -197,14 +220,15 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
+                <Divider />
                 <h1 className="py-6">RULE OF MERGER</h1>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     Each round leopard NFT image consists of 3 round leopard parts in different
                     colors and directions of top, left and right. In the round leopard NFT images,
                     three round leopard parts with different directions of the same color can be
                     merged into a leopard god NFT of the same color for free.
                 </p>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     Each round leopard NFT can be merged up to 3 times, and the parts that have
                     already been merged into leopard gods in each round leopard NFT image cannot
                     continue to be merged with other round leopard images, whereas, the unmerged
@@ -212,7 +236,7 @@ export default function Page() {
                     images. After running out of the number of mergence times, each round leopard
                     NFT will only lose its mergence function, instead of being destroyed.
                 </p>
-                <div className="relative w-[62rem] h-[30rem] mx-auto">
+                <div className="relative h-52 lg:w-[992px] lg:h-[480px] mx-auto">
                     <Image
                         layout="fill"
                         objectFit="contain"
@@ -221,12 +245,12 @@ export default function Page() {
                     />
                 </div>
                 <h1 className="py-6">REPEATED SYNTHESIS RULE</h1>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     In the 3 round leopard NFT images below, there are 2 sets of round leopard parts
                     of the same color in different directions, then they can merge 2 leopard god NFT
                     of the same color for free.
                 </p>
-                <div className="relative w-[62rem] h-[10rem] mx-auto">
+                <div className="relative h-20 lg:w-[992px] lg:h-40 mx-auto">
                     <Image
                         layout="fill"
                         objectFit="contain"
@@ -234,12 +258,12 @@ export default function Page() {
                         alt="merge2"
                     />
                 </div>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     In the 3 round leopard NFT images below, there are 3 sets of round leopard parts
                     of the same color in different directions, then they can merge 3 leopard god NFT
                     of the same color for free.
                 </p>
-                <div className="relative w-[62rem] h-[10rem] mx-auto">
+                <div className="relative h-20 lg:w-[992px] lg:h-40 mx-auto">
                     <Image
                         layout="fill"
                         objectFit="contain"
@@ -247,13 +271,14 @@ export default function Page() {
                         alt="merge3"
                     />
                 </div>
+                <Divider />
                 <h1 className="pt-14 pb-5">BONUS SYSTEM</h1>
                 <h2 className="pb-8">BREAK THE SEAL OF THE LEOPARD GOD</h2>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     Unseal the Leopard God: Once you have collected all 6 Supreme crowns, you can
                     unseal the Leopard God. and those who unseal will also get rich rewards.
                 </p>
-                <div className="relative h-[36rem]">
+                <div className="relative h-44 lg:h-[576px]">
                     <Image
                         src="/images/root/supreme-crown.jpg"
                         layout="fill"
@@ -262,95 +287,79 @@ export default function Page() {
                     />
                 </div>
                 <h1 className="pt-14 pb-5">BONUS SYSTEM COMPONENTS</h1>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     The bonus system is designed to bring more fun and benefits to community
                     users.Our bonus system consists of two parts, one is the bonus pool system, the
                     other is the lucky draw system.
                 </p>
-                <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="pb-4">BONUS POOL SYSTEM</h2>
-                    <p className="font-light">
-                        The bonus system is designed to bring more fun and benefits to community
-                        users.Our bonus system consists of two parts, one is the bonus pool system,
-                        the other is the lucky draw system.
-                    </p>
-                </div>
-                <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="pb-4">LUCKY DRAW SYSTEM</h2>
-                    <p className="font-light">
-                        The lucky draw system is designed to promote user transactions. In the
-                        system, we have designed three kinds of awards, namely, the monthly lucky
-                        draw of round leopard NFT and leopard god NFT and the Supreme Crown Award.
-                        The bonuses of these awards come from the funds accumulated by the bonus
-                        pool system. Since the bonus pool funds are made up of 20% mint fees and 4%
-                        of each transaction fee in the secondary market, it means that the more mint
-                        users and secondary market transactions, the higher the transaction fees, so
-                        the more bonuses can be accumulated in the bonus pool, and then the more
-                        bonuses the winners will get.
-                    </p>
-                </div>
-                <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="pb-4">MONTHLY ROUND LEOPARD AWARD</h2>
-                    <p className="font-light">
-                        As long as you own the round leopard NFT, you will be able to participate in
-                        the lucky draw for round leopard NFT users four times a month on the 6th,
-                        13th, 20th and 27th of each month. with the bonus accounting for 5% of the
-                        total amount of the current bonus pool. And the unconsumed bonus in the
-                        current month will be automatically accumulated into the prize pool of the
-                        next month.
-                    </p>
-                </div>
-                <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="pb-4">MONTHLY LEOPARD GOD AWARD</h2>
-                    <p className="font-light">
-                        If you hold a leopard god NFT, you will be able to participate in a monthly
-                        lucky draw for leopard god NFT users on the 27th monthly. with the bonus
-                        accounting for 20% of the total amount of the current bonus pool. And the
-                        unconsumed bonus in the current month will be automatically accumulated into
-                        the prize pool of the next month.
-                    </p>
-                </div>
-                <div className="w-[48rem] px-12 py-3 mb-6 mx-auto border border-[#D7C19A] rounded-3xl text-left">
-                    <h2 className="pb-4">SUPREME CROWN AWARD</h2>
-                    <p className="font-light">
-                        If you collect all leopard god NFT with six supreme crowns, then you can
-                        receive the Crown Award, which can be received only once a month, on the
-                        27th of each month. There will be one winner each time, with the bonus
-                        accounting for 60% of the total amount of the current bonus pool. If no one
-                        receives it in the current month, the bonus will be automatically
-                        accumulated into the bonus pool of the next month.
-                    </p>
+                <div className="px-4 lg:w-[768px] lg:mx-auto ">
+                    {[
+                        {
+                            title: 'BONUS POOL SYSTEM',
+                            desc: 'The bonus system is designed to bring more fun and benefits to community users.Our bonus system consists of two parts, one is the bonus pool system, the other is the lucky draw system.',
+                        },
+                        {
+                            title: 'LUCKY DRAW SYSTEM',
+                            desc: 'The lucky draw system is designed to promote user transactions. In the system, we have designed three kinds of awards, namely, the monthly lucky draw of round leopard NFT and leopard god NFT and the Supreme Crown Award. The bonuses of these awards come from the funds accumulated by the bonus pool system. Since the bonus pool funds are made up of 20% mint fees and 4% of each transaction fee in the secondary market, it means that the more mint users and secondary market transactions, the higher the transaction fees, so the more bonuses can be accumulated in the bonus pool, and then the more bonuses the winners will get.',
+                        },
+                        {
+                            title: 'MONTHLY ROUND LEOPARD AWARD',
+                            desc: 'As long as you own the round leopard NFT, you will be able to participate in the lucky draw for round leopard NFT users four times a month on the 6th, 13th, 20th and 27th of each month. with the bonus accounting for 5% of the total amount of the current bonus pool. And the unconsumed bonus in the current month will be automatically accumulated into the prize pool of the next month.',
+                        },
+                        {
+                            title: 'MONTHLY LEOPARD GOD AWARD',
+                            desc: 'If you hold a leopard god NFT, you will be able to participate in a monthly lucky draw for leopard god NFT users on the 27th monthly. with the bonus accounting for 20% of the total amount of the current bonus pool. And the unconsumed bonus in the current month will be automatically accumulated into the prize pool of the next month.',
+                        },
+                        {
+                            title: 'SUPREME CROWN AWARD',
+                            desc: 'If you collect all leopard god NFT with six supreme crowns, then you can receive the Crown Award, which can be received only once a month, on the 27th of each month. There will be one winner each time, with the bonus accounting for 60% of the total amount of the current bonus pool. If no one receives it in the current month, the bonus will be automatically accumulated into the bonus pool of the next month.',
+                        },
+                    ].map(({ title, desc }) => (
+                        <div
+                            key={title}
+                            className="px-6 pb-4 mb-6 border border-[#D7C19A] rounded-3xl text-left"
+                        >
+                            <h2>{title}</h2>
+                            <div className="font-light">{desc}</div>
+                        </div>
+                    ))}
                 </div>
                 <h1 className="pt-14 pb-5">FLOW CHART OF BONUS DISTRIBUTION</h1>
-                <p className="w-[64rem] px-[10rem] mx-auto py-4 font-light">
+                <p>
                     Attention: The supreme crown bonuses and monthly lucky draw bonuses come from
                     not only the accumulated funds--automatically deducted 4% ETH of transaction
                     fees for each transaction in the secondary market, but NFT holders can also
                     inject more money into the bonus pool at any time to increase the bonus chips.
                 </p>
-                <div className="bg-[#D7C19A] p-1 w-96 mx-auto rounded-sm text-black my-4 text-xs">
-                    INJECT MORE WINNINGS INTO THE BONUS POOL
-                </div>
-                <div className="w-[64rem] px-8 mx-auto border border-[#D7C19A] rounded-3xl">
-                    <div className="relative w-[60rem] h-72">
-                        <Image
-                            src="/images/root/prize-pool.png"
-                            layout="fill"
-                            objectFit="contain"
-                            alt="prize pool"
-                        />
+                <div className="px-8">
+                    <div className="bg-[#D7C19A] py-1 px-4 max-w-sm mx-auto my-4 rounded-sm text-black text-xs">
+                        INJECT MORE WINNINGS INTO THE BONUS POOL
                     </div>
                 </div>
+                <div className="lg:w-[1024px] lg:mx-auto px-4">
+                    <div className="px-8 py-4 border border-[#D7C19A] rounded-3xl">
+                        <div className="relative h-[645px] lg:w-[960px] lg:h-[1024px]">
+                            <Image
+                                src="/images/root/prize-pool_m.png"
+                                // srcSet="/images/root/prize-pool_m.png 300w, /images/root/prize-pool.png 1024w"
+                                layout="fill"
+                                objectFit="contain"
+                                alt="prize pool"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <Divider />
                 <h1 className="pt-14 pb-5">ROADMAP</h1>
-                <div className="relative h-[44rem] w-[35rem] mx-auto my-6 rounded-2xl overflow-hidden">
+                <div className="relative h-80 lg:h-[704px] lg:w-[560px] mx-auto my-6 rounded-2xl overflow-hidden">
                     <Image
                         src="/images/root/forest-leopard.jpg"
                         layout="fill"
-                        objectFit="cover"
+                        objectFit="contain"
                         alt="forest leopard"
                     />
                 </div>
-                <div className="w-[60rem] mx-auto">
+                <div className="px-4 lg:w-[960px] mx-auto">
                     {[
                         {
                             name: 'ROADMAP 1.0 STAGE',
@@ -410,9 +419,11 @@ export default function Page() {
                                     key={title}
                                     className="text-left flex justify-between items-center border-b py-4 border-b-[#5F5E5F]"
                                 >
-                                    <div className="w-60 text-2xl">{title}</div>
-                                    <div className="w-96">{desc}</div>
-                                    <div className="rounded-[50%] w-11 h-11 border border-[#D5BFB2]"></div>
+                                    <div className="flex-none w-20 lg:w-52 text-sm lg:text-2xl">
+                                        {title}
+                                    </div>
+                                    <div className="flex-1 px-10">{desc}</div>
+                                    <div className="flex-none rounded-[50%] w-8 h-8 border border-[#D5BFB2]"></div>
                                 </div>
                             ))}
                         </React.Fragment>
@@ -421,7 +432,8 @@ export default function Page() {
                         STAY TUNED
                     </div>
                 </div>
-                <div className="w-[64rem] mx-auto">
+                <Divider />
+                <div className="lg:w-[1024px] mx-auto">
                     <h1 className="pt-14 pb-5">THE TEAM</h1>
                     <h2 className="pb-8">LEOPARD GOD SERIES-NFT</h2>
                     <Swiper
@@ -441,8 +453,8 @@ export default function Page() {
                             { name: 'Jane', title: 'Operation Director and Founder' },
                         ].map(({ name, title }, index) => (
                             <SwiperSlide key={name}>
-                                <div className="w-72 h-[30rem] rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
-                                    <div className="relative w-64 h-64 rounded-3xl overflow-hidden">
+                                <div className="w-36 h-80 lg:w-72 lg:h-[480px] rounded-lg lg:rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
+                                    <div className="relative w-28 h-28 lg:w-64 lg:h-64 rounded-lg lg:rounded-3xl overflow-hidden">
                                         <Image
                                             layout="fill"
                                             objectFit="cover"
@@ -461,42 +473,54 @@ export default function Page() {
                         ))}
                     </Swiper>
                 </div>
-                <div className="w-[64rem] h-52 flex justify-between items-center mx-auto my-10 py-8 border-t border-b border-[#5F5E5F]">
-                    <div className="flex-1 flex h-full flex-col justify-between text-left">
-                        <div className="flex">
-                            <div className="flex justify-center items-center w-12 h-12 rounded-[50rem] bg-white/20">
-                                <EnvelopeIcon className="text-white" />
-                            </div>
-                            <div className="ml-3">
-                                <div className="text-[#8393AF]">Mail</div>
-                                <div>0xleopardgod@gmail.com</div>
-                            </div>
-                        </div>
-                        <div>©2023 3×3Lab</div>
-                    </div>
-                    <div className="flex-1">
+                <Divider />
+                <div>
+                    <div className="block md:hidden">
                         <Image src="/images/root/logo.png" width={122} height={114} alt="logo" />
                     </div>
-                    <div className="flex-1 flex h-full flex-col justify-between items-end text-right">
-                        <div className="flex justify-between w-44">
-                            <TwitterIcon className="h-5 w-5" />
-                            <DiscordIcon className="h-5 w-5" />
-                            <OpenseaIcon className="h-5 w-5" />
-                            <YoutubeIcon className="h-5 w-5" />
+                    <div className="lg:w-[1024px] lg:mx-auto h-52 flex justify-between items-center p-4">
+                        <div className="flex-1 flex h-full flex-col justify-between text-left">
+                            <div className="flex">
+                                <div className="flex justify-center items-center w-12 h-12 rounded-[800px] bg-white/20">
+                                    <EnvelopeIcon className="text-white" />
+                                </div>
+                                <div className="ml-3">
+                                    <div className="text-[#8393AF]">Mail</div>
+                                    <div>0xleopardgod@gmail.com</div>
+                                </div>
+                            </div>
+                            <div>©2023 3×3Lab</div>
                         </div>
-                        <div>
-                            <div>TERMS & CONDITIONS</div>
+                        <div className="hidden md:block flex-1">
+                            <Image
+                                src="/images/root/logo.png"
+                                width={122}
+                                height={114}
+                                alt="logo"
+                            />
+                        </div>
+                        <div className="flex-1 flex h-full flex-col justify-between items-end text-right">
+                            <div className="flex justify-between lg:w-44">
+                                <TwitterIcon className="ml-2 h-5 w-5" />
+                                <DiscordIcon className="ml-2 h-5 w-5" />
+                                <OpenseaIcon className="ml-2 h-5 w-5" />
+                                <YoutubeIcon className="ml-2 h-5 w-5" />
+                            </div>
                             <div>
-                                <a
-                                    className="hover:text-sky-400"
-                                    href="https://docs.leopardgod.com"
-                                >
-                                    INTRODUCTION DOCUMENT
-                                </a>
+                                <div>TERMS & CONDITIONS</div>
+                                <div>
+                                    <a
+                                        className="hover:text-sky-400"
+                                        href="https://docs.leopardgod.com"
+                                    >
+                                        INTRODUCTION DOCUMENT
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <Divider />
             </div>
         </Layout>
     );
