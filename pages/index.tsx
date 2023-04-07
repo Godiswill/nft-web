@@ -177,15 +177,18 @@ export default function Page() {
                             participate in the monthly lucky draws for both and increase your
                             chances of earning more bonus income. Therefore, synthesizing the
                             leopard god NFT also means expanding your sources of bonus income.
-                            <div>LUCKY DRAW</div>
                         </div>
-                        <div className="relative h-40 lg:h-auto lg:flex-1">
-                            <Image
-                                layout="fill"
-                                objectFit="contain"
-                                src="/images/root/ethereum.png"
-                                alt="ethereum"
-                            />
+                        <div className="lg:flex-1">
+                            <h2>LUCKY DRAW</h2>
+
+                            <div className="relative h-40 lg:h-52">
+                                <Image
+                                    layout="fill"
+                                    objectFit="contain"
+                                    src="/images/root/ethereum.png"
+                                    alt="ethereum"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -195,13 +198,17 @@ export default function Page() {
                         BE ABLE TO CLAIM THE SUPREME CROWN PRIZE
                     </h2>
                     <div className="flex flex-col-reverse lg:flex-row">
-                        <div className="relative h-40 lg:h-auto lg:flex-1">
-                            <Image
-                                layout="fill"
-                                objectFit="contain"
-                                src="/images/root/crown.png"
-                                alt="crown"
-                            />
+                        <div className="lg:flex-1">
+                            <h2>SUPREME CROWN PRIZE</h2>
+
+                            <div className="relative h-40 lg:h-52">
+                                <Image
+                                    layout="fill"
+                                    objectFit="contain"
+                                    src="/images/root/crown.png"
+                                    alt="crown"
+                                />
+                            </div>
                         </div>
                         <div className="flex-1 font-light text-left py-4 lg:pl-8">
                             To incentivize users to actively collect round leopard NFTs for
@@ -216,25 +223,25 @@ export default function Page() {
                             enough to get the Supreme Crown version of the leopard god NFT, you will
                             have the opportunity to receive the extremely generous Supreme Crown
                             Prize.
-                            <div>SUPREME CROWN PRIZE</div>
                         </div>
                     </div>
                 </div>
                 <Divider />
-                <h1 className="py-6">RULE OF MERGER</h1>
+                <h1 className="py-6">RULE OF SYNTHESIS</h1>
                 <p>
                     Each round leopard NFT image consists of 3 round leopard parts in different
                     colors and directions of top, left and right. In the round leopard NFT images,
                     three round leopard parts with different directions of the same color can be
-                    merged into a leopard god NFT of the same color for free.
+                    synthesized into a leopard god NFT of the same color for free.
                 </p>
                 <p>
-                    Each round leopard NFT can be merged up to 3 times, and the parts that have
-                    already been merged into leopard gods in each round leopard NFT image cannot
-                    continue to be merged with other round leopard images, whereas, the unmerged
-                    parts in one can continue to merge new leopard gods with other round leopard
-                    images. After running out of the number of mergence times, each round leopard
-                    NFT will only lose its mergence function, instead of being destroyed.
+                    Each round leopard NFT can only be synthesized up to 3 times, and the parts that
+                    have already been used to synthesize a leopard god NFT within each round leopard
+                    NFT image cannot be used again to synthesize with other round leopard NFTs.
+                    However, the unsynthesized parts within the same image can still be used to
+                    synthesize new leopard god NFTs with other round leopard NFTs. Once the maximum
+                    number of synthesis times has been reached, each round leopard NFT will lose its
+                    synthesis function, but it will not be destroyed.
                 </p>
                 <div className="relative h-52 lg:w-[992px] lg:h-[480px] mx-auto">
                     <Image
@@ -247,8 +254,8 @@ export default function Page() {
                 <h1 className="py-6">REPEATED SYNTHESIS RULE</h1>
                 <p>
                     In the 3 round leopard NFT images below, there are 2 sets of round leopard parts
-                    of the same color in different directions, then they can merge 2 leopard god NFT
-                    of the same color for free.
+                    of the same color in different directions, then they can synthesize two leopard
+                    god NFT of the same color for free.
                 </p>
                 <div className="relative h-20 lg:w-[992px] lg:h-40 mx-auto">
                     <Image
@@ -260,8 +267,8 @@ export default function Page() {
                 </div>
                 <p>
                     In the 3 round leopard NFT images below, there are 3 sets of round leopard parts
-                    of the same color in different directions, then they can merge 3 leopard god NFT
-                    of the same color for free.
+                    of the same color in different directions, then they can synthesize 3 leopard
+                    god NFT of the same color for free.
                 </p>
                 <div className="relative h-20 lg:w-[992px] lg:h-40 mx-auto">
                     <Image
@@ -288,31 +295,32 @@ export default function Page() {
                 </div>
                 <h1 className="pt-14 pb-5">BONUS SYSTEM COMPONENTS</h1>
                 <p>
-                    The bonus system is designed to bring more fun and benefits to community
-                    users.Our bonus system consists of two parts, one is the bonus pool system, the
-                    other is the lucky draw system.
+                    We have designed a set of bonus system for our community users, which is
+                    designed to bring more fun and benefits to community users. Our bonus system
+                    consists of two parts, one is the bonus pool system, the other is the lucky draw
+                    system.
                 </p>
                 <div className="px-4 lg:w-[768px] lg:mx-auto ">
                     {[
                         {
                             title: 'BONUS POOL SYSTEM',
-                            desc: 'The bonus system is designed to bring more fun and benefits to community users.Our bonus system consists of two parts, one is the bonus pool system, the other is the lucky draw system.',
+                            desc: `The bonus pool system is a set of systems designed for the accumulation of funds in the lucky draw system, aimed at accumulating bonuses for the lucky draw and increasing the benefits of the winners. The bonus pool serves as a prize pool wallet set up for the bonus system, whose address is publicly searchable and can be accessed by anyone. Prize pool wallets are funded by 30% of round leopard mint fees, 4% of round leopard NFT transaction fees in the secondary market, and 4% of leopard god NFT transaction fees in the secondary market. Apart from the accumulated funds from 4% of NFT's transaction fees in the secondary market, NFT holders can also inject more funds into the bonus pool at any time to increase the bonus chips. 50% of the monthly earnings will be included in the monthly lucky draw prize pool for Round Leopard NFT and Leopard God NFT, which will be used for the monthly lucky draw event. The other 50% of the monthly income will be included in the Supreme Crown Award prize pool, which will accumulate continuously each month until someone collects all six leopard god NFTs with supreme crowns, and then they can take all the bonuses from the Supreme Crown Award prize pool.`,
                         },
                         {
                             title: 'LUCKY DRAW SYSTEM',
-                            desc: 'The lucky draw system is designed to promote user transactions. In the system, we have designed three kinds of awards, namely, the monthly lucky draw of round leopard NFT and leopard god NFT and the Supreme Crown Award. The bonuses of these awards come from the funds accumulated by the bonus pool system. Since the bonus pool funds are made up of 20% mint fees and 4% of each transaction fee in the secondary market, it means that the more mint users and secondary market transactions, the higher the transaction fees, so the more bonuses can be accumulated in the bonus pool, and then the more bonuses the winners will get.',
+                            desc: `The bonus pool system is a set of systems designed for the accumulation of funds in the lucky draw system, aimed at accumulating bonuses for the lucky draw and increasing the benefits of the winners. The bonus pool serves as a prize pool wallet set up for the bonus system, whose address is publicly searchable and can be accessed by anyone. Prize pool wallets are funded by 30% of round leopard mint fees, 4% of round leopard NFT transaction fees in the secondary market, and 4% of leopard god NFT transaction fees in the secondary market. Apart from the accumulated funds from 4% of NFT's transaction fees in the secondary market, NFT holders can also inject more funds into the bonus pool at any time to increase the bonus chips. 50% of the monthly earnings will be included in the monthly lucky draw prize pool for Round Leopard NFT and Leopard God NFT, which will be used for the monthly lucky draw event. The other 50% of the monthly income will be included in the Supreme Crown Award prize pool, which will accumulate continuously each month until someone collects all six leopard god NFTs with supreme crowns, and then they can take all the bonuses from the Supreme Crown Award prize pool.`,
                         },
                         {
                             title: 'MONTHLY ROUND LEOPARD AWARD',
-                            desc: 'As long as you own the round leopard NFT, you will be able to participate in the lucky draw for round leopard NFT users four times a month on the 6th, 13th, 20th and 27th of each month. with the bonus accounting for 5% of the total amount of the current bonus pool. And the unconsumed bonus in the current month will be automatically accumulated into the prize pool of the next month.',
+                            desc: `If you hold a Round Leopard NFT, you will be able to participate in the lucky draw for Round Leopard NFT users four times a month on the 6th, 13th, 20th, and 27th of each month. Each month, half of the bonus pool for the Round Leopard NFT will be used for the lucky draw, while the other half will automatically accumulate to the next month's bonus pool.`,
                         },
                         {
                             title: 'MONTHLY LEOPARD GOD AWARD',
-                            desc: 'If you hold a leopard god NFT, you will be able to participate in a monthly lucky draw for leopard god NFT users on the 27th monthly. with the bonus accounting for 20% of the total amount of the current bonus pool. And the unconsumed bonus in the current month will be automatically accumulated into the prize pool of the next month.',
+                            desc: `If you hold a Leopard God NFT, you will be able to participate in the lucky draw for Leopard God NFT users four times a month on the 6th, 13th, 20th, and 27th of each month. Each month, half of the bonus pool for the Leopard God NFT will be used for the lucky draw, while the other half will automatically accumulate to the next month's bonus pool.`,
                         },
                         {
                             title: 'SUPREME CROWN AWARD',
-                            desc: 'If you collect all leopard god NFT with six supreme crowns, then you can receive the Crown Award, which can be received only once a month, on the 27th of each month. There will be one winner each time, with the bonus accounting for 60% of the total amount of the current bonus pool. If no one receives it in the current month, the bonus will be automatically accumulated into the bonus pool of the next month.',
+                            desc: `50% of the monthly income will be included in the Crown Award bonus pool, which will accumulate continuously each month until someone collects all six leopard god NFTs with supreme crowns, and can then claim the entire bonus pool. The Crown Award can be claimed once a month, and only one person can claim it each time.`,
                         },
                     ].map(({ title, desc }) => (
                         <div
@@ -324,12 +332,11 @@ export default function Page() {
                         </div>
                     ))}
                 </div>
-                <h1 className="pt-14 pb-5">FLOW CHART OF BONUS DISTRIBUTION</h1>
                 <p>
-                    Attention: The supreme crown bonuses and monthly lucky draw bonuses come from
-                    not only the accumulated funds--automatically deducted 4% ETH of transaction
-                    fees for each transaction in the secondary market, but NFT holders can also
-                    inject more money into the bonus pool at any time to increase the bonus chips.
+                    Attention: The bonuses for the Supreme Crown Award and the monthly lucky draw
+                    are accumulated funds that are automatically deducted 4% ETH transaction fees
+                    from each transaction in the secondary market. In addition, NFT holders can also
+                    inject more funds into the bonus pool at any time to increase the bonus chips.
                 </p>
                 <div className="px-8">
                     <div className="bg-[#D7C19A] py-1 px-4 max-w-sm mx-auto my-4 rounded-sm text-black text-xs">
@@ -456,7 +463,7 @@ export default function Page() {
                                         <Image
                                             layout="fill"
                                             objectFit="cover"
-                                            src={`/images/nft/${index + 1}.jpeg`}
+                                            src={`/images/nft/${index + 1}.jpg`}
                                             alt={title}
                                         />
                                     </div>

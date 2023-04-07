@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import {
     DiscordIcon,
-    LangIcon,
+    // LangIcon,
     TwitterIcon,
     YoutubeIcon,
     MenuIcon,
@@ -18,9 +18,7 @@ const paths = [
     { path: '', name: 'ROADMAP' },
     { path: 'https://opensea.com', name: 'BUY' },
     { path: '', name: 'SYNTHESIS' },
-    // { path: '/gallery', name: '画廊' },
     { path: '', name: 'GALLERY' },
-    // { path: '/404', name: '合成' },
     { path: '', name: 'wallet', components: <WalletIcon /> },
     {
         path: '',
@@ -33,11 +31,11 @@ const paths = [
         name: 'youtube',
         components: <YoutubeIcon />,
     },
-    {
-        path: '',
-        name: 'language',
-        components: <LangIcon />,
-    },
+    // {
+    //     path: '',
+    //     name: 'language',
+    //     components: <LangIcon />,
+    // },
 ];
 
 export default function Header() {
