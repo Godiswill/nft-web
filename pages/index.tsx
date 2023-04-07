@@ -30,7 +30,7 @@ export default function Page() {
             </div>
             <div className="text-white text-center pb-4">
                 <h1>LEOPARD GOD SERIES NFT</h1>
-                <h2>THE FIRST-EVER COLLECTED AND MERGE NFT PROJECT</h2>
+                <h2>THE FIRST-EVER COLLECTED AND SYNTHETIC NFT PROJECT</h2>
                 <div className="relative h-[91px] lg:h-[320px]">
                     <Image
                         src="/images/root/skin.jpg"
@@ -41,17 +41,18 @@ export default function Page() {
                     />
                 </div>
                 <p>
-                    The LEOPARD GOD series-NFT is the first merged and collected NFT project, which
-                    aims to encourage users to collect and merge by providing them with generous
-                    merger rewards and a very highly playable project experience, so that users can
-                    highly participate and enjoy it.
+                    The LEOPARD GOD series-NFT is the first synthetic and collected NFT project,
+                    which aims to encourage users to collect and synthesize by providing them with
+                    generous synthesis rewards and a very highly playable project experience, so
+                    that users can highly participate and enjoy it.
                 </p>
                 <Divider />
-                <h1 className="mt-8">NFT ARTWORK INTRODUCTION</h1>
+                <h1 className="mt-8">INTRODUCTION TO LEOPARD GOD SERIES NFT ARTWORKS</h1>
                 <p>
-                    The LEOPARD GOD series NFT consists of 10000 round leopard NFT and 10000 leopard
-                    god NFT. The former needs to be minted by pre-sale and formula, while the latter
-                    can only be merged and minted by round leopard NFT for free.
+                    The LEOPARD GOD series NFT consists of two parts: 10000 Round Leopard NFTs and
+                    10000 Leopard God NFTs. Round Leopard NFTs can be minted through pre-sale and
+                    formula, while Leopard God NFTs can only be synthesized and minted for free by
+                    holding Round Leopard NFTs.
                 </p>
                 <div className="lg:w-[992px] lg:mx-auto flex justify-center pt-4 pb-9">
                     <div>
@@ -88,8 +89,8 @@ export default function Page() {
                             LEOPARD GOD NFT
                         </div>
                         <div className="w-44 lg:w-80">
-                            The leopard god NFT can only be minted by round leopard NFT mergence,
-                            with a total of 10000. Each leopard god NFT image is made up of a
+                            The leopard god NFT can only be minted by round leopard NFT synthesis,
+                            with a total of 10000. Each round leopard NFT image is made up of a
                             different crown, head, glasses, and background.
                         </div>
                     </div>
@@ -116,11 +117,8 @@ export default function Page() {
                     forest in the dark woods, the heart of the desert in the barren deserts, the
                     heart of the glacier in the severe cold glaciers, the heart of lava in the
                     roaring volcanos, and the heart of the earth in the underground caves,
-                    constituting these six most precious stones in the world. He used them to make
-                    six powerful supreme crowns. He stablized the world by the divine power of these
-                    six supreme crowns, which helped him maintain a balanced and harmonious nature,
-                    and thus made the world a paradise for life. Since then, countless lives began
-                    to spring up. Human beings and animals flourished in a harmonious nature, thus
+                    constituting these six most precious stones in the world. He used them to to
+                    spring up. Human beings and animals flourished in a harmonious nature, thus
                     provided rich products, supporting countless lives. However, in the deep
                     darkness and endless nothingness, there is a pair of eyes peeping into all this.
                     It&apos;s the God of Nothingness. Much earlier than the Leopard God, the God of
@@ -147,7 +145,7 @@ export default function Page() {
                     that can break the seal of the leopard God, restoring a balanced and harmonious
                     world.
                 </p>
-                <h1 className="py-6">MERGED SYSTEM</h1>
+                <h1 className="py-6">SYNTHETIC SYSTEM</h1>
                 <h2>SUMMON THE LEOPARD GOD</h2>
                 <p>
                     The soul of the Leopard God is divided into three parts: courage, kindness, and
@@ -163,22 +161,22 @@ export default function Page() {
                         alt="schematic diagram"
                     />
                 </div>
-                <h1 className="py-6">THE BENEFITS OF MERGE LEOPARD GOD NFT</h1>
+                <h1 className="py-6">THE BENEFITS OF SYNTHESIZING LEOPARD GOD NFT</h1>
                 <div className="lg:w-[1024px] lg:mx-auto p-4">
                     <h2 className="flex items-center pb-4">
-                        GAIN MUCH HIGHER BONUSES: <div className="flex-1 h-px bg-[#848484] ml-8" />
+                        GAIN MUCH HIGHER BONUSES <div className="flex-1 h-px bg-[#848484] ml-8" />
                     </h2>
                     <div className="flex flex-col lg:flex-row">
                         <div className="flex-1 font-light text-left py-4 lg:pr-8">
                             As long as you hold the round leopard NFT or the leopard god NFT, you
-                            can participate in the monthly-held lucky draw. However, the monthly
-                            lucky draw amount of the leopard god NFT will be 4 times that of the
-                            round leopard NFT, which means that you will have a chance to get a
-                            higher bonus with the leopard god NFT than the round leopard NFT.
-                            Moreover, if you hold both the round leopard NFT and the leopard god
-                            NFT, you can participate in both lucky draws and get much more bonus
-                            benefits, so holding leopard god NFT also means broadening your bonus
-                            income sources.
+                            can participate in the monthly lucky draw. However, the monthly lucky
+                            draw amount of the leopard god NFT will be four times that of the round
+                            leopard NFT, which means that holding the leopard god NFT gives you a
+                            chance to earn a higher bonus than the round leopard NFT. Moreover, if
+                            you hold both the round leopard NFT and the leopard god NFT, you can
+                            participate in the monthly lucky draws for both and increase your
+                            chances of earning more bonus income. Therefore, synthesizing the
+                            leopard god NFT also means expanding your sources of bonus income.
                             <div>LUCKY DRAW</div>
                         </div>
                         <div className="relative h-40 lg:h-auto lg:flex-1">
@@ -194,7 +192,7 @@ export default function Page() {
                 <div className="lg:w-[1024px] lg:mx-auto p-4">
                     <h2 className="flex items-center pb-4">
                         <div className="flex-1 h-px bg-[#848484] mr-8" />
-                        BE ABLE TO CLAIM THE SUPREME CROWN PRIZE:
+                        BE ABLE TO CLAIM THE SUPREME CROWN PRIZE
                     </h2>
                     <div className="flex flex-col-reverse lg:flex-row">
                         <div className="relative h-40 lg:h-auto lg:flex-1">
@@ -206,16 +204,18 @@ export default function Page() {
                             />
                         </div>
                         <div className="flex-1 font-light text-left py-4 lg:pl-8">
-                            In order to encourage users to collect and merge, we have set up a very
-                            generous prize: the Supreme Crown Prize. As long as you win the prize, a
-                            very generous bonus will be given to you. The prerequisite for receiving
-                            the Supreme Crown Prize is to collect all leopard god NFT with six
-                            supreme crowns. Each merged leopard god NFT has a randomly assigned
-                            crown. This means that no matter which round leopard NFT you use to
-                            merge, you will have the chance to merge a leopard god NFT with a
-                            supreme crown. And if you are lucky enough to receive the Supreme Crown
-                            version of leopard god NFT, you will have the opportunity to receive the
-                            Supreme Crown Prize with an extremely generous bonus.
+                            To incentivize users to actively collect round leopard NFTs for
+                            synthesis into leopard god NFTs, we have created a highly lucrative
+                            prize: the Supreme Crown Prize! If you win this prize, you will receive
+                            an unprecedentedly generous bonus！The condition for receiving the
+                            Supreme Crown Prize is to collect six supreme crown versions of the
+                            leopard god NFTs. and each new synthesized leopard god NFT has a
+                            randomly assigned crown,This means that no matter which round leopard
+                            NFT you use to synthesize the leopard god NFT, you have the chance to
+                            synthesize a leopard god NFT with a supreme crown. If you are lucky
+                            enough to get the Supreme Crown version of the leopard god NFT, you will
+                            have the opportunity to receive the extremely generous Supreme Crown
+                            Prize.
                             <div>SUPREME CROWN PRIZE</div>
                         </div>
                     </div>
@@ -341,7 +341,6 @@ export default function Page() {
                         <div className="relative h-[645px] lg:w-[960px] lg:h-[1024px]">
                             <Image
                                 src="/images/root/prize-pool_m.png"
-                                // srcSet="/images/root/prize-pool_m.png 300w, /images/root/prize-pool.png 1024w"
                                 layout="fill"
                                 objectFit="contain"
                                 alt="prize pool"
@@ -355,7 +354,7 @@ export default function Page() {
                     <Image
                         src="/images/root/forest-leopard.jpg"
                         layout="fill"
-                        objectFit="contain"
+                        objectFit="cover"
                         alt="forest leopard"
                     />
                 </div>
@@ -440,9 +439,8 @@ export default function Page() {
                         slidesPerView={3}
                         spaceBetween={30}
                         freeMode={true}
-                        pagination={{
-                            clickable: true,
-                        }}
+                        loop={true}
+                        pagination={false}
                         modules={[FreeMode, Pagination]}
                         className="team-wiper"
                     >
