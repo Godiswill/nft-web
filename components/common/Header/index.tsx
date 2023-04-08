@@ -21,7 +21,7 @@ const paths = [
     { path: '', name: 'GALLERY' },
     { path: '', name: 'wallet', components: <WalletIcon /> },
     {
-        path: '',
+        path: 'https://twitter.com/0xleopardgod',
         name: 'twitter',
         components: <TwitterIcon />,
     },
