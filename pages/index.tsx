@@ -21,7 +21,7 @@ export default function Page() {
             </Head>
             <div className="relative h-[234px] lg:h-[736px]">
                 <Image
-                    src="/images/root/universe_m.jpg"
+                    src="/images/root/universe.jpeg"
                     // srcset="/images/root/universe_m.jpg 960w, /images/root/universe.jpg 1024w"
                     layout="fill"
                     objectFit="cover"
