@@ -356,7 +356,9 @@ export default function Page() {
                     </div>
                 </div>
                 <Divider />
-                <h1 className="pt-14 pb-5">ROADMAP</h1>
+                <h1 id="roadmap" className="pt-14 pb-5">
+                    ROADMAP
+                </h1>
                 <div className="relative h-80 lg:h-[704px] lg:w-[560px] mx-auto my-6 rounded-2xl overflow-hidden">
                     <Image
                         src="/images/root/forest-leopard.jpg"

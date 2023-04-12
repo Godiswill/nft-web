@@ -15,8 +15,8 @@ import styles from './index.module.scss';
 
 const paths = [
     { path: '/', name: 'HOME' },
-    { path: '', name: 'ROADMAP' },
-    { path: 'https://opensea.com', name: 'BUY' },
+    { path: '#roadmap', name: 'ROADMAP' },
+    { path: '', name: 'BUY' },
     { path: '', name: 'SYNTHESIS' },
     { path: '', name: 'GALLERY' },
     { path: '', name: 'wallet', components: <WalletIcon /> },
