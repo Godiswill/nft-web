@@ -30,7 +30,7 @@ export default function Page() {
             </div>
             <div className="text-white text-center pb-4">
                 <h1>LEOPARD GOD SERIES NFT</h1>
-                <h2>THE FIRST-EVER COLLECTED AND SYNTHETIC NFT PROJECT</h2>
+                <h2>A collected and synthetic NFT project that is profitable through synthesis</h2>
                 <div className="relative h-[91px] lg:h-[320px]">
                     <Image
                         src="/images/root/skin.jpg"
@@ -41,10 +41,10 @@ export default function Page() {
                     />
                 </div>
                 <p>
-                    The LEOPARD GOD series-NFT is the first synthetic and collected NFT project,
-                    which aims to encourage users to collect and synthesize by providing them with
-                    generous synthesis rewards and a very highly playable project experience, so
-                    that users can highly participate and enjoy it.
+                    The LEOPARD GOD series-NFT is a collected and synthetic NFT project that is
+                    profitable through synthesis., which aims to encourage users to collect and
+                    synthesize by providing them with generous synthesis rewards and a very highly
+                    playable project experience, so that users can highly participate and enjoy it.
                 </p>
                 <Divider />
                 <h1 className="mt-8">INTRODUCTION TO LEOPARD GOD SERIES NFT ARTWORKS</h1>
