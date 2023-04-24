@@ -12,12 +12,39 @@ import { FreeMode, Pagination } from 'swiper';
 import Layout from '@/components/Layout';
 import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon, EnvelopeIcon } from '@/components/svg';
 import Divider from '@/components/common/Divider';
+
+const title = 'LEOPARD GOD SERIES NFT';
+const description = 'A synthesis-profitable collected and synthetic NFT project.';
+const creator = '3x3Labs';
+const ogImage = 'https://www.leopardgod.com/images/root/universe.jpeg';
+
 export default function Page() {
     return (
         <Layout className="tiger" mainClassName="home">
             <Head>
-                <title>Leopard God</title>
-                {/*<link rel="icon" href="/favicon.ico" />*/}
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta
+                    name="keywords"
+                    content="Leopard God NFT, Leopard NFT, NFT, Synthetic NFT, Non-Fungible Token"
+                />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                    name="viewport"
+                    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"
+                />
+                <meta property="og:title" content={title} />
+                <meta property="og:url" content="https://leopardgod.com" />
+                <meta property="og:image" content={ogImage} />
+                <meta property="og:description" content={description} />
+                <meta property="og:site_name" content={title} />
+                <meta property="og:type" content="product" />
+                <meta property="twitter:card" content="summary" />
+                <meta property="twitter:image" content={ogImage} />
+                <meta property="twitter:title" content={title} />
+                <meta property="twitter:creator" content={creator} />
+                <meta property="twitter:site" content={title} />
+                <meta property="twitter:description" content={description} />
             </Head>
             <div className="relative h-[234px] lg:h-[736px]">
                 <Image
