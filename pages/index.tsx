@@ -13,7 +13,7 @@ import Layout from '@/components/Layout';
 import { TwitterIcon, DiscordIcon, OpenseaIcon, YoutubeIcon, EnvelopeIcon } from '@/components/svg';
 import Divider from '@/components/common/Divider';
 
-const title = 'LEOPARD GOD SERIES NFT';
+const title = 'LEOPARD GOD NFT';
 const description = 'A synthesis-profitable collected and synthetic NFT project.';
 const creator = '3x3Labs';
 const ogImage = 'https://www.leopardgod.com/images/root/universe.jpeg';
@@ -26,7 +26,7 @@ export default function Page() {
                 <meta name="description" content={description} />
                 <meta
                     name="keywords"
-                    content="Leopard God NFT, Leopard NFT, NFT, Synthetic NFT, Non-Fungible Token"
+                    content="Leopard, Leopard God, Leopard God NFT, Leopard NFT, NFT, Synthetic NFT, Non-Fungible Token"
                 />
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta
