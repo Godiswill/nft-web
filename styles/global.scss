@@ -20,22 +20,28 @@ body {
 }
 
 .tiger {
+
     // background: url('/images/bg_m.jpg') no-repeat center / cover;
     .home {
         h1 {
             @apply text-2xl my-4;
+
             @screen lg {
                 @apply text-5xl;
             }
         }
+
         h2 {
-            @apply text-xs my-3 text-[#D7C19A];
+            @apply text-xs my-4 text-[#D7C19A];
+
             @screen lg {
                 @apply text-xl;
             }
         }
+
         p {
             @apply px-4 py-6;
+
             @screen lg {
                 @apply w-[1024px] mx-auto px-40 font-light;
             }
@@ -45,8 +51,9 @@ body {
     .team-wiper {
         @apply pb-9;
     }
+
     @screen lg {
-        @apply bg-[#15141a];
+        // @apply bg-[#15141a];
         // background-image: url('/images/bg.jpg');
     }
 

@@ -31,6 +31,8 @@
 }
 
 .mobileNavigator {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
     @apply px-6 text-white fixed w-full z-10;
 
     @screen lg {

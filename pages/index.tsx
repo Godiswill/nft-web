@@ -56,7 +56,7 @@ export default function Page() {
                 />
             </div>
             <div className="text-white text-center pb-4">
-                <h1>LEOPARD GOD SERIES NFT</h1>
+                <h1>LEOPARD GOD NFT</h1>
                 <h2>A synthesis-profitable collected and synthetic NFT project</h2>
                 <div className="relative h-[91px] lg:h-[320px]">
                     <Image
@@ -73,7 +73,7 @@ export default function Page() {
                     them with generous synthesis rewards and a very highly playable project
                     experience, so that users can highly participate and enjoy it.
                 </p>
-                <Divider />
+                {/* <Divider /> */}
                 <h1 className="mt-8">INTRODUCTION TO LEOPARD GOD SERIES NFT ARTWORKS</h1>
                 <p>
                     The LEOPARD GOD series NFT consists of two parts: 10000 Round Leopard NFTs and
@@ -81,7 +81,7 @@ export default function Page() {
                     formula, while Leopard God NFTs can only be synthesized and minted for free by
                     holding Round Leopard NFTs.
                 </p>
-                <div className="lg:w-[992px] lg:mx-auto flex justify-center pt-4 pb-9">
+                <div className="lg:w-[992px] lg:mx-auto flex lg:px-20 justify-around pt-4 pb-9">
                     <div>
                         <div className="relative rounded-2xl w-44 h-44 lg:w-80 lg:h-80">
                             <Image
@@ -101,7 +101,7 @@ export default function Page() {
                             different colors in different directions and also different backgrounds.
                         </div>
                     </div>
-                    <Divider className="mx-4 lg:mx-10" vertical />
+                    <Divider className="mx-0" vertical />
                     <div>
                         <div className="relative rounded-2xl w-44 h-44 lg:w-80 lg:h-80">
                             <Image
@@ -131,7 +131,7 @@ export default function Page() {
                     />
                 </div>
                 <h1>THE STORY OF LEOPARD GOD</h1>
-                <p>
+                <p className="text-left">
                     The Leopard God was born in the early chaos of the universe. At that time, the
                     universe was in a haze, nothing but endless nothingness. So the Leopard God
                     decided to create a world. He created our world with six elements in the
@@ -139,38 +139,47 @@ export default function Page() {
                     elements to create oceans, forests, deserts, glaciers, lava, and the earth.
                     However, the Leopard God found that the world he created was full of
                     instability, with tsunamis, plant withering, sandstorms, heavy snow, scorching
-                    sun, and earthquakes wreaking havoc on the world from time to time. Then the
-                    Leopard God found the heart of the deep sea in the oceans, the heart of the
-                    forest in the dark woods, the heart of the desert in the barren deserts, the
+                    sun, and earthquakes wreaking havoc on the world from time to time.
+                    <br />
+                    <br />
+                    Then the Leopard God found the heart of the deep sea in the oceans, the heart of
+                    the forest in the dark woods, the heart of the desert in the barren deserts, the
                     heart of the glacier in the severe cold glaciers, the heart of lava in the
                     roaring volcanos, and the heart of the earth in the underground caves,
                     constituting these six most precious stones in the world. He used them to to
                     spring up. Human beings and animals flourished in a harmonious nature, thus
-                    provided rich products, supporting countless lives. However, in the deep
-                    darkness and endless nothingness, there is a pair of eyes peeping into all this.
-                    It&apos;s the God of Nothingness. Much earlier than the Leopard God, the God of
-                    Nothingness has long existed in this world as early as the universe came into
-                    being. It existed in the endless nothingness. The God of Nothingness would erase
-                    anything existed, even a speck of dust will be eliminated without a trace,
-                    leaving a world of nothingness. The God of Nothingness came from nothingness to
-                    the world created by Leopard God, trying to make everything disappear. But in
-                    order to protect all the living beings in the world he created, the Leopard God
-                    fought fiercely against the God of Nothingness. Unfortunately, the God of
-                    Nothingness was so powerful that he disassembled the Leopard God&apos;s soul
-                    into three parts, namely, courage, goodness, and wisdom, and sealed them in
-                    different places, making it difficult for the Leopard God to resurrect. But at
-                    the last moment, the Leopard God played his best cards--the six supreme crowns,
-                    whose strong power drove the God of Nothingness away and made him falling into
-                    the abyss of endless dark void, so that he could no longer set foot in the world
-                    created by the Leopard God. However, those six supreme crowns disappeared with
-                    the God of Nothingness. No one knows their whereabouts. Without supreme crowns,
-                    the world will lose stability and balance. That means natural disasters
-                    including tsunamis, plant withering, sandstorms, heavy snow, scorching sun, and
-                    earthquakes would ravage the world again. So, in order to get everything back on
-                    track, a group of kind and brave humans are dedicated to finding the six supreme
-                    crowns of the Leopard God. It is only the strong power of the six supreme crowns
-                    that can break the seal of the leopard God, restoring a balanced and harmonious
-                    world.
+                    provided rich products, supporting countless lives.
+                    <br />
+                    <br />
+                    However, in the deep darkness and endless nothingness, there is a pair of eyes
+                    peeping into all this. It&apos;s the God of Nothingness. Much earlier than the
+                    Leopard God, the God of Nothingness has long existed in this world as early as
+                    the universe came into being. It existed in the endless nothingness. The God of
+                    Nothingness would erase anything existed, even a speck of dust will be
+                    eliminated without a trace, leaving a world of nothingness. The God of
+                    Nothingness came from nothingness to the world created by Leopard God, trying to
+                    make everything disappear. But in order to protect all the living beings in the
+                    world he created, the Leopard God fought fiercely against the God of
+                    Nothingness.
+                    <br />
+                    <br />
+                    Unfortunately, the God of Nothingness was so powerful that he disassembled the
+                    Leopard God&apos;s soul into three parts, namely, courage, goodness, and wisdom,
+                    and sealed them in different places, making it difficult for the Leopard God to
+                    resurrect. But at the last moment, the Leopard God played his best cards--the
+                    six supreme crowns, whose strong power drove the God of Nothingness away and
+                    made him falling into the abyss of endless dark void, so that he could no longer
+                    set foot in the world created by the Leopard God. However, those six supreme
+                    crowns disappeared with the God of Nothingness.
+                    <br />
+                    <br />
+                    No one knows their whereabouts. Without supreme crowns, the world will lose
+                    stability and balance. That means natural disasters including tsunamis, plant
+                    withering, sandstorms, heavy snow, scorching sun, and earthquakes would ravage
+                    the world again. So, in order to get everything back on track, a group of kind
+                    and brave humans are dedicated to finding the six supreme crowns of the Leopard
+                    God. It is only the strong power of the six supreme crowns that can break the
+                    seal of the leopard God, restoring a balanced and harmonious world.
                 </p>
                 <h1 className="py-6">SYNTHETIC SYSTEM</h1>
                 <h2>SUMMON THE LEOPARD GOD</h2>
@@ -253,7 +262,7 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <Divider />
+                {/* <Divider /> */}
                 <h1 className="py-6">RULE OF SYNTHESIS</h1>
                 <p>
                     Each round leopard NFT image consists of 3 round leopard parts in different
@@ -305,7 +314,7 @@ export default function Page() {
                         alt="merge3"
                     />
                 </div>
-                <Divider />
+                {/* <Divider /> */}
                 <h1 className="pt-14 pb-5">BONUS SYSTEM</h1>
                 <h2 className="pb-8">BREAK THE SEAL OF THE LEOPARD GOD</h2>
                 <p>
@@ -382,8 +391,8 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                <Divider />
-                <h1 id="roadmap" className="pt-14 pb-5">
+                {/* <Divider /> */}
+                <h1 id="roadmap" className="pt-10 pb-5">
                     ROADMAP
                 </h1>
                 <div className="relative h-80 lg:h-[704px] lg:w-[560px] mx-auto my-6 rounded-2xl overflow-hidden">
@@ -417,7 +426,7 @@ export default function Page() {
                                 },
                                 {
                                     title: 'OPEN PUBLIC SALE',
-                                    desc: 'You can go to our official website to mint after the opening of the public sale (time to be determined). All you need to do is to connect your wallet address to the LEOPARD GOD website in order to purchase your own LEOPARD GOD series NFT.',
+                                    desc: 'You can go to our official website to mint after the opening of the public sale (time to be determined). All you need to do is to connect your wallet address to the LEOPARD GOD website in order to purchase your own LEOPARD GOD NFT.',
                                 },
                                 {
                                     title: 'OPEN MERGENCE SYSTEM',
@@ -467,7 +476,7 @@ export default function Page() {
                         STAY TUNED
                     </div>
                 </div>
-                <Divider />
+                {/* <Divider /> */}
                 <div className="lg:w-[1024px] mx-auto">
                     <h1 className="pt-14 pb-5">THE TEAM</h1>
                     <h2 className="pb-8">LEOPARD GOD SERIES-NFT</h2>
