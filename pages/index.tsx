@@ -68,18 +68,18 @@ export default function Page() {
                     />
                 </div>
                 <p>
-                    The LEOPARD GOD series-NFT is a synthesis-profitable collected and synthetic NFT
+                    The LEOPARD GOD NFT is a synthesis-profitable collected and synthetic NFT
                     project, which aims to encourage users to collect and synthesize by providing
                     them with generous synthesis rewards and a very highly playable project
                     experience, so that users can highly participate and enjoy it.
                 </p>
                 {/* <Divider /> */}
-                <h1 className="mt-8">INTRODUCTION TO LEOPARD GOD SERIES NFT ARTWORKS</h1>
+                <h1 className="mt-8">INTRODUCTION TO LEOPARD GOD NFT ARTWORKS</h1>
                 <p>
-                    The LEOPARD GOD series NFT consists of two parts: 10000 Round Leopard NFTs and
-                    10000 Leopard God NFTs. Round Leopard NFTs can be minted through pre-sale and
-                    formula, while Leopard God NFTs can only be synthesized and minted for free by
-                    holding Round Leopard NFTs.
+                    The LEOPARD GOD NFT consists of two parts: 10000 Round Leopard NFTs and 10000
+                    Leopard God NFTs. Round Leopard NFTs can be minted through pre-sale and formula,
+                    while Leopard God NFTs can only be synthesized and minted for free by holding
+                    Round Leopard NFTs.
                 </p>
                 <div className="lg:w-[992px] lg:mx-auto flex lg:px-20 justify-around pt-4 pb-9">
                     <div>
@@ -443,11 +443,11 @@ export default function Page() {
                             items: [
                                 {
                                     title: 'BUILD A FASHION BRAND',
-                                    desc: 'We hope to build a powerful fashion brand around the LEOPARD GOD series. We will develop characteristic products around clothing, cool fun, artwork and so on.',
+                                    desc: 'We hope to build a powerful fashion brand around the LEOPARD GOD NFT. We will develop characteristic products around clothing, cool fun, artwork and so on.',
                                 },
                                 {
                                     title: 'ISSUE TOKENS',
-                                    desc: 'Considering our long-term development goals, we will issue our own tokens. We will hand out free tokens to holders of the LEOPARD GOD NFT series.',
+                                    desc: 'Considering our long-term development goals, we will issue our own tokens. We will hand out free tokens to holders of the LEOPARD GOD NFT.',
                                 },
                                 {
                                     title: 'DEVELOP NEW BLOCKCHAIN GAMES',
@@ -479,7 +479,7 @@ export default function Page() {
                 {/* <Divider /> */}
                 <div className="lg:w-[1024px] mx-auto">
                     <h1 className="pt-14 pb-5">THE TEAM</h1>
-                    <h2 className="pb-8">LEOPARD GOD SERIES-NFT</h2>
+                    <h2 className="pb-8">LEOPARD GOD NFT</h2>
                     <Swiper
                         slidesPerView={3}
                         spaceBetween={30}
