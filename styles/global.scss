@@ -23,6 +23,12 @@ body {
 
     // background: url('/images/bg_m.jpg') no-repeat center / cover;
     .home {
+        @apply pt-14;
+
+        @screen lg {
+            @apply pt-0;
+        }
+
         h1 {
             @apply text-2xl my-4;
 

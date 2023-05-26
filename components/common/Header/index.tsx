@@ -6,10 +6,10 @@ import {
     DiscordIcon,
     // LangIcon,
     TwitterIcon,
-    YoutubeIcon,
+    // YoutubeIcon,
     MenuIcon,
     CloseIcon,
-    WalletIcon,
+    // WalletIcon,
 } from '../../svg';
 import styles from './index.module.scss';
 
@@ -19,18 +19,18 @@ const paths = [
     { path: '', name: 'BUY' },
     { path: '', name: 'SYNTHESIS' },
     { path: '', name: 'GALLERY' },
-    { path: '', name: 'wallet', components: <WalletIcon /> },
+    // { path: '', name: 'wallet', components: <WalletIcon /> },
     {
         path: 'https://twitter.com/0xleopardgod',
         name: 'twitter',
         components: <TwitterIcon />,
     },
-    { path: '', name: 'discord', components: <DiscordIcon /> },
-    {
-        path: '',
-        name: 'youtube',
-        components: <YoutubeIcon />,
-    },
+    { path: 'https://discord.gg/GdPzmcpxQ2', name: 'discord', components: <DiscordIcon /> },
+    // {
+    //     path: '',
+    //     name: 'youtube',
+    //     components: <YoutubeIcon />,
+    // },
     // {
     //     path: '',
     //     name: 'language',
