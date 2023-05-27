@@ -204,16 +204,11 @@ export default function Page() {
                         GAIN MUCH HIGHER BONUSES <div className="flex-1 h-px bg-[#848484] ml-8" />
                     </h2>
                     <div className="flex flex-col lg:flex-row">
-                        <div className="flex-1 font-light text-left py-4 lg:pr-8">
-                            As long as you hold the round leopard NFT or the leopard god NFT, you
-                            can participate in the monthly lucky draw. However, the monthly lucky
-                            draw amount of the leopard god NFT will be four times that of the round
-                            leopard NFT, which means that holding the leopard god NFT gives you a
-                            chance to earn a higher bonus than the round leopard NFT. Moreover, if
-                            you hold both the round leopard NFT and the leopard god NFT, you can
-                            participate in the monthly lucky draws for both and increase your
-                            chances of earning more bonus income. Therefore, synthesizing the
-                            leopard god NFT also means expanding your sources of bonus income.
+                        <div className="flex items-center flex-1 font-light text-left py-4 lg:pr-8">
+                            As long as you hold the leopard god NFT, you can participate in the
+                            monthly lucky draw. Holding the leopard god NFT gives you a chance to
+                            earn a higher bonus than the round leopard NFT. Therefore, synthesizing
+                            the leopard god NFT also means expanding your sources of bonus income.
                         </div>
                         <div className="lg:flex-1">
                             <h2>LUCKY DRAW</h2>
