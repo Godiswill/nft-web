@@ -68,18 +68,19 @@ export default function Page() {
                     />
                 </div>
                 <p>
-                    The LEOPARD GOD NFT is a synthesis-profitable collected and synthetic NFT
-                    project, which aims to encourage users to collect and synthesize by providing
-                    them with generous synthesis rewards and a very highly playable project
-                    experience, so that users can highly participate and enjoy it.
+                    The LEOPARD GOD series - NFT is a synthesis-profitable, community-focused NFT
+                    project that aims to foster a sense of excitement and fun around collecting and
+                    synthesizing. We&apos;re offering generous synthesis rewards and a richly
+                    project experience to ensure users fully engage with and enjoy the process.
                 </p>
                 {/* <Divider /> */}
-                <h1 className="mt-8">INTRODUCTION TO LEOPARD GOD NFT ARTWORKS</h1>
+                <h1 className="mt-8">Overview of LEOPARD GOD Series NFT Artworks</h1>
                 <p>
-                    The LEOPARD GOD NFT consists of two parts: 10000 Round Leopard NFTs and 10000
-                    Leopard God NFTs. Round Leopard NFTs can be minted through pre-sale and formula,
-                    while Leopard God NFTs can only be synthesized and minted for free by holding
-                    Round Leopard NFTs.
+                    The LEOPARD GOD series NFT consists of two parts: 10,000 Round Leopard NFTs and
+                    10,000 Leopard God NFTs. The allocation is as follows: 1,000 for airdrop, 2,000
+                    for free minting, 3,000 for pre-sale, and 4,000 for Dutch auction. Round Leopard
+                    NFTs can be acquired through these stages, while Leopard God NFTs can only be
+                    synthesized and minted for free by holding Round Leopard NFTs.
                 </p>
                 <div className="lg:w-[992px] lg:mx-auto flex lg:px-20 justify-around pt-4 pb-9">
                     <div>
@@ -93,12 +94,12 @@ export default function Page() {
                             />
                         </div>
                         <div className="bg-[#D7C19A] p-1 text-xs lg:text-sm w-36 lg:w-72 mx-auto rounded-sm text-black my-4">
-                            ROUND LEOPARD NFT
+                            The Round Leopard NFT
                         </div>
                         <div className="w-44 lg:w-80">
-                            As the initial minted NFT, the total number of round leopard NFT is
-                            10000, with each piece consisting of three round leopard parts with
-                            different colors in different directions and also different backgrounds.
+                            The Round Leopard NFT, the initial minted NFT, totals 10,000. Each piece
+                            consists of three Round Leopard parts with varying colors in different
+                            directions and distinctive backgrounds.
                         </div>
                     </div>
                     <Divider className="mx-0" vertical />
@@ -113,12 +114,12 @@ export default function Page() {
                             />
                         </div>
                         <div className="bg-[#D7C19A] p-1 text-xs lg:text-sm w-36 lg:w-72 mx-auto rounded-sm text-black my-4">
-                            LEOPARD GOD NFT
+                            The Leopard God NFT
                         </div>
                         <div className="w-44 lg:w-80">
-                            The leopard god NFT can only be minted by round leopard NFT synthesis,
-                            with a total of 10000. Each round leopard NFT image is made up of a
-                            different crown, head, glasses, and background.
+                            The Leopard God NFT can only be minted by Round Leopard NFT synthesis,
+                            with a total of 10,000. Each Leopard God NFT image features a unique
+                            crown, head, glasses, and background.
                         </div>
                     </div>
                 </div>
@@ -146,9 +147,9 @@ export default function Page() {
                     the forest in the dark woods, the heart of the desert in the barren deserts, the
                     heart of the glacier in the severe cold glaciers, the heart of lava in the
                     roaring volcanos, and the heart of the earth in the underground caves,
-                    constituting these six most precious stones in the world. He used them to to
-                    spring up. Human beings and animals flourished in a harmonious nature, thus
-                    provided rich products, supporting countless lives.
+                    constituting these six most precious stones in the world. He used them to spring
+                    up. Human beings and animals flourished in a harmonious nature, thus provided
+                    rich products, supporting countless lives.
                     <br />
                     <br />
                     However, in the deep darkness and endless nothingness, there is a pair of eyes
@@ -340,23 +341,78 @@ export default function Page() {
                     {[
                         {
                             title: 'BONUS POOL SYSTEM',
-                            desc: `The bonus pool system is a set of systems designed for the accumulation of funds in the lucky draw system, aimed at accumulating bonuses for the lucky draw and increasing the benefits of the winners. The bonus pool serves as a prize pool wallet set up for the bonus system, whose address is publicly searchable and can be accessed by anyone. Prize pool wallets are funded by 30% of round leopard mint fees, 4% of round leopard NFT transaction fees in the secondary market, and 4% of leopard god NFT transaction fees in the secondary market. Apart from the accumulated funds from 4% of NFT's transaction fees in the secondary market, NFT holders can also inject more funds into the bonus pool at any time to increase the bonus chips. 50% of the monthly earnings will be included in the monthly lucky draw prize pool for Round Leopard NFT and Leopard God NFT, which will be used for the monthly lucky draw event. The other 50% of the monthly income will be included in the Supreme Crown Award prize pool, which will accumulate continuously each month until someone collects all six leopard god NFTs with supreme crowns, and then they can take all the bonuses from the Supreme Crown Award prize pool.`,
+                            desc: (
+                                <>
+                                    <div>
+                                        The Bonus Pool System is designed to accumulate funds for
+                                        the Lucky Draw System, aiming to increase the benefits for
+                                        the winners. The bonus pool serves as a prize pool wallet
+                                        for the bonus system, with a publicly searchable and
+                                        accessible address. This wallet is funded by 20% of Round
+                                        Leopard mint fees, 3% of Round Leopard NFT transaction fees
+                                        in the secondary market, and 3% of Leopard God NFT
+                                        transaction fees in the secondary market.
+                                    </div>
+                                    <br />
+                                    <div>
+                                        Beyond the accumulation from 3% of NFT&apos;s transaction
+                                        fees, NFT holders can voluntarily inject more funds into the
+                                        bonus pool at any time to raise the prize pool. 50% of the
+                                        monthly earnings will be channeled into the Leopard God NFT
+                                        Monthly Lucky Draw prize pool. The remaining 50% of the
+                                        monthly income will contribute to the Supreme Crown Award
+                                        prize pool, which will continuously accumulate each month
+                                        until someone collects all six Leopard God NFTs with supreme
+                                        crowns and claims the entire bonus pool.
+                                    </div>
+                                </>
+                            ),
                         },
                         {
                             title: 'LUCKY DRAW SYSTEM',
-                            desc: 'The lucky draw system is designed to promote user transactions. In the system, we have designed three types of awards: the Round Leopard NFT Monthly Lucky Draw, Leopard God NFT Monthly Lucky Draw, and the Supreme Crown Award. The bonuses for these awards come from the funds accumulated by the bonus pool system. Since the bonus pool funds are composed of 30% of mint fees and 4% of each transaction fee in the secondary market, this means that the more the Round Leopard NFT and Leopard God NFT are traded in the secondary market, the higher the transaction price, and the more bonuses can be accumulated in the bonus pool. This, in turn, means that the more significant the amount of bonuses that winners can receive.',
-                        },
-                        {
-                            title: 'MONTHLY ROUND LEOPARD AWARD',
-                            desc: `If you hold a Round Leopard NFT, you will be able to participate in the lucky draw for Round Leopard NFT users four times a month on the 6th, 13th, 20th, and 27th of each month. Each month, half of the bonus pool for the Round Leopard NFT will be used for the lucky draw, while the other half will automatically accumulate to the next month's bonus pool.`,
+                            desc: (
+                                <>
+                                    <div>
+                                        The lucky draw system is designed to promote user
+                                        transactions. In the system, we have designed two types of
+                                        awards: Leopard God NFT Monthly Lucky Draw and the Supreme
+                                        Crown Award. The bonuses for these awards come from the
+                                        funds accumulated by the bonus pool system. Since the bonus
+                                        pool funds are composed of 20% of mint fees and 3% of each
+                                        transaction fee in the secondary market, this means that the
+                                        more the Round Leopard NFT and Leopard God NFT are traded in
+                                        the secondary market, the higher the transaction price, and
+                                        the more bonuses can be accumulated in the bonus pool. This,
+                                        in turn, means that the more significant the amount of
+                                        bonuses that winners can receive.
+                                    </div>
+                                </>
+                            ),
                         },
                         {
                             title: 'MONTHLY LEOPARD GOD AWARD',
-                            desc: `If you hold a Leopard God NFT, you will be able to participate in the lucky draw for Leopard God NFT users four times a month on the 6th, 13th, 20th, and 27th of each month. Each month, half of the bonus pool for the Leopard God NFT will be used for the lucky draw, while the other half will automatically accumulate to the next month's bonus pool.`,
+                            desc: (
+                                <>
+                                    If you hold a Leopard God NFT, you can participate in the lucky
+                                    draw for Leopard God NFT users four times a month on the 6th,
+                                    13th, 20th, and 27th of each month. Each month, half of the
+                                    bonus pool for the Leopard God NFT will be used for the lucky
+                                    draw, with the remainder accumulating for the next month&apos;s
+                                    bonus pool.
+                                </>
+                            ),
                         },
                         {
                             title: 'SUPREME CROWN AWARD',
-                            desc: `50% of the monthly income will be included in the Crown Award bonus pool, which will accumulate continuously each month until someone collects all six leopard god NFTs with supreme crowns, and can then claim the entire bonus pool. The Crown Award can be claimed once a month, and only one person can claim it each time.`,
+                            desc: (
+                                <>
+                                    50% of the monthly income will accumulate in the Crown Award
+                                    bonus pool. This continues until a user, who has collected all
+                                    six supreme crown Leopard God NFTs, can claim the entire bonus
+                                    pool. The Crown Award can be claimed once a month, and only one
+                                    person can claim it each time.
+                                </>
+                            ),
                         },
                     ].map(({ title, desc }) => (
                         <div
@@ -369,21 +425,22 @@ export default function Page() {
                     ))}
                 </div>
                 <p>
-                    Attention: The bonuses for the Supreme Crown Award and the monthly lucky draw
-                    are accumulated funds that are automatically deducted 4% ETH transaction fees
-                    from each transaction in the secondary market. In addition, NFT holders can also
-                    inject more funds into the bonus pool at any time to increase the bonus chips.
+                    Note: The bonuses for the Supreme Crown Award and the monthly lucky draw are
+                    derived from accumulated funds that are automatically deducted 4% ETH
+                    transaction fees from each transaction in the secondary market. NFT holders also
+                    have the opportunity to inject additional funds into the bonus pool at any time
+                    to increase the prizes.
                 </p>
                 <div className="px-8">
                     <div className="bg-[#D7C19A] py-1 px-4 max-w-sm mx-auto my-4 rounded-sm text-black text-xs">
                         INJECT MORE WINNINGS INTO THE BONUS POOL
                     </div>
                 </div>
-                <div className="lg:w-[1024px] lg:mx-auto px-4">
-                    <div className="px-8 py-4 border border-[#D7C19A] rounded-3xl">
-                        <div className="relative h-[645px] lg:w-[960px] lg:h-[1024px]">
+                <div className="lg:w-[768px] lg:mx-auto">
+                    <div className="flex justify-center border border-[#D7C19A] rounded-3xl">
+                        <div className="relative h-[645px] lg:w-[500px] lg:h-[924px]">
                             <Image
-                                src="/images/root/prize-pool_m.png"
+                                src="/images/root/prize_pool.png"
                                 layout="fill"
                                 objectFit="contain"
                                 alt="prize pool"
@@ -409,32 +466,117 @@ export default function Page() {
                             name: 'ROADMAP 1.0 STAGE',
                             items: [
                                 {
-                                    title: 'OPERATIONAL ACTIVITIES ON SOCIAL MEDIA',
-                                    desc: 'Use LEOPARD GOD-exclusive social media, Twitter, Instagram and Youtube promotion to advertise our project.',
+                                    title: 'Activation of Social Media Channels',
+                                    desc: (
+                                        <>
+                                            Initiating our outreach, we will engage potential
+                                            participants through our bespoke LEOPARD GOD social
+                                            media channels on key platforms including Twitter,
+                                            Medium and YouTube. This strategic presence will boost
+                                            awareness of our project and foster active
+                                            communication.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'BUILD COMMUNITIES',
-                                    desc: 'Build Discord community channel for users to build our communities.',
+                                    title: 'Community Formation and Nurturing',
+                                    desc: (
+                                        <>
+                                            In parallel, we will establish a dedicated Discord
+                                            community. This will serve as a focal point for our
+                                            members, offering an open space for discourse,
+                                            collaboration, and collective growth.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'LAUNCH THE OFFICIAL WEBSITE',
-                                    desc: 'The official website of LEOPARD GOD is on service, the website we open mint, where you can purchase your own NFT, or use round leopard NFT to merge a new leopard god NFT. In addition, you can join our official social media channels and communities through the official website. You can also go to our official opensea link through the official website to trade in the secondary market.',
+                                    title: 'Launch of the Official LEOPARD GOD Website',
+                                    desc: (
+                                        <>
+                                            The official LEOPARD GOD website will act as the central
+                                            hub for all activities surrounding our project. Here,
+                                            enthusiasts will have the ability to mint and purchase
+                                            LEOPARD GOD NFTs and use Round Leopard NFTs to access
+                                            our novel synthesis feature for creating new Leopard God
+                                            NFTs. Moreover, the website will serve as a gateway to
+                                            our official social media channels and vibrant
+                                            communities, as well as providing a direct link to our
+                                            OpenSea page for secondary market transactions.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'WL PRESALE',
-                                    desc: 'The project party will invite active users in the community to join in the WL, and set presale (time undetermined) for WL users. Through WL presale, it is more likely for users to buy at a lower price and also spend less time gaining NFT.',
+                                    title: 'Airdrop',
+                                    desc: (
+                                        <>
+                                            The journey begins with an airdrop event, during which
+                                            we will distribute 1,000 NFTs to selected members of our
+                                            community, prioritizing those who have demonstrated
+                                            active involvement on our Discord channel.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'OPEN PUBLIC SALE',
-                                    desc: 'You can go to our official website to mint after the opening of the public sale (time to be determined). All you need to do is to connect your wallet address to the LEOPARD GOD website in order to purchase your own LEOPARD GOD NFT.',
+                                    title: 'Synthetic System Rollout',
+                                    desc: (
+                                        <>
+                                            Upon completion of the airdrop, we will deploy the
+                                            synthesis system. Holders of Round Leopard NFTs will be
+                                            able to leverage this innovative feature on our website
+                                            to synthesize new Leopard God NFTs, initiating secondary
+                                            sales and adding another dimension of excitement and
+                                            value to our offering.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'OPEN MERGENCE SYSTEM',
-                                    desc: 'After the merger system is opened, you can go to our official website to merge the new leopard god NFT with your round leopard NFT for free.',
+                                    title: 'Free Mint',
+                                    desc: (
+                                        <>
+                                            We will celebrate our community by holding a free mint
+                                            event for members who have shown significant interaction
+                                            and contribution on our Discord. A total of 2,000 NFTs
+                                            will be available during this event.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'OPEN BONUS SYSTEM',
-                                    desc: 'After the bonus system is opened, you can participate in our monthly-hold lucky draw. Besides, the supreme crown prize is waiting for you. As long as you have collected all the six supreme crowns, you can carry the supreme crown prize home, so as to gain more fun and proceeds.',
+                                    title: 'Whitelist Exclusive Pre-sale',
+                                    desc: (
+                                        <>
+                                            To further reward our most active community members, we
+                                            will launch a pre-sale event specifically for those on
+                                            the whitelist. This event will offer 3,000 NFTs for
+                                            purchase, ensuring that those who have invested their
+                                            time and efforts in our community get the first chance
+                                            to own a piece of the LEOPARD GOD collection.
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Dutch Auction',
+                                    desc: (
+                                        <>
+                                            We&apos;ll make the remaining 4,000 NFTs available in a
+                                            Dutch auction. This transparent and fair auction method
+                                            provides all participants with an equal opportunity to
+                                            acquire a LEOPARD GOD NFT.
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Introduction of the Bonus System',
+                                    desc: (
+                                        <>
+                                            The launch of our bonus system will coincide with the
+                                            unveiling of the synthesis system. Holders of Leopard
+                                            God NFTs will have the privilege to participate in
+                                            monthly lucky draws. Additionally, the introduction of
+                                            the supreme crown prize for those who collect all six
+                                            supreme crowns will add an additional layer of fun and
+                                            potential profit for our community members.
+                                        </>
+                                    ),
                                 },
                             ],
                         },
@@ -442,16 +584,39 @@ export default function Page() {
                             name: 'ROADMAP 2.0 STAGE',
                             items: [
                                 {
-                                    title: 'BUILD A FASHION BRAND',
-                                    desc: 'We hope to build a powerful fashion brand around the LEOPARD GOD NFT. We will develop characteristic products around clothing, cool fun, artwork and so on.',
+                                    title: 'Development of the LEOPARD GOD Fashion Brand',
+                                    desc: (
+                                        <>
+                                            In our continuous quest for growth and diversification,
+                                            we plan to create a robust fashion brand centered on the
+                                            LEOPARD GOD series. This will entail developing unique
+                                            and stylish products across several categories,
+                                            including apparel, accessories, and artwork.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'ISSUE TOKENS',
-                                    desc: 'Considering our long-term development goals, we will issue our own tokens. We will hand out free tokens to holders of the LEOPARD GOD NFT.',
+                                    title: 'Release of Proprietary Tokens',
+                                    desc: (
+                                        <>
+                                            In alignment with our long-term strategy, we will launch
+                                            our own digital tokens. As a token of our appreciation,
+                                            holders of the LEOPARD GOD NFT series will be granted
+                                            these tokens free of charge.
+                                        </>
+                                    ),
                                 },
                                 {
-                                    title: 'DEVELOP NEW BLOCKCHAIN GAMES',
-                                    desc: 'Most of our team members come from the world&apos; TOP5 game developers, who have rich experience in game development. We will follow up on the development of new blockchain games and provide more project benefits to our early supporters.',
+                                    title: 'Design and Deployment of Blockchain Games',
+                                    desc: (
+                                        <>
+                                            Benefiting from the experience of our team members who
+                                            come from the world&apos;s top 5 game developers, we
+                                            will develop new blockchain games. This will provide
+                                            additional benefits to our early supporters and
+                                            contribute to the overall value of our project.
+                                        </>
+                                    ),
                                 },
                             ],
                         },
