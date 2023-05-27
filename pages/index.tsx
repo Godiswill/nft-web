@@ -205,10 +205,11 @@ export default function Page() {
                     </h2>
                     <div className="flex flex-col lg:flex-row">
                         <div className="flex items-center flex-1 font-light text-left py-4 lg:pr-8">
-                            As long as you hold the leopard god NFT, you can participate in the
-                            monthly lucky draw. Holding the leopard god NFT gives you a chance to
-                            earn a higher bonus than the round leopard NFT. Therefore, synthesizing
-                            the leopard god NFT also means expanding your sources of bonus income.
+                            We have set up a weekly lucky draw for users who own Leopard God NFTs.
+                            As long as you hold the Leopard God NFT, you can participate in the
+                            weekly lucky draw and have a chance to win generous prize earnings. So
+                            hurry up and collect Round Leopard NFTs to synthesize the Leopard God
+                            NFT, which will bring you substantial additional income.
                         </div>
                         <div className="lg:flex-1">
                             <h2>LUCKY DRAW</h2>
@@ -512,19 +513,6 @@ export default function Page() {
                                     ),
                                 },
                                 {
-                                    title: 'Synthetic System Rollout',
-                                    desc: (
-                                        <>
-                                            Upon completion of the airdrop, we will deploy the
-                                            synthesis system. Holders of Round Leopard NFTs will be
-                                            able to leverage this innovative feature on our website
-                                            to synthesize new Leopard God NFTs, initiating secondary
-                                            sales and adding another dimension of excitement and
-                                            value to our offering.
-                                        </>
-                                    ),
-                                },
-                                {
                                     title: 'Free Mint',
                                     desc: (
                                         <>
@@ -556,6 +544,19 @@ export default function Page() {
                                             Dutch auction. This transparent and fair auction method
                                             provides all participants with an equal opportunity to
                                             acquire a LEOPARD GOD NFT.
+                                        </>
+                                    ),
+                                },
+                                {
+                                    title: 'Synthetic System Rollout',
+                                    desc: (
+                                        <>
+                                            Upon completion of the airdrop, we will deploy the
+                                            synthesis system. Holders of Round Leopard NFTs will be
+                                            able to leverage this innovative feature on our website
+                                            to synthesize new Leopard God NFTs, initiating secondary
+                                            sales and adding another dimension of excitement and
+                                            value to our offering.
                                         </>
                                     ),
                                 },
