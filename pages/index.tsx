@@ -651,11 +651,27 @@ export default function Page() {
                         className="team-wiper"
                     >
                         {[
-                            { name: 'ZK', title: 'Technical Director and Founder' },
-                            { name: 'GH', title: 'Art Director and Founder' },
-                            { name: 'L', title: 'Marketing Director and Founder' },
-                            { name: 'Jane', title: 'Operation Director and Founder' },
-                        ].map(({ name, title }, index) => (
+                            {
+                                name: 'ZK',
+                                title: 'Technical Director and Founder',
+                                twitter: 'https://twitter.com/ZK3X3labs',
+                            },
+                            {
+                                name: 'GH',
+                                title: 'Art Director and Founder',
+                                twitter: 'https://twitter.com/GH3X3labs',
+                            },
+                            {
+                                name: 'Ezekiel',
+                                title: 'Marketing Director and Founder',
+                                twitter: 'https://twitter.com/3X3labs',
+                            },
+                            {
+                                name: 'Leo',
+                                title: 'Operation Director and Founder',
+                                twitter: 'https://twitter.com/0xleopardgod',
+                            },
+                        ].map(({ name, title, twitter }, index) => (
                             <SwiperSlide key={name}>
                                 <div className="w-36 h-80 lg:w-72 lg:h-[480px] rounded-lg lg:rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
                                     <div className="relative w-28 h-28 lg:w-64 lg:h-64 rounded-lg lg:rounded-3xl overflow-hidden">
@@ -669,9 +685,14 @@ export default function Page() {
                                     <div>{name}</div>
                                     <div>{title}</div>
                                     <TwitterIcon className="w-5 h-5" />
-                                    <button className="bg-[#5293FE] px-4 py-1 rounded-2xl">
+                                    <a
+                                        href={twitter}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                        className="bg-[#5293FE] px-4 py-1 rounded-2xl"
+                                    >
                                         Follow
-                                    </button>
+                                    </a>
                                 </div>
                             </SwiperSlide>
                         ))}
