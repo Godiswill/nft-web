@@ -422,7 +422,7 @@ export default function Page() {
                 </div>
                 <p>
                     Note: The bonuses for the Supreme Crown Award and the monthly lucky draw are
-                    derived from accumulated funds that are automatically deducted 4% ETH
+                    derived from accumulated funds that are automatically deducted 3% ETH
                     transaction fees from each transaction in the secondary market. NFT holders also
                     have the opportunity to inject additional funds into the bonus pool at any time
                     to increase the prizes.
