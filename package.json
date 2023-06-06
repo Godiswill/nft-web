@@ -13,10 +13,13 @@
         "analyze": "ANALYZE=true next build"
     },
     "dependencies": {
+        "@rainbow-me/rainbowkit": "^1.0.1",
         "next": "^12.3.1",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "swiper": "^8.4.2"
+        "swiper": "^8.4.2",
+        "viem": "^0.3.50",
+        "wagmi": "^1.1.0"
     },
     "devDependencies": {
         "@next/bundle-analyzer": "^12.3.1",
