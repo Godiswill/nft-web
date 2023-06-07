@@ -10,34 +10,27 @@ import {
     RainbowKitProvider,
     getDefaultWallets,
     connectorsForWallets,
+    darkTheme,
 } from '@rainbow-me/rainbowkit';
 import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mainnet, polygon, optimism, arbitrum, goerli } from 'wagmi/chains';
+import { mainnet, goerli, sepolia } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
 
-const { chains, publicClient, webSocketPublicClient } = configureChains(
-    [
-        mainnet,
-        polygon,
-        optimism,
-        arbitrum,
-        ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli] : []),
-    ],
-    [publicProvider()]
+const { chains, publicClient } = configureChains(
+    [mainnet, ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : [])],
+    [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]
 );
 
-const projectId = 'YOUR_PROJECT_ID';
+const appName = 'LeopardGod';
+const projectId = 'ee3c846d86a16545057c76cea4c6a8d1';
 
 const { wallets } = getDefaultWallets({
-    appName: 'RainbowKit demo',
+    appName,
     projectId,
     chains,
 });
-
-const demoAppInfo = {
-    appName: 'Rainbowkit Demo',
-};
 
 const connectors = connectorsForWallets([
     ...wallets,
@@ -52,16 +45,16 @@ const connectors = connectorsForWallets([
 ]);
 
 const wagmiConfig = createConfig({
-    autoConnect: true,
+    // autoConnect: true,
     connectors,
     publicClient,
-    webSocketPublicClient,
+    // webSocketPublicClient,
 });
 
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
+            <RainbowKitProvider theme={darkTheme()} chains={chains}>
                 <Component {...pageProps} />
             </RainbowKitProvider>
         </WagmiConfig>

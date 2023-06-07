@@ -1,36 +1,42 @@
 import Head from 'next/head';
+import type { NextPage } from 'next';
 import Layout from '@/components/Layout';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 
-export default function Mint() {
+const Mint: NextPage = () => {
     return (
-        <Layout className="tiger-common">
+        <Layout className="tiger">
             <Head>
-                <title>Mint </title>
+                <title>LEOPARD GOD - Mint</title>
             </Head>
-            <div className="dialog-wrap">
-                <div className="dialog"></div>
+            <div className="text-white text-center px-4 lg:w-[960px] mx-auto">
+                <h1 id="roadmap" className="pt-10 pb-5">
+                    Get Ready, the MINT Launch is Imminent!
+                </h1>
+                <div>
+                    A total of 2000 NFTs are exclusively reserved for our whitelist members to mint
+                    for free.
+                </div>
+                <div>
+                    How to Secure Your Whitelist Spot? Level up on our official Discord channel to
+                    Level 10, participate in giveaways or rank in the top 3 on zealy.io during our
+                    weekly sprints. Follow us on Twitter and Discord to keep up with all our
+                    whitelist activities.
+                </div>
+                <h2>MINT Details</h2>
+                <div>Kick-off date: June 20, 2023.</div>
+                <div>Individual NFT mint price: 0 ETH.</div>
+                <div>Per user limit: 2 NFTs.</div>
+                <div>Max wallet holdings: 10 NFTs.</div>
+                <ConnectButton />
+                <div>
+                    Sign in with your wallet to mint. MINT Progress: Mint your NFTs now! Mint Price
+                    and Quantity: Please note, your address must be registered as a whitelist user
+                    to mint. Ensure you have sufficient balance for the transaction.
+                </div>
             </div>
-            <style global jsx>{`
-                .user-input input {
-                    background-color: transparent;
-                    width: 100%;
-                    border: 1px solid white;
-                    outline: none;
-                    border-radius: 3px;
-                    text-indent: 8px;
-                    height: 36px;
-                }
-                .btn {
-                    background: rgb(177, 16, 16);
-                    width: 162px;
-                }
-                .real-mint span {
-                    background-color: #c4c4c4;
-                    border-radius: 2px 0 0 2px;
-                    padding: 2px 4px;
-                    color: black;
-                }
-            `}</style>
         </Layout>
     );
-}
+};
+
+export default Mint;

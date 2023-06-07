@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from 'next/head';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -15,9 +16,9 @@ import styles from './index.module.scss';
 
 const paths = [
     { path: '/', name: 'HOME' },
-    { path: '#roadmap', name: 'ROADMAP' },
-    { path: '/mint', name: 'BUY' },
-    { path: '', name: 'SYNTHESIS' },
+    { path: '/roadmap', name: 'ROADMAP' },
+    { path: '/mint', name: 'MINT' },
+    { path: '/synthesis', name: 'SYNTHESIS' },
     { path: '', name: 'GALLERY' },
     // { path: '', name: 'wallet', components: <WalletIcon /> },
     {
@@ -38,6 +39,11 @@ const paths = [
     // },
 ];
 
+const title = 'LEOPARD GOD NFT';
+const description = 'A synthesis-profitable collected and synthetic NFT project.';
+const creator = '3x3Labs';
+const ogImage = 'https://www.leopardgod.com/images/root/universe.jpeg';
+
 export default function Header() {
     const router = useRouter();
     const [showMMenu, setShowMMenu] = useState(false);
@@ -48,10 +54,37 @@ export default function Header() {
 
     return (
         <>
+            <Head>
+                <title>{title}</title>
+                <meta name="description" content={description} />
+                <meta
+                    name="keywords"
+                    content="Leopard, Leopard God, Leopard God NFT, Leopard NFT, NFT, Synthetic NFT, Non-Fungible Token"
+                />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta
+                    name="viewport"
+                    content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"
+                />
+                <meta property="og:title" content={title} />
+                <meta property="og:url" content="https://leopardgod.com" />
+                <meta property="og:image" content={ogImage} />
+                <meta property="og:description" content={description} />
+                <meta property="og:site_name" content={title} />
+                <meta property="og:type" content="product" />
+                <meta property="twitter:card" content="summary" />
+                <meta property="twitter:image" content={ogImage} />
+                <meta property="twitter:title" content={title} />
+                <meta property="twitter:creator" content={creator} />
+                <meta property="twitter:site" content={title} />
+                <meta property="twitter:description" content={description} />
+            </Head>
             <header>
                 <div className={`${styles.navigator} bg-[#15141a] text-white`}>
                     <Link href="/">
-                        <Image src="/images/root/lg.png" width={140} height={13} alt="logo" />
+                        <a>
+                            <Image src="/images/root/lg.png" width={140} height={13} alt="logo" />
+                        </a>
                     </Link>
                     <div className={styles.menu}>
                         {paths.map((it) => (
@@ -85,7 +118,14 @@ export default function Header() {
                 <div className={`${styles.mobileNavigator} ${showMMenu ? styles.showBG : ''}`}>
                     <div className={`text-[#D7C19A] h-14 flex justify-between items-center`}>
                         <Link href="/">
-                            <Image src="/images/root/lg_m.png" width={159} height={15} alt="logo" />
+                            <a>
+                                <Image
+                                    src="/images/root/lg_m.png"
+                                    width={159}
+                                    height={15}
+                                    alt="logo"
+                                />
+                            </a>
                         </Link>
                         {showMMenu ? (
                             <div onClick={() => setShowMMenu(false)}>
