@@ -74,7 +74,7 @@ export default function Page() {
                     project experience to ensure users fully engage with and enjoy the process.
                 </p>
                 {/* <Divider /> */}
-                <h1 className="mt-8">Overview of LEOPARD GOD Series NFT Artworks</h1>
+                <h1 className="mt-8">OVERVIEW OF LEOPARD GOD SERIES NFT ARTWORKS</h1>
                 <p>
                     The LEOPARD GOD series NFT consists of two parts: 10,000 Round Leopard NFTs and
                     10,000 Leopard God NFTs. The allocation is as follows: 1,000 for airdrop, 2,000
