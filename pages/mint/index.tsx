@@ -3,7 +3,9 @@ import Head from 'next/head';
 import type { NextPage } from 'next';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Layout from '@/components/Layout';
-import { ErrorIcon, CloseIcon2, InfoIcon } from '@/components/svg';
+import Alert from '@/components/common/Alert';
+import InfoTip from '@/components/common/InfoTip';
+import { CloseIcon2 } from '@/components/svg';
 
 const Mint: NextPage = () => {
     const [wlInfo, setWLInfo] = useState(false);
@@ -21,7 +23,7 @@ const Mint: NextPage = () => {
                     for free.
                 </div>
                 {wlInfo ? (
-                    <div className="mb-4 bg-white/[0.11] text-white mx-auto lg:w-96 p-8 rounded relative">
+                    <div className="mb-4 bg-white/[0.15] text-white mx-auto lg:w-96 p-8 rounded relative">
                         Level up on our official Discord channel to Level 10, participate in
                         giveaways or rank in the top 3 on zealy.io during our weekly sprints. Follow
                         us on Twitter and Discord to keep up with all our whitelist activities.
@@ -33,15 +35,11 @@ const Mint: NextPage = () => {
                         </div>
                     </div>
                 ) : (
-                    <div className="flex justify-center">
-                        <div
-                            className="mb-4 bg-white/[0.11] text-white px-4 py-2 flex items-center rounded cursor-pointer"
-                            onClick={() => setWLInfo(true)}
-                        >
-                            <InfoIcon />
-                            <span className="ml-2">How to Secure Your Whitelist Spot?</span>
-                        </div>
-                    </div>
+                    <InfoTip
+                        title="How to Secure Your Whitelist Spot?"
+                        type="info"
+                        onClick={() => setWLInfo(true)}
+                    />
                 )}
                 <h2>MINT Details</h2>
                 <div className="mb-4">Kick-off date: June 20, 2023.</div>
@@ -60,7 +58,7 @@ const Mint: NextPage = () => {
                 <div className="w-80 mx-auto">
                     <div className="flex justify-around items-center border-b border-[#d7c19a]/50 py-4">
                         <div className="flex justify-center items-center text-base font-bold w-12 h-12 border border-[#d7c19a]/50 rounded-full">
-                            -
+                            &minus;
                         </div>
                         <div className="flex justify-center items-center w-16 h-16 border border-[#d7c19a] rounded-xl">
                             1
@@ -78,12 +76,7 @@ const Mint: NextPage = () => {
                         <div>2</div>
                     </div>
                 </div>
-                <div className="flex justify-center my-6">
-                    <div className="bg-[#030812] border border-[#d7c19a] px-4 py-2 rounded-lg flex justify-center items-center">
-                        <ErrorIcon />
-                        <span className="ml-2">需要更多的余额来进行铸造！</span>
-                    </div>
-                </div>
+                <Alert title="Nedd more ETH!" />
                 <div className="flex justify-center my-9">
                     <ConnectButton />
                 </div>

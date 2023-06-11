@@ -1,7 +1,7 @@
 export function DiscordIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -26,7 +26,7 @@ export function DiscordIcon({ fill = 'currentColor', className = '' }) {
 export function OpenseaIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -46,7 +46,7 @@ export function OpenseaIcon({ fill = 'currentColor', className = '' }) {
 export function TwitterIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -71,7 +71,7 @@ export function TwitterIcon({ fill = 'currentColor', className = '' }) {
 export function VectorIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="37.000000"
             height="37.000000"
             viewBox="0 0 37 37"
@@ -90,7 +90,7 @@ export function VectorIcon({ fill = 'currentColor', className = '' }) {
 export function YoutubeIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="33.916748"
             height="23.742798"
             viewBox="0 0 33.9167 23.7428"
@@ -109,7 +109,7 @@ export function YoutubeIcon({ fill = 'currentColor', className = '' }) {
 export function MenuIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="46.000000"
             height="14.000000"
             viewBox="0 0 46 14"
@@ -148,7 +148,7 @@ export function MenuIcon({ fill = 'currentColor', className = '' }) {
 export function CloseIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="65.053833"
             height="65.053833"
             viewBox="0 0 65.0538 65.0538"
@@ -179,7 +179,7 @@ export function CloseIcon({ fill = 'currentColor', className = '' }) {
 export function WalletIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="32.000000"
             height="32.000000"
             viewBox="0 0 32 32"
@@ -207,7 +207,7 @@ export function WalletIcon({ fill = 'currentColor', className = '' }) {
 export function EnvelopeIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="24.000000"
             height="24.000000"
             viewBox="0 0 24 24"
@@ -235,7 +235,7 @@ export function EnvelopeIcon({ fill = 'currentColor', className = '' }) {
 export function LangIcon({ className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="18.000000"
             height="18.000000"
             viewBox="0 0 18 18"
@@ -256,7 +256,7 @@ export function LangIcon({ className = '' }) {
 export function ErrorIcon({ className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="24.000000"
             height="24.000000"
             viewBox="0 0 24 24"
@@ -289,7 +289,7 @@ export function ErrorIcon({ className = '' }) {
 export function CloseIcon2({ className = '' }) {
     return (
         <svg
-            className={className}
+            className={`cursor-pointer ${className}`}
             width="24.000000"
             height="24.000000"
             viewBox="0 0 24 24"
@@ -313,9 +313,10 @@ export function CloseIcon2({ className = '' }) {
     );
 }
 
-export function InfoIcon() {
+export function InfoIcon({ className = '' }) {
     return (
         <svg
+            className={`cursor-pointer ${className}`}
             width="24.000000"
             height="24.000000"
             viewBox="0 0 24 24"
@@ -346,6 +347,580 @@ export function InfoIcon() {
                     />
                 </clipPath>
             </defs>
+        </svg>
+    );
+}
+
+export function SelectEmptyIcon({ className = '' }) {
+    return (
+        <svg
+            className={`cursor-pointer ${className}`}
+            width="24.000000"
+            height="24.000000"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g clipPath="url(#clip104_178)">
+                <path
+                    id="union-1"
+                    d="M12 4C7.58154 4 4 7.58179 4 12C4 16.4182 7.58154 20 12 20C16.4185 20 20 16.4182 20 12C20 7.58179 16.4185 4 12 4ZM2 12C2 6.47705 6.47705 2 12 2C17.5229 2 22 6.47705 22 12C22 17.5229 17.5229 22 12 22C6.47705 22 2 17.5229 2 12Z"
+                    fillRule="evenodd"
+                    fill="#D7C19A"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip104_178">
+                    <rect
+                        id="radio-empty-outline"
+                        width="24.000000"
+                        height="24.000000"
+                        fill="white"
+                    />
+                </clipPath>
+            </defs>
+        </svg>
+    );
+}
+
+export function SelectedIcon({ className = '' }) {
+    return (
+        <svg
+            className={`cursor-pointer ${className}`}
+            width="24.000000"
+            height="24.000000"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g clipPath="url(#clip104_186)">
+                <path
+                    id="union-1"
+                    d="M22 12C22 17.5229 17.5229 22 12 22C6.47705 22 2 17.5229 2 12C2 6.47705 6.47705 2 12 2C17.5229 2 22 6.47705 22 12Z"
+                    fillRule="evenodd"
+                    fill="#D7C19A"
+                />
+                <path
+                    id="union-2"
+                    d="M16.707 8.79297C17.0977 9.18335 17.0977 9.81665 16.707 10.207L11.707 15.207C11.3164 15.5977 10.6836 15.5977 10.293 15.207L7.79297 12.707C7.40234 12.3167 7.40234 11.6833 7.79297 11.293C8.18359 10.9023 8.81641 10.9023 9.20703 11.293L11 13.0857L15.293 8.79297C15.6836 8.40234 16.3164 8.40234 16.707 8.79297Z"
+                    fillRule="evenodd"
+                    fill="#000000"
+                />
+            </g>
+            <defs>
+                <clipPath id="clip104_186">
+                    <rect
+                        id="radio-checked-filled"
+                        width="24.000000"
+                        height="24.000000"
+                        fill="white"
+                    />
+                </clipPath>
+            </defs>
+        </svg>
+    );
+}
+
+export function SynthesisFailedIcon({ className = '' }) {
+    return (
+        <svg
+            className={`cursor-pointer ${className}`}
+            width="94.000000"
+            height="94.000000"
+            viewBox="0 0 94 94"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <g filter="url(#filter_104_805_dd)">
+                <rect
+                    id="Rectangle 1"
+                    x="45.208496"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    fill="#FF0000"
+                    fillOpacity="0.8"
+                />
+                <rect
+                    id="Rectangle 5"
+                    x="4.000000"
+                    y="44.791504"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(-90 4.000000 44.791504)"
+                    fill="#000000"
+                />
+                <rect
+                    id="Rectangle 7"
+                    x="27.051758"
+                    y="81.134766"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.499998"
+                    transform="rotate(-150 27.051758 81.134766)"
+                    fill="#FF0000"
+                    fillOpacity="0.2"
+                />
+                <rect
+                    id="Rectangle 9"
+                    x="70.051758"
+                    y="79.343262"
+                    rx="1.791667"
+                    width="3.583334"
+                    height="21.499998"
+                    transform="rotate(150 70.051758 79.343262)"
+                    fill="#FF0000"
+                    fillOpacity="0.3"
+                />
+                <rect
+                    id="Rectangle 11"
+                    x="85.134766"
+                    y="62.948242"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500002"
+                    transform="rotate(120 85.134766 62.948242)"
+                    fill="#FF0000"
+                    fillOpacity="0.4"
+                />
+                <rect
+                    id="Rectangle 13"
+                    x="83.343262"
+                    y="19.948242"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(60 83.343262 19.948242)"
+                    fill="#FF0000"
+                    fillOpacity="0.6"
+                />
+                <rect
+                    id="Rectangle 4"
+                    x="48.791504"
+                    y="86.000000"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(180 48.791504 86.000000)"
+                    fill="#FF0000"
+                    fillOpacity="0.25"
+                />
+                <rect
+                    id="Rectangle 6"
+                    x="90.000000"
+                    y="41.208496"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(90 90.000000 41.208496)"
+                    fill="#FF0000"
+                    fillOpacity="0.5"
+                />
+                <rect
+                    id="Rectangle 8"
+                    x="66.948242"
+                    y="4.865234"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(30 66.948242 4.865234)"
+                    fill="#FF0000"
+                    fillOpacity="0.7"
+                />
+                <rect
+                    id="Rectangle 10"
+                    x="23.948242"
+                    y="6.656738"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500002"
+                    transform="rotate(-30 23.948242 6.656738)"
+                    fill="#FF0000"
+                    fillOpacity="0.9"
+                />
+                <rect
+                    id="Rectangle 12"
+                    x="8.865234"
+                    y="23.051758"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.499998"
+                    transform="rotate(-60 8.865234 23.051758)"
+                    fill="#FF0000"
+                />
+                <rect
+                    id="Rectangle 14"
+                    x="10.656738"
+                    y="66.051758"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(-120 10.656738 66.051758)"
+                    fill="#FF0000"
+                    fillOpacity="0.1"
+                />
+            </g>
+            <path
+                id="union-2"
+                d="M38.6592 34.6592C39.5376 33.7803 40.9624 33.7803 41.8408 34.6592L47 39.8179L52.1592 34.6592C53.0376 33.7803 54.4624 33.7803 55.3408 34.6592C56.2197 35.5376 56.2197 36.9624 55.3408 37.8408L50.1821 43L55.3408 48.1592C56.2197 49.0376 56.2197 50.4624 55.3408 51.3408C54.4624 52.2197 53.0376 52.2197 52.1592 51.3408L47 46.1821L41.8408 51.3408C40.9624 52.2197 39.5376 52.2197 38.6592 51.3408C37.7803 50.4624 37.7803 49.0376 38.6592 48.1592L43.8179 43L38.6592 37.8408C37.7803 36.9624 37.7803 35.5376 38.6592 34.6592Z"
+                fillRule="evenodd"
+                fill="#FF0000"
+            />
+            <defs>
+                <filter
+                    id="filter_104_805_dd"
+                    x="0.000000"
+                    y="0.000000"
+                    width="94.000000"
+                    height="94.000000"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    />
+                    <feOffset dx="0" dy="4" />
+                    <feGaussianBlur stdDeviation="1.33333" />
+                    <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1" />
+                    <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect_dropShadow_1"
+                        result="shape"
+                    />
+                </filter>
+            </defs>
+        </svg>
+    );
+}
+
+export function SynthesisSuccessIcon({ className = '' }) {
+    return (
+        <svg
+            className={`cursor-pointer ${className}`}
+            width="94.000000"
+            height="94.000000"
+            viewBox="0 0 94 94"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path
+                id="union-2"
+                d="M57.3525 35.6274C58.2158 36.4644 58.2158 37.8213 57.3525 38.6582L46.2998 49.3726C45.4365 50.209 44.0371 50.209 43.1738 49.3726L37.6475 44.0151C36.7842 43.1782 36.7842 41.8218 37.6475 40.9849C38.5107 40.1479 39.9102 40.1479 40.7734 40.9849L44.7368 44.8267L54.2266 35.6274C55.0898 34.791 56.4893 34.791 57.3525 35.6274Z"
+                fillRule="evenodd"
+                fill="#81FFAB"
+            />
+            <g filter="url(#filter_104_484_dd)">
+                <rect
+                    id="Rectangle 1"
+                    x="45.208496"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    fill="#81FFAB"
+                    fillOpacity="0.8"
+                />
+                <rect
+                    id="Rectangle 5"
+                    x="4.000000"
+                    y="44.791504"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(-90 4.000000 44.791504)"
+                    fill="#000000"
+                />
+                <rect
+                    id="Rectangle 7"
+                    x="27.051758"
+                    y="81.134766"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.499998"
+                    transform="rotate(-150 27.051758 81.134766)"
+                    fill="#81FFAB"
+                    fillOpacity="0.2"
+                />
+                <rect
+                    id="Rectangle 9"
+                    x="70.051758"
+                    y="79.343262"
+                    rx="1.791667"
+                    width="3.583334"
+                    height="21.499998"
+                    transform="rotate(150 70.051758 79.343262)"
+                    fill="#81FFAB"
+                    fillOpacity="0.3"
+                />
+                <rect
+                    id="Rectangle 11"
+                    x="85.134766"
+                    y="62.948242"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500002"
+                    transform="rotate(120 85.134766 62.948242)"
+                    fill="#81FFAB"
+                    fillOpacity="0.4"
+                />
+                <rect
+                    id="Rectangle 13"
+                    x="83.343262"
+                    y="19.948242"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(60 83.343262 19.948242)"
+                    fill="#81FFAB"
+                    fillOpacity="0.6"
+                />
+                <rect
+                    id="Rectangle 4"
+                    x="48.791504"
+                    y="86.000000"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(180 48.791504 86.000000)"
+                    fill="#81FFAB"
+                    fillOpacity="0.25"
+                />
+                <rect
+                    id="Rectangle 6"
+                    x="90.000000"
+                    y="41.208496"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(90 90.000000 41.208496)"
+                    fill="#81FFAB"
+                    fillOpacity="0.5"
+                />
+                <rect
+                    id="Rectangle 8"
+                    x="66.948242"
+                    y="4.865234"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(30 66.948242 4.865234)"
+                    fill="#81FFAB"
+                    fillOpacity="0.7"
+                />
+                <rect
+                    id="Rectangle 10"
+                    x="23.948242"
+                    y="6.656738"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500002"
+                    transform="rotate(-30 23.948242 6.656738)"
+                    fill="#81FFAB"
+                    fillOpacity="0.9"
+                />
+                <rect
+                    id="Rectangle 12"
+                    x="8.865234"
+                    y="23.051758"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.499998"
+                    transform="rotate(-60 8.865234 23.051758)"
+                    fill="#81FFAB"
+                />
+                <rect
+                    id="Rectangle 14"
+                    x="10.656738"
+                    y="66.051758"
+                    rx="1.791667"
+                    width="3.583333"
+                    height="21.500000"
+                    transform="rotate(-120 10.656738 66.051758)"
+                    fill="#81FFAB"
+                    fillOpacity="0.1"
+                />
+            </g>
+            <defs>
+                <filter
+                    id="filter_104_484_dd"
+                    x="0.000000"
+                    y="0.000000"
+                    width="94.000000"
+                    height="94.000000"
+                    filterUnits="userSpaceOnUse"
+                    colorInterpolationFilters="sRGB"
+                >
+                    <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                        in="SourceAlpha"
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    />
+                    <feOffset dx="0" dy="4" />
+                    <feGaussianBlur stdDeviation="1.33333" />
+                    <feColorMatrix
+                        type="matrix"
+                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect_dropShadow_1" />
+                    <feBlend
+                        mode="normal"
+                        in="SourceGraphic"
+                        in2="effect_dropShadow_1"
+                        result="shape"
+                    />
+                </filter>
+            </defs>
+        </svg>
+    );
+}
+
+export function SynthesizingIcon({ className = '' }) {
+    return (
+        <svg
+            className={`cursor-pointer ${className}`}
+            width="86.000000"
+            height="86.000000"
+            viewBox="0 0 86 86"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <rect
+                id="Rectangle 1"
+                x="41.208496"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                fill="#D7C19A"
+                fillOpacity="0.8"
+            />
+            <rect
+                id="Rectangle 5"
+                y="44.791748"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                transform="rotate(-90 0.000000 44.791748)"
+                fill="#000000"
+            />
+            <rect
+                id="Rectangle 7"
+                x="23.051758"
+                y="81.135010"
+                rx="1.791667"
+                width="3.583333"
+                height="21.499998"
+                transform="rotate(-150 23.051758 81.135010)"
+                fill="#D7C19A"
+                fillOpacity="0.2"
+            />
+            <rect
+                id="Rectangle 9"
+                x="66.051758"
+                y="79.343262"
+                rx="1.791667"
+                width="3.583334"
+                height="21.499998"
+                transform="rotate(150 66.051758 79.343262)"
+                fill="#D7C19A"
+                fillOpacity="0.3"
+            />
+            <rect
+                id="Rectangle 11"
+                x="81.134766"
+                y="62.948242"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500002"
+                transform="rotate(120 81.134766 62.948242)"
+                fill="#D7C19A"
+                fillOpacity="0.4"
+            />
+            <rect
+                id="Rectangle 13"
+                x="79.343262"
+                y="19.948242"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                transform="rotate(60 79.343262 19.948242)"
+                fill="#D7C19A"
+                fillOpacity="0.6"
+            />
+            <rect
+                id="Rectangle 4"
+                x="44.791504"
+                y="86.000000"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                transform="rotate(180 44.791504 86.000000)"
+                fill="#D7C19A"
+                fillOpacity="0.25"
+            />
+            <rect
+                id="Rectangle 6"
+                x="86.000000"
+                y="41.208252"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                transform="rotate(90 86.000000 41.208252)"
+                fill="#D7C19A"
+                fillOpacity="0.5"
+            />
+            <rect
+                id="Rectangle 8"
+                x="62.948242"
+                y="4.864990"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                transform="rotate(30 62.948242 4.864990)"
+                fill="#D7C19A"
+                fillOpacity="0.7"
+            />
+            <rect
+                id="Rectangle 10"
+                x="19.948242"
+                y="6.656738"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500002"
+                transform="rotate(-30 19.948242 6.656738)"
+                fill="#D7C19A"
+                fillOpacity="0.9"
+            />
+            <rect
+                id="Rectangle 12"
+                x="4.865234"
+                y="23.051758"
+                rx="1.791667"
+                width="3.583333"
+                height="21.499998"
+                transform="rotate(-60 4.865234 23.051758)"
+                fill="#D7C19A"
+            />
+            <rect
+                id="Rectangle 14"
+                x="6.656738"
+                y="66.051758"
+                rx="1.791667"
+                width="3.583333"
+                height="21.500000"
+                transform="rotate(-120 6.656738 66.051758)"
+                fill="#D7C19A"
+                fillOpacity="0.1"
+            />
+            <defs />
         </svg>
     );
 }

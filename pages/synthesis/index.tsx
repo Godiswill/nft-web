@@ -1,10 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Layout from '@/components/Layout';
+import { SelectedIcon, SelectEmptyIcon } from '@/components/svg';
+import Button from '@/components/common/Button';
+import Modal from './Modal';
 
 export default function Synthesis() {
+    const [tab, setTab] = useState('Round Leopard');
+    const [selectedRL, setSelectRL] = useState<number[]>([]);
+    const [visible, setVisible] = useState(false);
+
     return (
         <Layout className="tiger" mainClassName="home">
             <Head>
@@ -15,12 +22,59 @@ export default function Synthesis() {
                 <div className="flex justify-center my-9">
                     <ConnectButton />
                 </div>
-                <div>
+                <div className="lg:w-[1024px] mx-auto p-4">
                     <div className="flex">
-                        <div>Round Leopard</div>
-                        <div>Leopard God</div>
+                        {['Round Leopard', 'Leopard God'].map((name) => (
+                            <div
+                                key={name}
+                                className={`${
+                                    name === tab ? 'bg-white/20' : ''
+                                } cursor-pointer rounded-md p-2`}
+                                onClick={() => setTab(name)}
+                            >
+                                {name}
+                            </div>
+                        ))}
+                    </div>
+                    <div className="border-t border-b border-[#848484] my-3 py-4 grid grid-cols-3 lg:grid-cols-6 gap-4">
+                        {[1141, 1199, 1257, 2334, 580, 7561, 1].map((tokenId) => (
+                            <div key={tokenId} className="bg-white/20 p-2 rounded-lg">
+                                <div className="select-none">
+                                    <Image
+                                        key={tokenId}
+                                        className="rounded-2xl"
+                                        src={`https://ipfs.io/ipfs/bafybeieuv5nuno56clsnthqmhnaiqalyhmov2uk3kx6wjkdg3f4rfp3h5u/${tokenId}.jpeg`}
+                                        height={160}
+                                        width={160}
+                                        alt="Round Leopard"
+                                    />
+                                </div>
+                                <div className="text-xs font-light mt-2 mb-4">Token #{tokenId}</div>
+                                <div className="flex justify-center mb-2">
+                                    <span
+                                        onClick={() =>
+                                            setSelectRL((pre) =>
+                                                pre.includes(tokenId)
+                                                    ? pre.filter((id) => id !== tokenId)
+                                                    : [...pre, tokenId]
+                                            )
+                                        }
+                                    >
+                                        {selectedRL.includes(tokenId) ? (
+                                            <SelectedIcon />
+                                        ) : (
+                                            <SelectEmptyIcon />
+                                        )}
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
+                <div className="flex justify-center my-9">
+                    <Button onClick={() => setVisible(true)}>Synthesis</Button>
+                </div>
+                <Modal visible={visible} onClose={() => setVisible(false)} status="synthesising" />
                 <h1 className="py-6">SYNTHETIC SYSTEM</h1>
                 <h2>SUMMON THE LEOPARD GOD</h2>
                 <p>
