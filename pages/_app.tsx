@@ -51,10 +51,18 @@ const wagmiConfig = createConfig({
     // webSocketPublicClient,
 });
 
+const theme = darkTheme({
+    accentColor: '#D7C19A',
+    accentColorForeground: '#000000',
+    borderRadius: 'small',
+});
+
+theme.fonts.body = `"Noto Sans", ${theme.fonts.body}`;
+
 export default function App({ Component, pageProps }: AppProps) {
     return (
         <WagmiConfig config={wagmiConfig}>
-            <RainbowKitProvider theme={darkTheme()} chains={chains}>
+            <RainbowKitProvider theme={theme} chains={chains}>
                 <Component {...pageProps} />
             </RainbowKitProvider>
         </WagmiConfig>

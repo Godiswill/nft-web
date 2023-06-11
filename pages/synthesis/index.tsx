@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Layout from '@/components/Layout';
 
 export default function Synthesis() {
@@ -10,6 +11,16 @@ export default function Synthesis() {
                 <title>LEOPARD GOD - SYNTHESIS</title>
             </Head>
             <div className="text-white text-center pb-4">
+                <h1 className="py-6">START SYNTHESIS</h1>
+                <div className="flex justify-center my-9">
+                    <ConnectButton />
+                </div>
+                <div>
+                    <div className="flex">
+                        <div>Round Leopard</div>
+                        <div>Leopard God</div>
+                    </div>
+                </div>
                 <h1 className="py-6">SYNTHETIC SYSTEM</h1>
                 <h2>SUMMON THE LEOPARD GOD</h2>
                 <p>

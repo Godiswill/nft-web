@@ -1,4 +1,4 @@
-export default function Footer() {
+wexport default function Footer() {
     return (
         <footer className="p-6 text-center">
             <a
