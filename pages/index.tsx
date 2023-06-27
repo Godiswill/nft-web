@@ -675,14 +675,15 @@ export default function Page() {
                                 title: 'Operation Director and Founder',
                                 twitter: 'https://twitter.com/0xleopardgod',
                             },
-                        ].map(({ name, title, twitter }, index) => (
+                        ].map(({ name, title, twitter }) => (
                             <SwiperSlide key={name}>
                                 <div className="w-36 h-80 lg:w-72 lg:h-[480px] rounded-lg lg:rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
                                     <div className="relative w-28 h-28 lg:w-64 lg:h-64 rounded-lg lg:rounded-3xl overflow-hidden">
                                         <Image
                                             layout="fill"
-                                            objectFit="cover"
-                                            src={`/images/nft/${index + 1}.jpg`}
+                                            objectFit="contain"
+                                            // src={`/images/nft/${index + 1}.jpg`}
+                                            src={`/images/root/logo_m.png`}
                                             alt={title}
                                         />
                                     </div>
