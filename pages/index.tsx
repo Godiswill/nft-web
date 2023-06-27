@@ -678,7 +678,7 @@ export default function Page() {
                         ].map(({ name, title, twitter }) => (
                             <SwiperSlide key={name}>
                                 <div className="w-36 h-80 lg:w-72 lg:h-[480px] rounded-lg lg:rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
-                                    <div className="relative w-28 h-28 lg:w-64 lg:h-64 rounded-lg lg:rounded-3xl overflow-hidden">
+                                    <div className="relative w-24 h-24 lg:w-52 lg:h-52 overflow-hidden">
                                         <Image
                                             layout="fill"
                                             objectFit="contain"
