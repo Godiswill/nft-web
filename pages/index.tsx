@@ -190,11 +190,18 @@ export default function Page() {
                     three parts of the soul, you can summon the Leopard God.
                 </p>
                 <div>
-                    <Image
+                    {/* <Image
                         className="rounded-2xl"
                         src="/images/root/diagram.jpg"
                         height={627}
                         width={885}
+                        alt="schematic diagram"
+                    /> */}
+                    <Image
+                        className="rounded-2xl"
+                        src="/images/root/_diagram.jpg"
+                        height={675}
+                        width={1000}
                         alt="schematic diagram"
                     />
                 </div>
