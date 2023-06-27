@@ -74,7 +74,7 @@ export default function Page() {
                     project experience to ensure users fully engage with and enjoy the process.
                 </p>
                 {/* <Divider /> */}
-                <h1 className="mt-8">OVERVIEW OF LEOPARD GOD SERIES NFT ARTWORKS</h1>
+                {/* <h1 className="mt-8">OVERVIEW OF LEOPARD GOD SERIES NFT ARTWORKS</h1>
                 <p>
                     The LEOPARD GOD series NFT consists of two parts: 10,000 Round Leopard NFTs and
                     10,000 Leopard God NFTs. The allocation is as follows: 1,000 for airdrop, 2,000
@@ -122,7 +122,7 @@ export default function Page() {
                             crown, head, glasses, and background.
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="relative h-64 lg:h-[800px]">
                     <Image
                         src="/images/root/worldview.jpg"
@@ -182,7 +182,7 @@ export default function Page() {
                     God. It is only the strong power of the six supreme crowns that can break the
                     seal of the leopard God, restoring a balanced and harmonious world.
                 </p>
-                <h1 className="py-6">SYNTHETIC SYSTEM</h1>
+                {/* <h1 className="py-6">SYNTHETIC SYSTEM</h1> */}
                 <h2>SUMMON THE LEOPARD GOD</h2>
                 <p>
                     The soul of the Leopard God is divided into three parts: courage, kindness, and
@@ -198,7 +198,7 @@ export default function Page() {
                         alt="schematic diagram"
                     />
                 </div>
-                <h1 className="py-6">THE BENEFITS OF SYNTHESIZING LEOPARD GOD NFT</h1>
+                {/* <h1 className="py-6">THE BENEFITS OF SYNTHESIZING LEOPARD GOD NFT</h1>
                 <div className="lg:w-[1024px] lg:mx-auto p-4">
                     <h2 className="flex items-center pb-4">
                         GAIN MUCH HIGHER BONUSES <div className="flex-1 h-px bg-[#848484] ml-8" />
@@ -259,7 +259,6 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                {/* <Divider /> */}
                 <h1 className="py-6">RULE OF SYNTHESIS</h1>
                 <p>
                     Each round leopard NFT image consists of 3 round leopard parts in different
@@ -311,7 +310,6 @@ export default function Page() {
                         alt="merge3"
                     />
                 </div>
-                {/* <Divider /> */}
                 <h1 className="pt-14 pb-5">BONUS SYSTEM</h1>
                 <h2 className="pb-8">BREAK THE SEAL OF THE LEOPARD GOD</h2>
                 <p>
@@ -444,7 +442,6 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                {/* <Divider /> */}
                 <h1 id="roadmap" className="pt-10 pb-5">
                     ROADMAP
                 </h1>
@@ -636,7 +633,7 @@ export default function Page() {
                     <div className="w-36 mx-auto my-9 py-2 border border-[#575757] rounded-3xl">
                         STAY TUNED
                     </div>
-                </div>
+                </div> */}
                 {/* <Divider /> */}
                 <div className="lg:w-[1024px] mx-auto">
                     <h1 className="pt-14 pb-5">THE TEAM</h1>
@@ -734,10 +731,7 @@ export default function Page() {
                             <div>
                                 <div>TERMS & CONDITIONS</div>
                                 <div>
-                                    <a
-                                        className="hover:text-sky-400"
-                                        href="https://docs.leopardgod.com"
-                                    >
+                                    <a className="hover:text-sky-400" href="#">
                                         INTRODUCTION DOCUMENT
                                     </a>
                                 </div>
