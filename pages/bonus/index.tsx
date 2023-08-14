@@ -129,7 +129,7 @@ export default function Bonus() {
                         INJECT MORE WINNINGS INTO THE BONUS POOL
                     </div>
                 </div>
-                <div className="relative h-[320px] lg:h-[720px]">
+                <div className="relative h-[350px] lg:h-[780px]">
                     <Image
                         src="/images/root/bonus_pool.png"
                         layout="fill"
