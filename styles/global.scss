@@ -57,10 +57,10 @@ body {
         }
 
         h2 {
-            @apply text-xs my-4 text-[#D7C19A];
+            @apply text-xl my-4 text-[#D7C19A];
 
             @screen lg {
-                @apply text-xl;
+                @apply text-2xl;
             }
         }
 

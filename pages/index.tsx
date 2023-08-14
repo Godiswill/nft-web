@@ -47,7 +47,7 @@ export default function Page() {
                     project experience to ensure users fully engage with and enjoy the process.
                 </p>
                 {/* <Divider /> */}
-                <h1 className="mt-8">OVERVIEW OF LEOPARD GOD SERIES NFT ARTWORKS</h1>
+                {/* <h1 className="mt-8">OVERVIEW OF LEOPARD GOD SERIES NFT ARTWORKS</h1>
                 <p>
                     The LEOPARD GOD series NFT consists of two parts: 10,000 Round Leopard NFTs and
                     10,000 Leopard God NFTs. The allocation is as follows: 1,000 for airdrop, 2,000
@@ -95,7 +95,7 @@ export default function Page() {
                             crown, head, glasses, and background.
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="relative h-64 lg:h-[800px]">
                     <Image
                         src="/images/root/worldview.jpg"
@@ -287,7 +287,7 @@ export default function Page() {
                             />
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/* <Divider /> */}
                 <div className="lg:w-[1024px] mx-auto">
                     <h1 className="pt-14 pb-5">THE TEAM</h1>
@@ -322,14 +322,15 @@ export default function Page() {
                                 title: 'Operation Director and Founder',
                                 twitter: 'https://twitter.com/0xleopardgod',
                             },
-                        ].map(({ name, title, twitter }, index) => (
+                        ].map(({ name, title, twitter }) => (
                             <SwiperSlide key={name}>
                                 <div className="w-36 h-80 lg:w-72 lg:h-[480px] rounded-lg lg:rounded-3xl bg-[#272D37] flex flex-col justify-around items-center">
-                                    <div className="relative w-28 h-28 lg:w-64 lg:h-64 rounded-lg lg:rounded-3xl overflow-hidden">
+                                    <div className="relative w-24 h-24 lg:w-52 lg:h-52 overflow-hidden">
                                         <Image
                                             layout="fill"
-                                            objectFit="cover"
-                                            src={`/images/nft/${index + 1}.jpg`}
+                                            objectFit="contain"
+                                            // src={`/images/nft/${index + 1}.jpg`}
+                                            src={`/images/root/logo_m.png`}
                                             alt={title}
                                         />
                                     </div>
@@ -385,10 +386,7 @@ export default function Page() {
                             <div>
                                 <div>TERMS & CONDITIONS</div>
                                 <div>
-                                    <a
-                                        className="hover:text-sky-400"
-                                        href="https://docs.leopardgod.com"
-                                    >
+                                    <a className="hover:text-sky-400" href="#">
                                         INTRODUCTION DOCUMENT
                                     </a>
                                 </div>

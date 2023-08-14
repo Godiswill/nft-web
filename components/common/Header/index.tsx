@@ -143,17 +143,15 @@ export default function Header() {
                             {paths.map((it) => (
                                 <div key={it.name} className={`border-b border-b-white pb-4 mb-4`}>
                                     {it.components ? (
-                                        <div className="flex justify-between">
+                                        <a
+                                            href={it.path}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            className="flex justify-between items-center"
+                                        >
                                             <span className="uppercase lg:hidden">{it.name}</span>
-                                            <a
-                                                href={it.path}
-                                                target="_blank"
-                                                rel="noreferrer"
-                                                className="flex items-center"
-                                            >
-                                                {it.components}
-                                            </a>
-                                        </div>
+                                            {it.components}
+                                        </a>
                                     ) : (
                                         <Link href={it.path}>{it.name}</Link>
                                     )}
