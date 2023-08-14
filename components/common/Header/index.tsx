@@ -16,17 +16,18 @@ import styles from './index.module.scss';
 
 const paths = [
     { path: '/', name: 'HOME' },
-    { path: '/roadmap', name: 'ROADMAP' },
-    { path: '/mint', name: 'MINT' },
+    { path: '', name: 'MINT' },
     { path: '/synthesis', name: 'SYNTHESIS' },
+    { path: '/bonus', name: 'BONUS' },
+    { path: '/roadmap', name: 'ROADMAP' },
     { path: '', name: 'GALLERY' },
     // { path: '', name: 'wallet', components: <WalletIcon /> },
     {
         path: 'https://twitter.com/0xleopardgod',
-        name: 'twitter',
+        name: 'TWITTER',
         components: <TwitterIcon />,
     },
-    { path: 'https://discord.gg/GdPzmcpxQ2', name: 'discord', components: <DiscordIcon /> },
+    { path: 'https://discord.gg/GdPzmcpxQ2', name: 'DISCORD', components: <DiscordIcon /> },
     // {
     //     path: '',
     //     name: 'youtube',
@@ -61,7 +62,7 @@ export default function Header() {
                     name="keywords"
                     content="Leopard, Leopard God, Leopard God NFT, Leopard NFT, NFT, Synthetic NFT, Non-Fungible Token"
                 />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+                <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta
                     name="viewport"
                     content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover"
@@ -92,7 +93,7 @@ export default function Header() {
                                 key={it.name}
                                 className={`${
                                     router.pathname === it.path ? 'font-bold border-b-2' : ''
-                                } ${it.path ? 'cursor-pointer' : 'cursor-not-allowed'}`}
+                                } ${it.path ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'}`}
                             >
                                 {it.components ? (
                                     <>
@@ -141,7 +142,12 @@ export default function Header() {
                     {showMMenu && (
                         <div className="mt-10">
                             {paths.map((it) => (
-                                <div key={it.name} className={`border-b border-b-white pb-4 mb-4`}>
+                                <div
+                                    key={it.name}
+                                    className={`border-b border-b-white pb-4 mb-4 ${
+                                        it.path ? 'cursor-pointer' : 'cursor-not-allowed opacity-60'
+                                    }`}
+                                >
                                     {it.components ? (
                                         <a
                                             href={it.path}
@@ -152,8 +158,10 @@ export default function Header() {
                                             <span className="uppercase lg:hidden">{it.name}</span>
                                             {it.components}
                                         </a>
-                                    ) : (
+                                    ) : it.path ? (
                                         <Link href={it.path}>{it.name}</Link>
+                                    ) : (
+                                        <span>{it.name}</span>
                                     )}
                                 </div>
                             ))}

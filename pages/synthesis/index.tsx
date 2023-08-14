@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+// import { ConnectButton } from '@rainbow-me/rainbowkit';
 import Layout from '@/components/Layout';
-import { SelectedIcon, SelectEmptyIcon } from '@/components/svg';
-import Button from '@/components/common/Button';
+// import { SelectedIcon, SelectEmptyIcon } from '@/components/svg';
+// import Button from '@/components/common/Button';
 import Modal from './Modal';
 
 export default function Synthesis() {
-    const [tab, setTab] = useState('Round Leopard');
-    const [selectedRL, setSelectRL] = useState<number[]>([]);
+    // const [tab, setTab] = useState('Round Leopard');
+    // const [selectedRL, setSelectRL] = useState<number[]>([]);
     const [visible, setVisible] = useState(false);
 
     return (
@@ -18,7 +18,7 @@ export default function Synthesis() {
                 <title>LEOPARD GOD - SYNTHESIS</title>
             </Head>
             <div className="text-white text-center pb-4">
-                <h1 className="py-6">START SYNTHESIS</h1>
+                {/* <h1 className="py-6">START SYNTHESIS</h1>
                 <div className="flex justify-center my-9">
                     <ConnectButton />
                 </div>
@@ -73,7 +73,7 @@ export default function Synthesis() {
                 </div>
                 <div className="flex justify-center my-9">
                     <Button onClick={() => setVisible(true)}>Synthesis</Button>
-                </div>
+                </div> */}
                 <Modal visible={visible} onClose={() => setVisible(false)} status="synthesising" />
                 <h1 className="py-6">SYNTHETIC SYSTEM</h1>
                 <h2>SUMMON THE LEOPARD GOD</h2>

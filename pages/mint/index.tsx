@@ -12,7 +12,7 @@ const Mint: NextPage = () => {
     return (
         <Layout className="tiger">
             <Head>
-                <title>LEOPARD GOD - Mint</title>
+                <title>LEOPARD GOD - MINT</title>
             </Head>
             <div className="text-white text-center px-4 lg:w-[960px] mx-auto">
                 <h1 id="roadmap" className="pt-10 pb-5">
