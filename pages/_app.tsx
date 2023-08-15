@@ -1,5 +1,6 @@
 // 全局入口文件
 import type { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 // import Footer from '../components/common/Footer';
 import '@rainbow-me/rainbowkit/styles.css';
 import 'tailwindcss/tailwind.css'; // 全局样式只能在这里引入
@@ -64,6 +65,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <WagmiConfig config={wagmiConfig}>
             <RainbowKitProvider theme={theme} chains={chains}>
                 <Component {...pageProps} />
+                <Analytics />
             </RainbowKitProvider>
         </WagmiConfig>
     );
