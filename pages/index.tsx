@@ -48,9 +48,9 @@ export default function Page() {
                 {/* <Divider /> */}
                 <h1 className="mt-8">OVERVIEW OF LEOPARD GOD SERIES NFT ARTWORKS</h1>
                 <p>
-                    The LEOPARD GOD series NFT consists of two parts: 10,000 Round Leopard NFTs and
-                    10,000 Leopard God NFTs. The allocation is as follows: 1,000 for airdrop, 2,000
-                    for free minting, 3,000 for pre-sale, and 4,000 for Dutch auction. Round Leopard
+                    The LEOPARD GOD series NFT consists of two parts: 6,000 Round Leopard NFTs and
+                    6,000 Leopard God NFTs. The allocation is as follows: 600 for airdrop, 600 for
+                    free minting, 1,800 for pre-sale, and 3,000 for Dutch auction. Round Leopard
                     NFTs can be acquired through these stages, while Leopard God NFTs can only be
                     synthesized and minted for free by holding Round Leopard NFTs.
                 </p>
@@ -69,7 +69,7 @@ export default function Page() {
                             The Round Leopard NFT
                         </div>
                         <div className="w-44 lg:w-80">
-                            The Round Leopard NFT, the initial minted NFT, totals 10,000. Each piece
+                            The Round Leopard NFT, the initial minted NFT, totals 6,000. Each piece
                             consists of three Round Leopard parts with varying colors in different
                             directions and distinctive backgrounds.
                         </div>
@@ -90,7 +90,7 @@ export default function Page() {
                         </div>
                         <div className="w-44 lg:w-80">
                             The Leopard God NFT can only be minted by Round Leopard NFT synthesis,
-                            with a total of 10,000. Each Leopard God NFT image features a unique
+                            with a total of 6,000. Each Leopard God NFT image features a unique
                             crown, head, glasses, and background.
                         </div>
                     </div>
