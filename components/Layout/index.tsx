@@ -1,5 +1,6 @@
 import Header from '../common/Header';
 import Footer from '../common/Footer';
+import Universe from '../common/Universe';
 
 export default function Layout({
     children,
@@ -12,6 +13,7 @@ export default function Layout({
 }) {
     return (
         <div className={className}>
+            <Universe />
             <Header />
             <main className={`${mainClassName || ''}`}>{children}</main>
             <Footer />
