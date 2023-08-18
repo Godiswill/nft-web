@@ -39,7 +39,7 @@ export default function Synthesis({
     const { title, desc, icon, iconDesc } = Status[status];
     return (
         <div
-            className={`fixed top-0 right-0 bottom-0 left-10 bg-black/80 transition-all ${
+            className={`fixed top-0 right-0 bottom-0 left-10 transition-all ${
                 visible ? 'z-10' : '-z-50'
             } flex justify-center items-center`}
         >

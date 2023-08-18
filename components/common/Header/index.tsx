@@ -16,7 +16,7 @@ import styles from './index.module.scss';
 
 const paths = [
     { path: '/', name: 'HOME' },
-    { path: '', name: 'MINT' },
+    { path: '/mint', name: 'MINT' },
     { path: '/synthesis', name: 'SYNTHESIS' },
     { path: '/bonus', name: 'BONUS' },
     { path: '/roadmap', name: 'ROADMAP' },
