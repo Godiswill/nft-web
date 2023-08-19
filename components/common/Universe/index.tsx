@@ -1,10 +1,12 @@
+import React from 'react';
 import styles from './index.module.scss';
 
 const _arr = (cnt: number) =>
     Array(cnt)
         .fill(0)
         .map((it, i) => it + i);
-export default function Universe() {
+
+function Universe() {
     return (
         <div className={styles['stars-wrapper']}>
             {_arr(3).map((it) => (
@@ -29,8 +31,8 @@ export default function Universe() {
             <svg className="extras" width="100%" height="100%" preserveAspectRatio="none">
                 <defs>
                     <radialGradient id="comet-gradient" cx="0" cy=".5" r="0.5">
-                        <stop offset="0%" stop-color="rgba(255,255,255,.8)"></stop>
-                        <stop offset="100%" stop-color="rgba(255,255,255,0)"></stop>
+                        <stop offset="0%" stopColor="rgba(255,255,255,.8)"></stop>
+                        <stop offset="100%" stopColor="rgba(255,255,255,0)"></stop>
                     </radialGradient>
                 </defs>
                 <g transform="rotate(-135)">
@@ -67,3 +69,5 @@ export default function Universe() {
         </div>
     );
 }
+
+export default React.memo(Universe);

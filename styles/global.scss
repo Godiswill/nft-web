@@ -39,6 +39,10 @@ body {
     @apply flex justify-center items-center;
 }
 
+main {
+    min-height: calc(100vh - 330px);
+}
+
 .tiger {
 
     // background: url('/images/bg_m.jpg') no-repeat center / cover;
