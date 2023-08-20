@@ -63,17 +63,17 @@ function Countdown() {
     return (
         <>
             <h2>Coming soon, stay tuned</h2>
-            <div className="my-8 text-lg">
+            <div className="my-8 lg:text-lg">
                 <div className="mb-4">Aug 25, 2023</div>
                 <div className="mb-4">600 supply (Max 2/wallet)</div>
                 <div className="mb-4">Maximum 10 NFTs per wallet!</div>
             </div>
 
-            <div className="flex justify-around text-5xl text-center mt-20 mb-14">
+            <div className="flex justify-around text-center mt-20 mb-14">
                 {dateKey.map((key) => (
-                    <div key={key} className="bg-white/[.15] py-3 rounded w-36">
-                        <div>{clock[key]}</div>
-                        <div className="mt-2 text-lg uppercase">{key}</div>
+                    <div key={key} className="bg-white/[.15] py-3 rounded w-20 lg:w-36">
+                        <div className="text-2xl lg:text-5xl">{clock[key]}</div>
+                        <div className="mt-2 text-sm lg:text-lg uppercase">{key}</div>
                     </div>
                 ))}
             </div>
