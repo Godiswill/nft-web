@@ -6,24 +6,33 @@ const _arr = (cnt: number) =>
         .fill(0)
         .map((it, i) => it + i);
 
+const data = _arr(3).map((it) => ({
+    key: it,
+    stars: _arr(88).map((i) => ({
+        key: i,
+        star: [Math.random(), Math.random(), Math.random()],
+    })),
+}));
+
 function Universe() {
     return (
         <div className={styles['stars-wrapper']}>
-            {_arr(3).map((it) => (
+            {data.map(({ key, stars }) => (
                 <svg
-                    key={it}
+                    key={key}
                     className={styles.stars}
                     width="100%"
                     height="100%"
                     preserveAspectRatio="none"
                 >
-                    {_arr(88).map((i) => (
+                    {stars.map(({ key, star: [cx, cy, r] }) => (
                         <circle
-                            key={i}
+                            suppressHydrationWarning
+                            key={key}
                             className={styles.star}
-                            cx={Math.round(Math.random() * 10000) / 100 + '%'}
-                            cy={Math.round(Math.random() * 10000) / 100 + '%'}
-                            r={Math.round((Math.random() + 0.5) * 10) / 10}
+                            cx={Math.round(cx * 10000) / 100 + '%'}
+                            cy={Math.round(cy * 10000) / 100 + '%'}
+                            r={Math.round((r + 0.5) * 10) / 10}
                         ></circle>
                     ))}
                 </svg>

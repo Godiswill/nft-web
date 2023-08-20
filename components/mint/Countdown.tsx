@@ -33,7 +33,7 @@ function Countdown() {
 
     useEffect(() => {
         if (!blockTime) return;
-        const target = new Date(Date.UTC(2023, 7, 25, 0, 0, 0));
+        const target = new Date(Date.UTC(2023, 7, 25, 14, 0, 0));
         let now = blockTime * 1000;
         // console.log(target);
         const countdown = () => {
@@ -64,9 +64,9 @@ function Countdown() {
         <>
             <h2>Coming soon, stay tuned</h2>
             <div className="my-8 lg:text-lg">
-                <div className="mb-4">Aug 25, 2023</div>
-                <div className="mb-4">600 supply (Max 2/wallet)</div>
-                <div className="mb-4">Maximum 10 NFTs per wallet!</div>
+                <div className="mb-4">600 supply, Max 2 per wallet</div>
+                <div className="mb-4">Maximum 10 NFTs per wallet</div>
+                <div className="mb-4">Fri, 25 Aug 2023 14:00:00 UTC</div>
             </div>
 
             <div className="flex justify-around text-center mt-20 mb-14">
