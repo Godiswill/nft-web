@@ -1,9 +1,64 @@
-import { useState, memo } from 'react';
+import { useState, memo, useEffect } from 'react';
+import { usePublicClient } from 'wagmi';
 import InfoTip from '@/components/common/InfoTip';
 import { CloseIcon2 } from '@/components/svg';
 
+type IInitDate = {
+    days: string;
+    hours: string;
+    minutes: string;
+    seconds: string;
+};
+
+const dateKey = ['days', 'hours', 'minutes', 'seconds'] as (keyof IInitDate)[];
+
 function Countdown() {
+    const client = usePublicClient();
+    const [blockTime, setBlockTime] = useState<number>();
     const [wlInfo, setWLInfo] = useState(false);
+    const [clock, setClock] = useState({
+        days: '-',
+        hours: '-',
+        minutes: '-',
+        seconds: '-',
+    });
+
+    useEffect(() => {
+        client.getBlock().then((block) => {
+            const now = Number(block.timestamp);
+            console.log(now, Math.floor(Date.now() / 1000));
+            setBlockTime(now);
+        });
+    }, [client]);
+
+    useEffect(() => {
+        if (!blockTime) return;
+        const target = new Date(Date.UTC(2023, 7, 25, 0, 0, 0));
+        let now = blockTime * 1000;
+        // console.log(target);
+        const countdown = () => {
+            const gap = target.getTime() - now;
+            now += 1000;
+            const s = 1000;
+            const m = 60 * s;
+            const h = 60 * m;
+            const d = 24 * h;
+            const days = Math.floor(gap / d);
+            const hours = Math.floor((gap - days * d) / h);
+            const minutes = Math.floor((gap - days * d - hours * h) / m);
+            const seconds = Math.floor((gap - days * d - hours * h - minutes * m) / s);
+            setClock({
+                days: days.toString(),
+                hours: hours.toString().padStart(2, '0'),
+                minutes: minutes.toString().padStart(2, '0'),
+                seconds: seconds.toString().padStart(2, '0'),
+            });
+        };
+        const timer = setInterval(countdown, 1000);
+        return () => {
+            clearInterval(timer);
+        };
+    }, [blockTime]);
 
     return (
         <>
@@ -14,23 +69,13 @@ function Countdown() {
                 <div className="mb-4">Maximum 10 NFTs per wallet!</div>
             </div>
 
-            <div className="flex justify-around text-4xl text-center mt-20 mb-14">
-                <div>
-                    <div>7</div>
-                    <div className="mt-2 text-2xl">DAYS</div>
-                </div>
-                <div>
-                    <div>24</div>
-                    <div className="mt-2 text-2xl">HOURS</div>
-                </div>
-                <div>
-                    <div>00</div>
-                    <div className="mt-2 text-2xl">MINUTES</div>
-                </div>
-                <div>
-                    <div>14</div>
-                    <div className="mt-2 text-2xl">SECONDS</div>
-                </div>
+            <div className="flex justify-around text-5xl text-center mt-20 mb-14">
+                {dateKey.map((key) => (
+                    <div key={key} className="bg-white/[.15] py-3 rounded w-36">
+                        <div>{clock[key]}</div>
+                        <div className="mt-2 text-lg uppercase">{key}</div>
+                    </div>
+                ))}
             </div>
 
             <div className="mb-10">
