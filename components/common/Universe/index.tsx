@@ -27,7 +27,6 @@ function Universe() {
                 >
                     {stars.map(({ key, star: [cx, cy, r] }) => (
                         <circle
-                            suppressHydrationWarning
                             key={key}
                             className={styles.star}
                             cx={Math.round(cx * 10000) / 100 + '%'}
