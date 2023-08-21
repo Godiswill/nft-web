@@ -71,7 +71,7 @@ export default function RoadMap() {
                                     desc: (
                                         <>
                                             The journey begins with an airdrop event, during which
-                                            we will distribute 1,000 NFTs to selected members of our
+                                            we will distribute 600 NFTs to selected members of our
                                             community, prioritizing those who have demonstrated
                                             active involvement on our Discord channel.
                                         </>
@@ -83,7 +83,7 @@ export default function RoadMap() {
                                         <>
                                             We will celebrate our community by holding a free mint
                                             event for members who have shown significant interaction
-                                            and contribution on our Discord. A total of 2,000 NFTs
+                                            and contribution on our Discord. A total of 600 NFTs
                                             will be available during this event.
                                         </>
                                     ),
@@ -94,7 +94,7 @@ export default function RoadMap() {
                                         <>
                                             To further reward our most active community members, we
                                             will launch a pre-sale event specifically for those on
-                                            the whitelist. This event will offer 3,000 NFTs for
+                                            the whitelist. This event will offer 1,800 NFTs for
                                             purchase, ensuring that those who have invested their
                                             time and efforts in our community get the first chance
                                             to own a piece of the LEOPARD GOD collection.
@@ -105,7 +105,7 @@ export default function RoadMap() {
                                     title: 'Dutch Auction',
                                     desc: (
                                         <>
-                                            We&apos;ll make the remaining 4,000 NFTs available in a
+                                            We&apos;ll make the remaining 3,000 NFTs available in a
                                             Dutch auction. This transparent and fair auction method
                                             provides all participants with an equal opportunity to
                                             acquire a LEOPARD GOD NFT.
