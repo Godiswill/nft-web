@@ -12,6 +12,8 @@ type IInitDate = {
 
 const dateKey = ['days', 'hours', 'minutes', 'seconds'] as (keyof IInitDate)[];
 
+const mintDate = new Date(Date.UTC(2023, 7, 25, 13, 0, 0)); // free mint
+
 function Countdown() {
     const client = usePublicClient();
     const [blockTime, setBlockTime] = useState<number>();
@@ -33,11 +35,9 @@ function Countdown() {
 
     useEffect(() => {
         if (!blockTime) return;
-        const target = new Date(Date.UTC(2023, 7, 25, 14, 0, 0));
         let now = blockTime * 1000;
-        // console.log(target);
         const countdown = () => {
-            const gap = target.getTime() - now;
+            const gap = mintDate.getTime() - now;
             now += 1000;
             const s = 1000;
             const m = 60 * s;
@@ -66,7 +66,8 @@ function Countdown() {
             <div className="my-8 lg:text-lg">
                 <div className="mb-4">600 supply, Max 2 per wallet</div>
                 <div className="mb-4">Maximum 10 NFTs per wallet</div>
-                <div className="mb-4">Fri, 25 Aug 2023 14:00:00 UTC</div>
+                {/* <div className="mb-4">Fri, 25 Aug 2023 13:00:00 UTC</div> */}
+                <div className="mb-4">{mintDate.toString()}</div>
             </div>
 
             <div className="flex justify-around text-center mt-20 mb-14">
