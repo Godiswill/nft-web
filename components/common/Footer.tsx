@@ -57,6 +57,9 @@ export default function Footer() {
                                     INTRODUCTION DOCUMENT
                                 </a>
                             </div>
+                            <div>
+                                <a href="https://raritysniper.com/nft-drops-calendar">NFT Drops</a>
+                            </div>
                         </div>
                     </div>
                 </div>
