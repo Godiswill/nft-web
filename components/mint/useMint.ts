@@ -39,6 +39,7 @@ function useFreeMint(cnt: number) {
                 functionName: 'freeCnt',
             },
         ],
+        watch: true,
     });
 
     const [{ result: MAX_PER_FREE }, { result: MAX_FREE }, { result: freeCnt }] = (data || [
