@@ -19,7 +19,10 @@ function MintFunc() {
                     </div>
                 </div>
                 <div className="bg-[#C4C4C4]/[0.18] h-1 rounded-2xl overflow-hidden">
-                    <div className="bg-[#81FFAB] w-1/2 h-1"></div>
+                    <div
+                        className="bg-[#81FFAB] h-1"
+                        style={{ width: SUPPLY ? `${(mintedCnt / SUPPLY) * 100}%` : 0 }}
+                    ></div>
                 </div>
             </div>
             <div className=" lg:w-[30rem] mx-auto">

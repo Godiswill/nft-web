@@ -1,8 +1,9 @@
 import { useMemo } from 'react';
-import { useContractReads, usePrepareContractWrite, useContractWrite } from 'wagmi';
+import { useAccount, useContractReads, usePrepareContractWrite, useContractWrite } from 'wagmi';
 import { formatEther } from 'viem';
 import rl from '@/contract/rl.json';
 import Err from '@/contract/Err';
+import { getProof } from '@/contract/merkletree';
 
 const rlABI = rl.abi
     .filter((it) => it.name)
@@ -15,6 +16,7 @@ const rlABI = rl.abi
 const address = '0x31d642E694d5F8D8acB541e53aFd08d0B148Abf0';
 
 function useFreeMint(cnt: number) {
+    const { address: addr } = useAccount();
     const {
         data,
         isError: isRError,
@@ -49,7 +51,6 @@ function useFreeMint(cnt: number) {
         if (isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
-        console.log('read', data);
         return [
             0,
             Number(MAX_PER_FREE || 0),
@@ -57,8 +58,7 @@ function useFreeMint(cnt: number) {
             freeCnt?.toString() || 0,
             0,
         ];
-    }, [MAX_FREE, MAX_PER_FREE, data, freeCnt, isRError, isRLoading]);
-
+    }, [MAX_FREE, MAX_PER_FREE, freeCnt, isRError, isRLoading]);
     const {
         config,
         error: wErr,
@@ -68,15 +68,7 @@ function useFreeMint(cnt: number) {
         address,
         abi: rlABI['freeMint'],
         functionName: 'freeMint',
-        args: [
-            cnt,
-            [
-                '0xfdc40dec50fffedc0e905d0c73e2cc5cdefcb1fdeb7b157cd484f1be02239901',
-                '0xc632716923b4ad63783e3f33c9beb37f4ca01187f99b21c9f5b06f5ba9ac2e51',
-                '0xa15a85e448850c17b40305ea4dca47430d2638a048135be0f257085913ef584c',
-                '0xbe09a843e96d820323ffaac74f0f119734db1f158ac0d0d5b627ac7f3bcc82c2',
-            ],
-        ],
+        args: [cnt, getProof(addr)],
     });
     const { data: data2, write } = useContractWrite(config);
     console.log('data2', data2);

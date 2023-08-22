@@ -253,14 +253,14 @@ export function LangIcon({ className = '' }) {
     );
 }
 
-export function ErrorIcon({ className = '' }) {
+export function ErrorIcon({ fill = 'currentColor', className = '' }) {
     return (
         <svg
             className={`cursor-pointer ${className}`}
             width="24.000000"
             height="24.000000"
             viewBox="0 0 24 24"
-            fill="none"
+            fill={fill}
             xmlns="http://www.w3.org/2000/svg"
         >
             <g clipPath="url(#clip92_593)">
@@ -268,13 +268,13 @@ export function ErrorIcon({ className = '' }) {
                     id="union-1"
                     d="M12 4C7.58154 4 4 7.58154 4 12C4 16.4185 7.58154 20 12 20C16.4185 20 20 16.4185 20 12C20 7.58154 16.4185 4 12 4ZM2 12C2 6.47705 6.47705 2 12 2C17.5229 2 22 6.47705 22 12C22 17.5229 17.5229 22 12 22C6.47705 22 2 17.5229 2 12ZM12 7C12.5522 7 13 7.44775 13 8L13 12C13 12.5522 12.5522 13 12 13C11.4478 13 11 12.5522 11 12L11 8C11 7.44775 11.4478 7 12 7Z"
                     fillRule="evenodd"
-                    fill="#FF0000"
+                    fill={fill}
                 />
                 <path
                     id="union-2"
                     d="M13 16C13 16.5522 12.5522 17 12 17C11.4478 17 11 16.5522 11 16C11 15.4478 11.4478 15 12 15C12.5522 15 13 15.4478 13 16Z"
                     fillRule="evenodd"
-                    fill="#FF0000"
+                    fill={fill}
                 />
             </g>
             <defs>
