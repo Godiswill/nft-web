@@ -23,6 +23,16 @@
                     "type": "address"
                 },
                 {
+                    "internalType": "bytes32",
+                    "name": "_merkleRoot",
+                    "type": "bytes32"
+                },
+                {
+                    "internalType": "uint256",
+                    "name": "_startTime",
+                    "type": "uint256"
+                },
+                {
                     "internalType": "address[]",
                     "name": "_addr",
                     "type": "address[]"
@@ -114,25 +124,6 @@
                 }
             ],
             "name": "OwnershipTransferred",
-            "type": "event"
-        },
-        {
-            "anonymous": false,
-            "inputs": [
-                {
-                    "indexed": false,
-                    "internalType": "uint256",
-                    "name": "requestId",
-                    "type": "uint256"
-                },
-                {
-                    "indexed": false,
-                    "internalType": "uint256[]",
-                    "name": "randomWords",
-                    "type": "uint256[]"
-                }
-            ],
-            "name": "ReturnedRandomness",
             "type": "event"
         },
         {
@@ -521,6 +512,19 @@
                     "internalType": "bytes32",
                     "name": "",
                     "type": "bytes32"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "mintedToken",
+            "outputs": [
+                {
+                    "internalType": "uint256[]",
+                    "name": "tokenIds",
+                    "type": "uint256[]"
                 }
             ],
             "stateMutability": "view",
@@ -995,24 +999,6 @@
                 }
             ],
             "name": "startAuction",
-            "outputs": [],
-            "stateMutability": "nonpayable",
-            "type": "function"
-        },
-        {
-            "inputs": [
-                {
-                    "internalType": "bytes32",
-                    "name": "_merkleRoot",
-                    "type": "bytes32"
-                },
-                {
-                    "internalType": "uint256",
-                    "name": "_time",
-                    "type": "uint256"
-                }
-            ],
-            "name": "startFreeMint",
             "outputs": [],
             "stateMutability": "nonpayable",
             "type": "function"

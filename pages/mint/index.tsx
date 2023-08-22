@@ -6,7 +6,7 @@ import Countdown from '@/components/mint/Countdown';
 import MintFunc from '@/components/mint/MintFunc';
 
 const Mint: NextPage = () => {
-    const [timeIsUp] = useState(false);
+    const [timeIsUp] = useState(true);
     return (
         <Layout className="tiger">
             <Head>

@@ -21,11 +21,13 @@ import { alchemyProvider } from 'wagmi/providers/alchemy';
 
 const { chains, publicClient } = configureChains(
     [
+        goerli,
         sepolia,
         mainnet,
-        ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : []),
+        // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : []),
     ],
-    [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]
+    // [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]
+    [alchemyProvider({ apiKey: 'fu06SLByP_-1ptf4_jXppDwX8xFDSjup' }), publicProvider()]
 );
 
 const appName = 'LeopardGod';

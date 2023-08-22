@@ -1,7 +1,8 @@
 import { useMemo } from 'react';
 import { useContractReads, usePrepareContractWrite, useContractWrite } from 'wagmi';
 import { formatEther } from 'viem';
-import rl from '@/components/rl.json';
+import rl from '@/contract/rl.json';
+import Err from '@/contract/Err';
 
 const rlABI = rl.abi
     .filter((it) => it.name)
@@ -10,7 +11,8 @@ const rlABI = rl.abi
         return pre;
     }, {} as Record<string, any>);
 
-const address = '0x1D33B1b8d3c33c1667603b13d0B38C0325F4f96f';
+// const address = '0x1D33B1b8d3c33c1667603b13d0B38C0325F4f96f';
+const address = '0x31d642E694d5F8D8acB541e53aFd08d0B148Abf0';
 
 function useFreeMint(cnt: number) {
     const {
@@ -41,6 +43,7 @@ function useFreeMint(cnt: number) {
         if (isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
+        console.log('read', data);
         return [
             0,
             Number((data?.[0]?.result as bigint) || 0),
@@ -71,7 +74,6 @@ function useFreeMint(cnt: number) {
     });
     const { data: data2, write } = useContractWrite(config);
     console.log('data2', data2);
-
     return {
         PRICE,
         MAX,
@@ -82,6 +84,7 @@ function useFreeMint(cnt: number) {
         isWErr,
         isWLoading,
         write,
+        errMsg: Err[(wErr?.cause as any)?.reason],
     };
 }
 
@@ -153,6 +156,7 @@ function usePresaleMint(cnt: number) {
         isWErr,
         isWLoading,
         write,
+        errMsg: Err[wErr?.cause?.reason],
     };
 }
 
