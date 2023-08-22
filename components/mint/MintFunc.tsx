@@ -7,8 +7,20 @@ import { useAccount } from 'wagmi';
 function MintFunc() {
     const { address } = useAccount();
     const [cnt, setCnt] = useState(2);
-    const { PRICE, MAX, SUPPLY, mintedCnt, cost, isWErr, wErr, write, errMsg } = useFreeMint(cnt);
-
+    const {
+        PRICE,
+        MAX,
+        SUPPLY,
+        mintedCnt,
+        cost,
+        isWErr,
+        wErr,
+        isWLoading,
+        write,
+        errMsg,
+        wResult,
+    } = useFreeMint(cnt);
+    const disabledMint = isWErr || isWLoading;
     return (
         <>
             <div className="lg:w-[30rem] mt-10 mb-9 px-8 py-6 mx-auto bg-[#030812] border border-[#d7c19a] rounded-xl">
@@ -51,12 +63,20 @@ function MintFunc() {
                     <div>Total</div>
                     <div>{cost} ETH</div>
                 </div>
-                <div className="h-12">
+                <div className="min-h-12">
                     {isWErr && (
                         <div className="bg-[#030812]/50 text-red-500 py-3 flex items-center">
                             <ErrorIcon className="flex flex-shrink-0" />
                             <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
                                 {errMsg || wErr?.message}
+                            </span>
+                        </div>
+                    )}
+                    {wResult && !disabledMint && (
+                        <div className="bg-[#030812]/50 text-green-500 py-3 flex items-center">
+                            <ErrorIcon className="flex flex-shrink-0" />
+                            <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
+                                Transaction Hash: {wResult.hash}
                             </span>
                         </div>
                     )}
@@ -68,7 +88,10 @@ function MintFunc() {
             {address && (
                 <div className="flex justify-center my-9">
                     <button
-                        className="h-10 w-36 flex justify-center items-center px-4 bg-[#D7C19A] text-black rounded font-bold shadow-[0px_4px_12px_rgba(0, 0, 0, 0.1)] transition hover:scale-[1.025]"
+                        className={`${
+                            disabledMint ? 'opacity-50 cursor-not-allowed ' : ''
+                        }h-10 w-36 flex justify-center items-center px-4 bg-[#D7C19A] text-black rounded font-bold shadow-[0px_4px_12px_rgba(0, 0, 0, 0.1)] transition hover:scale-[1.025]`}
+                        disabled={disabledMint}
                         onClick={() => write?.()}
                     >
                         Mint

@@ -70,8 +70,8 @@ function useFreeMint(cnt: number) {
         functionName: 'freeMint',
         args: [cnt, getProof(addr)],
     });
-    const { data: data2, write } = useContractWrite(config);
-    console.log('data2', data2);
+    const { data: wResult, write } = useContractWrite(config);
+    console.log('data2', wResult);
     return {
         PRICE,
         MAX,
@@ -83,6 +83,7 @@ function useFreeMint(cnt: number) {
         isWLoading,
         write,
         errMsg: Err[(wErr?.cause as any)?.reason],
+        wResult,
     };
 }
 
