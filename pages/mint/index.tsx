@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import type { NextPage } from 'next';
 import Layout from '@/components/Layout';
 import Countdown from '@/components/mint/Countdown';
-import MintFunc from '@/components/mint/MintFunc';
+// import MintFunc from '@/components/mint/MintFunc';
+
+const MintFunc = dynamic(() => import('@/components/mint/MintFunc'), { ssr: false });
 
 const Mint: NextPage = () => {
     const [timeIsUp] = useState(true);

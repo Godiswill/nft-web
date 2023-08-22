@@ -14,7 +14,7 @@ function MintFunc() {
             <div className="lg:w-[30rem] mt-10 mb-9 px-8 py-6 mx-auto bg-[#030812] border border-[#d7c19a] rounded-xl">
                 <div className="flex justify-between mb-7">
                     <div>MINT Progress</div>
-                    <div suppressHydrationWarning>
+                    <div>
                         {mintedCnt}/{SUPPLY}
                     </div>
                 </div>
@@ -48,14 +48,16 @@ function MintFunc() {
                     <div>Total</div>
                     <div>{cost} ETH</div>
                 </div>
-                {isWErr && (
-                    <div className="bg-[#030812] text-red-500 py-3 flex items-center">
-                        <ErrorIcon className="flex flex-shrink-0" />
-                        <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
-                            {errMsg || wErr?.message}
-                        </span>
-                    </div>
-                )}
+                <div className="h-12">
+                    {isWErr && (
+                        <div className="bg-[#030812]/50 text-red-500 py-3 flex items-center">
+                            <ErrorIcon className="flex flex-shrink-0" />
+                            <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
+                                {errMsg || wErr?.message}
+                            </span>
+                        </div>
+                    )}
+                </div>
             </div>
             <div className="flex justify-center my-9">
                 <ConnectButton />

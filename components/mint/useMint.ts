@@ -39,6 +39,12 @@ function useFreeMint(cnt: number) {
         ],
     });
 
+    const [{ result: MAX_PER_FREE }, { result: MAX_FREE }, { result: freeCnt }] = (data || [
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+    ]) as Array<any>;
+
     const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
         if (isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
@@ -46,12 +52,12 @@ function useFreeMint(cnt: number) {
         console.log('read', data);
         return [
             0,
-            Number((data?.[0]?.result as bigint) || 0),
-            data?.[1]?.result?.toString() || 0,
-            data?.[2]?.result?.toString() || 0,
+            Number(MAX_PER_FREE || 0),
+            MAX_FREE?.toString() || 0,
+            freeCnt?.toString() || 0,
             0,
         ];
-    }, [data, isRError, isRLoading]);
+    }, [MAX_FREE, MAX_PER_FREE, data, freeCnt, isRError, isRLoading]);
 
     const {
         config,
@@ -102,8 +108,8 @@ function usePresaleMint(cnt: number) {
             },
             {
                 address,
-                abi: rlABI['presaleSupply'],
-                functionName: 'presaleSupply',
+                abi: rlABI['presalePerMax'],
+                functionName: 'presalePerMax',
             },
             {
                 address,
@@ -112,26 +118,38 @@ function usePresaleMint(cnt: number) {
             },
             {
                 address,
-                abi: rlABI['freeCnt'],
-                functionName: 'freeCnt',
+                abi: rlABI['presaleCnt'],
+                functionName: 'presaleCnt',
             },
         ],
     });
+
+    const [
+        { result: presalePrice },
+        { result: presalePerMax },
+        { result: presaleSupply },
+        { result: presaleCnt },
+    ] = (data || [
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+    ]) as Array<any>;
 
     const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
         if (isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
-        const _price = formatEther(data?.[0]?.result as bigint);
-        const _cost = formatEther((data?.[0]?.result as bigint) * BigInt(cnt));
+        const _price = formatEther(presalePrice);
+        const _cost = formatEther(presalePrice * BigInt(cnt));
         return [
             _price,
-            Number((data?.[1]?.result as bigint) || 0),
-            data?.[2]?.result?.toString() || 0,
-            data?.[3]?.result?.toString() || 0,
+            Number(presalePerMax || 0),
+            presaleSupply?.toString() || 0,
+            presaleCnt?.toString() || 0,
             _cost,
         ];
-    }, [data, cnt, isRError, isRLoading]);
+    }, [isRError, isRLoading, presalePrice, cnt, presalePerMax, presaleSupply, presaleCnt]);
 
     const {
         config,
@@ -156,7 +174,7 @@ function usePresaleMint(cnt: number) {
         isWErr,
         isWLoading,
         write,
-        errMsg: Err[wErr?.cause?.reason],
+        errMsg: Err[(wErr?.cause as any)?.reason],
     };
 }
 

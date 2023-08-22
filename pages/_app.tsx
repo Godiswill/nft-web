@@ -15,15 +15,15 @@ import {
 } from '@rainbow-me/rainbowkit';
 import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { mainnet, goerli, sepolia } from 'wagmi/chains';
+import { goerli } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 
 const { chains, publicClient } = configureChains(
     [
         goerli,
-        sepolia,
-        mainnet,
+        // sepolia,
+        // mainnet,
         // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : []),
     ],
     // [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]

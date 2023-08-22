@@ -46,7 +46,7 @@ const Err = {
 
 const rErr: Record<string, string> = Object.entries(Err).reduce(
     (pre, [val, key]) => ({ ...pre, [key]: val }),
-    {}
+    {} as Record<string, string>
 );
 
 export default rErr;
