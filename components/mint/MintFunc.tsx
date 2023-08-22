@@ -1,6 +1,7 @@
 import { useState, memo } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ErrorIcon } from '@/components/svg';
+import Ellipsis from '@/components/common/Ellipsis';
 import { useFreeMint } from './useMint';
 import { useAccount } from 'wagmi';
 
@@ -15,12 +16,15 @@ function MintFunc() {
         cost,
         isWErr,
         wErr,
-        isWLoading,
+        isLoading,
         write,
+        reset,
+        isSuccess,
         errMsg,
-        wResult,
+        result,
     } = useFreeMint(cnt);
-    const disabledMint = isWErr || isWLoading;
+    const disabledMint = isWErr || isLoading;
+
     return (
         <>
             <div className="lg:w-[30rem] mt-10 mb-9 px-8 py-6 mx-auto bg-[#030812] border border-[#d7c19a] rounded-xl">
@@ -72,11 +76,11 @@ function MintFunc() {
                             </span>
                         </div>
                     )}
-                    {wResult && !disabledMint && (
+                    {result && !disabledMint && (
                         <div className="bg-[#030812]/50 text-green-500 py-3 flex items-center">
                             <ErrorIcon className="flex flex-shrink-0" />
                             <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
-                                Transaction Hash: {wResult.hash}
+                                {`${result.status}: ${result.transactionHash}`}
                             </span>
                         </div>
                     )}
@@ -92,9 +96,15 @@ function MintFunc() {
                             disabledMint ? 'opacity-50 cursor-not-allowed ' : ''
                         }h-10 w-36 flex justify-center items-center px-4 bg-[#D7C19A] text-black rounded font-bold shadow-[0px_4px_12px_rgba(0, 0, 0, 0.1)] transition hover:scale-[1.025]`}
                         disabled={disabledMint}
-                        onClick={() => write?.()}
+                        onClick={() => {
+                            if (isSuccess) {
+                                reset?.();
+                            } else {
+                                write?.();
+                            }
+                        }}
                     >
-                        Mint
+                        {isSuccess ? 'Reset' : isLoading ? <Ellipsis>Waiting</Ellipsis> : 'Mint'}
                     </button>
                 </div>
             )}

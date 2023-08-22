@@ -1,5 +1,11 @@
 import { useMemo } from 'react';
-import { useAccount, useContractReads, usePrepareContractWrite, useContractWrite } from 'wagmi';
+import {
+    useAccount,
+    useContractReads,
+    usePrepareContractWrite,
+    useContractWrite,
+    useWaitForTransaction,
+} from 'wagmi';
 import { formatEther } from 'viem';
 import rl from '@/contract/rl.json';
 import Err from '@/contract/Err';
@@ -40,6 +46,10 @@ function useFreeMint(cnt: number) {
             },
         ],
         watch: true,
+        cacheTime: 10_000,
+        onSettled(data) {
+            console.log('Settled', data);
+        },
     });
 
     const [{ result: MAX_PER_FREE }, { result: MAX_FREE }, { result: freeCnt }] = (data || [
@@ -65,14 +75,23 @@ function useFreeMint(cnt: number) {
         error: wErr,
         isError: isWErr,
         isLoading: isWLoading,
+        refetch,
     } = usePrepareContractWrite({
         address,
         abi: rlABI['freeMint'],
         functionName: 'freeMint',
         args: [cnt, getProof(addr)],
     });
-    const { data: wResult, write } = useContractWrite(config);
-    console.log('data2', wResult);
+    const { data: wData, write, reset } = useContractWrite(config);
+    console.log('data2', wData);
+
+    const {
+        data: result,
+        isSuccess,
+        isLoading,
+    } = useWaitForTransaction({
+        hash: wData?.hash,
+    });
     return {
         PRICE,
         MAX,
@@ -81,10 +100,15 @@ function useFreeMint(cnt: number) {
         cost,
         wErr,
         isWErr,
-        isWLoading,
+        isLoading: isWLoading || isLoading,
         write,
+        reset: () => {
+            refetch?.();
+            reset?.();
+        },
+        isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
-        wResult,
+        result,
     };
 }
 
@@ -155,7 +179,7 @@ function usePresaleMint(cnt: number) {
         abi: rlABI['presaleMint'],
         functionName: 'presaleMint',
     });
-    const { data: data2, write } = useContractWrite(config);
+    const { data: data2, write, reset } = useContractWrite(config);
     console.log('data2', data2);
 
     return {
@@ -168,6 +192,7 @@ function usePresaleMint(cnt: number) {
         isWErr,
         isWLoading,
         write,
+        reset,
         errMsg: Err[(wErr?.cause as any)?.reason],
     };
 }
