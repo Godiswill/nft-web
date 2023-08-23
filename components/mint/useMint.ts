@@ -186,7 +186,7 @@ function usePresaleMint(cnt: number) {
         abi: rlABI['presaleMint'],
         functionName: 'presaleMint',
         args: [cnt, getProof(addr)],
-        value: BigInt(presalePrice) * BigInt(cnt),
+        value: presalePrice && BigInt(presalePrice) * BigInt(cnt),
     });
 
     const { data: wData, write, reset } = useContractWrite(config);
