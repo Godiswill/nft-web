@@ -119,11 +119,11 @@ function Countdown() {
                 )}
             </div>
 
-            <div className="lg:w-[27rem] h-24 mx-auto">
+            <div className="lg:w-[28.5rem] h-24 mx-auto px-4">
                 <input
                     type="text"
                     placeholder="Enter your wallet address to verify the whitelist"
-                    className="bg-black outline-none border border-[#D7C19A] p-2 rounded indent-4 w-full"
+                    className="bg-black outline-none border border-[#D7C19A] p-2 rounded indent-4 w-full text-xs lg:text-base"
                     onBlur={(e) => setValidAddr(e.target.value)}
                 />
                 {validAddr && (
