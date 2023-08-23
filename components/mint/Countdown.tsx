@@ -2,6 +2,7 @@ import { useState, memo, useEffect } from 'react';
 import { usePublicClient } from 'wagmi';
 import InfoTip from '@/components/common/InfoTip';
 import { CloseIcon2 } from '@/components/svg';
+import { getProof } from '@/contract/merkletree';
 
 type IInitDate = {
     days: string;
@@ -24,6 +25,7 @@ function Countdown() {
         minutes: '-',
         seconds: '-',
     });
+    const [validAddr, setValidAddr] = useState<string>();
 
     useEffect(() => {
         client.getBlock().then((block) => {
@@ -70,7 +72,7 @@ function Countdown() {
                 <div className="mb-4">{mintDate.toString()}</div>
             </div>
 
-            <div className="flex justify-around text-center mt-20 mb-14">
+            <div className="flex justify-around text-center mt-16 mb-12">
                 {dateKey.map((key) => (
                     <div key={key} className="bg-white/[.15] py-3 rounded w-20 lg:w-36">
                         <div className="text-2xl lg:text-5xl">{clock[key]}</div>
@@ -79,7 +81,7 @@ function Countdown() {
                 ))}
             </div>
 
-            <div className="mb-10">
+            <div className="mb-6">
                 {wlInfo ? (
                     <div className="mb-4 bg-white/[0.15] text-white text-left mx-auto lg:w-96 p-8 rounded relative">
                         Please follow our official{' '}
@@ -114,6 +116,28 @@ function Countdown() {
                         type="info"
                         onClick={() => setWLInfo(true)}
                     />
+                )}
+            </div>
+
+            <div className="lg:w-[27rem] h-24 mx-auto">
+                <input
+                    type="text"
+                    placeholder="Enter your wallet address to verify the whitelist"
+                    className="bg-black outline-none border border-[#D7C19A] p-2 rounded indent-4 w-full"
+                    onBlur={(e) => setValidAddr(e.target.value)}
+                />
+                {validAddr && (
+                    <div className="text-start h-12 flex items-center">
+                        {!!getProof(validAddr as `0x${string}`)?.length ? (
+                            <span className="text-green-500">
+                                Congratulations, you are on the whitelist!
+                            </span>
+                        ) : (
+                            <span className="text-red-500">
+                                Sorry, you are not on the whitelist.
+                            </span>
+                        )}
+                    </div>
                 )}
             </div>
         </>
