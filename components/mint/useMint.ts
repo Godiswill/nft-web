@@ -113,6 +113,7 @@ function useFreeMint(cnt: number) {
 }
 
 function usePresaleMint(cnt: number) {
+    const { address: addr } = useAccount();
     const {
         data,
         isError: isRError,
@@ -140,6 +141,11 @@ function usePresaleMint(cnt: number) {
                 functionName: 'presaleCnt',
             },
         ],
+        watch: true,
+        cacheTime: 10_000,
+        onSettled(data) {
+            console.log('Settled', data);
+        },
     });
 
     const [
@@ -174,14 +180,25 @@ function usePresaleMint(cnt: number) {
         error: wErr,
         isError: isWErr,
         isLoading: isWLoading,
+        refetch,
     } = usePrepareContractWrite({
         address,
         abi: rlABI['presaleMint'],
         functionName: 'presaleMint',
+        args: [cnt, getProof(addr)],
+        value: BigInt(presalePrice) * BigInt(cnt),
     });
-    const { data: data2, write, reset } = useContractWrite(config);
-    console.log('data2', data2);
 
+    const { data: wData, write, reset } = useContractWrite(config);
+    console.log('data2', wData);
+
+    const {
+        data: result,
+        isSuccess,
+        isLoading,
+    } = useWaitForTransaction({
+        hash: wData?.hash,
+    });
     return {
         PRICE,
         MAX,
@@ -191,10 +208,226 @@ function usePresaleMint(cnt: number) {
         wErr,
         isWErr,
         isWLoading,
+        isLoading: isWLoading || isLoading,
         write,
-        reset,
+        reset: () => {
+            refetch?.();
+            reset?.();
+        },
+        isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
+        result,
     };
 }
 
-export { useFreeMint, usePresaleMint };
+function useAuctionMint(cnt: number) {
+    const {
+        data,
+        isError: isRError,
+        isLoading: isRLoading,
+    } = useContractReads({
+        contracts: [
+            {
+                address,
+                abi: rlABI['presalePrice'],
+                functionName: 'presalePrice',
+            },
+            {
+                address,
+                abi: rlABI['presalePerMax'],
+                functionName: 'presalePerMax',
+            },
+            {
+                address,
+                abi: rlABI['presaleSupply'],
+                functionName: 'presaleSupply',
+            },
+            {
+                address,
+                abi: rlABI['presaleCnt'],
+                functionName: 'presaleCnt',
+            },
+        ],
+        watch: true,
+        cacheTime: 10_000,
+        onSettled(data) {
+            console.log('Settled', data);
+        },
+    });
+
+    const [
+        { result: presalePrice },
+        { result: presalePerMax },
+        { result: presaleSupply },
+        { result: presaleCnt },
+    ] = (data || [
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+    ]) as Array<any>;
+
+    const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
+        if (isRError || isRLoading) {
+            return [0, 0, 0, 0, 0];
+        }
+        const _price = formatEther(presalePrice);
+        const _cost = formatEther(presalePrice * BigInt(cnt));
+        return [
+            _price,
+            Number(presalePerMax || 0),
+            presaleSupply?.toString() || 0,
+            presaleCnt?.toString() || 0,
+            _cost,
+        ];
+    }, [isRError, isRLoading, presalePrice, cnt, presalePerMax, presaleSupply, presaleCnt]);
+
+    const {
+        config,
+        error: wErr,
+        isError: isWErr,
+        isLoading: isWLoading,
+        refetch,
+    } = usePrepareContractWrite({
+        address,
+        abi: rlABI['presaleMint'],
+        functionName: 'presaleMint',
+    });
+
+    const { data: wData, write, reset } = useContractWrite(config);
+    console.log('data2', wData);
+
+    const {
+        data: result,
+        isSuccess,
+        isLoading,
+    } = useWaitForTransaction({
+        hash: wData?.hash,
+    });
+    return {
+        PRICE,
+        MAX,
+        SUPPLY,
+        mintedCnt,
+        cost,
+        wErr,
+        isWErr,
+        isWLoading,
+        isLoading: isWLoading || isLoading,
+        write,
+        reset: () => {
+            refetch?.();
+            reset?.();
+        },
+        isSuccess,
+        errMsg: Err[(wErr?.cause as any)?.reason],
+        result,
+    };
+}
+
+function usePublicMint(cnt: number) {
+    const {
+        data,
+        isError: isRError,
+        isLoading: isRLoading,
+    } = useContractReads({
+        contracts: [
+            {
+                address,
+                abi: rlABI['presalePrice'],
+                functionName: 'presalePrice',
+            },
+            {
+                address,
+                abi: rlABI['presalePerMax'],
+                functionName: 'presalePerMax',
+            },
+            {
+                address,
+                abi: rlABI['presaleSupply'],
+                functionName: 'presaleSupply',
+            },
+            {
+                address,
+                abi: rlABI['presaleCnt'],
+                functionName: 'presaleCnt',
+            },
+        ],
+        watch: true,
+        cacheTime: 10_000,
+        onSettled(data) {
+            console.log('Settled', data);
+        },
+    });
+
+    const [
+        { result: presalePrice },
+        { result: presalePerMax },
+        { result: presaleSupply },
+        { result: presaleCnt },
+    ] = (data || [
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+        { result: undefined },
+    ]) as Array<any>;
+
+    const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
+        if (isRError || isRLoading) {
+            return [0, 0, 0, 0, 0];
+        }
+        const _price = formatEther(presalePrice);
+        const _cost = formatEther(presalePrice * BigInt(cnt));
+        return [
+            _price,
+            Number(presalePerMax || 0),
+            presaleSupply?.toString() || 0,
+            presaleCnt?.toString() || 0,
+            _cost,
+        ];
+    }, [isRError, isRLoading, presalePrice, cnt, presalePerMax, presaleSupply, presaleCnt]);
+
+    const {
+        config,
+        error: wErr,
+        isError: isWErr,
+        isLoading: isWLoading,
+        refetch,
+    } = usePrepareContractWrite({
+        address,
+        abi: rlABI['presaleMint'],
+        functionName: 'presaleMint',
+    });
+
+    const { data: wData, write, reset } = useContractWrite(config);
+    console.log('data2', wData);
+
+    const {
+        data: result,
+        isSuccess,
+        isLoading,
+    } = useWaitForTransaction({
+        hash: wData?.hash,
+    });
+    return {
+        PRICE,
+        MAX,
+        SUPPLY,
+        mintedCnt,
+        cost,
+        wErr,
+        isWErr,
+        isWLoading,
+        isLoading: isWLoading || isLoading,
+        write,
+        reset: () => {
+            refetch?.();
+            reset?.();
+        },
+        isSuccess,
+        errMsg: Err[(wErr?.cause as any)?.reason],
+        result,
+    };
+}
+
+export { useFreeMint, usePresaleMint, useAuctionMint, usePublicMint };

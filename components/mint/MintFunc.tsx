@@ -2,7 +2,7 @@ import { useState, memo } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { ErrorIcon } from '@/components/svg';
 import Ellipsis from '@/components/common/Ellipsis';
-import { useFreeMint } from './useMint';
+import { usePresaleMint } from './useMint';
 import { useAccount } from 'wagmi';
 
 function MintFunc() {
@@ -22,14 +22,14 @@ function MintFunc() {
         isSuccess,
         errMsg,
         result,
-    } = useFreeMint(cnt);
+    } = usePresaleMint(cnt);
     const disabledMint = isWErr || isLoading;
 
     return (
         <>
             <div className="lg:w-[30rem] mt-10 mb-9 px-8 py-6 mx-auto bg-[#030812] border border-[#d7c19a] rounded-xl">
                 <div className="flex justify-between mb-7">
-                    <div>MINT Progress</div>
+                    <div>Mint Progress</div>
                     <div>
                         {mintedCnt}/{SUPPLY}
                     </div>
