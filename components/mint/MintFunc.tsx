@@ -3,11 +3,12 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount } from 'wagmi';
 import { ErrorIcon } from '@/components/svg';
 import Ellipsis from '@/components/common/Ellipsis';
-import { usePresaleMint } from './useMint';
+import { useAuctionMint } from './useMint';
 
 function MintFunc() {
     const { address } = useAccount();
     const [cnt, setCnt] = useState(2);
+    const [selected] = useState([11]);
     const {
         PRICE,
         MAX,
@@ -22,7 +23,7 @@ function MintFunc() {
         isSuccess,
         errMsg,
         result,
-    } = usePresaleMint(cnt);
+    } = useAuctionMint(selected);
     const disabledMint = isWErr || isLoading;
 
     return (

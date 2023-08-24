@@ -9,7 +9,7 @@ import Countdown from '@/components/mint/Countdown';
 const MintFunc = dynamic(() => import('@/components/mint/MintFunc'), { ssr: false });
 
 const Mint: NextPage = () => {
-    const [timeIsUp] = useState(false);
+    const [timeIsUp] = useState(true);
     return (
         <Layout className="tiger">
             <Head>

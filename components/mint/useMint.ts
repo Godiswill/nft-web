@@ -220,7 +220,7 @@ function usePresaleMint(cnt: number) {
     };
 }
 
-function useAuctionMint(cnt: number) {
+function useAuctionMint(tokenIds: number[]) {
     const {
         data,
         isError: isRError,
@@ -229,18 +229,23 @@ function useAuctionMint(cnt: number) {
         contracts: [
             {
                 address,
-                abi: rlABI['presalePrice'],
-                functionName: 'presalePrice',
+                abi: rlABI['getAuctionPrice'],
+                functionName: 'getAuctionPrice',
             },
             {
                 address,
-                abi: rlABI['presalePerMax'],
-                functionName: 'presalePerMax',
+                abi: rlABI['MAX_PER_WALLET'],
+                functionName: 'MAX_PER_WALLET',
             },
             {
                 address,
-                abi: rlABI['presaleSupply'],
-                functionName: 'presaleSupply',
+                abi: rlABI['totalSupply'],
+                functionName: 'totalSupply',
+            },
+            {
+                address,
+                abi: rlABI['freeCnt'],
+                functionName: 'freeCnt',
             },
             {
                 address,
@@ -256,9 +261,9 @@ function useAuctionMint(cnt: number) {
     });
 
     const [
-        { result: presalePrice },
-        { result: presalePerMax },
-        { result: presaleSupply },
+        { result: auctionPrice },
+        { result: MAX_PER_WALLET },
+        { result: inventory },
         { result: presaleCnt },
     ] = (data || [
         { result: undefined },
@@ -271,16 +276,16 @@ function useAuctionMint(cnt: number) {
         if (isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
-        const _price = formatEther(presalePrice);
-        const _cost = formatEther(presalePrice * BigInt(cnt));
+        const _price = formatEther(auctionPrice);
+        const _cost = formatEther(auctionPrice * BigInt(tokenIds.length));
         return [
             _price,
-            Number(presalePerMax || 0),
-            presaleSupply?.toString() || 0,
+            Number(MAX_PER_WALLET || 0),
+            inventory?.toString() || 0,
             presaleCnt?.toString() || 0,
             _cost,
         ];
-    }, [isRError, isRLoading, presalePrice, cnt, presalePerMax, presaleSupply, presaleCnt]);
+    }, [isRError, isRLoading, auctionPrice, tokenIds, MAX_PER_WALLET, inventory, presaleCnt]);
 
     const {
         config,
@@ -290,8 +295,10 @@ function useAuctionMint(cnt: number) {
         refetch,
     } = usePrepareContractWrite({
         address,
-        abi: rlABI['presaleMint'],
-        functionName: 'presaleMint',
+        abi: rlABI['auctionMint'],
+        functionName: 'auctionMint',
+        args: [tokenIds],
+        value: auctionPrice && BigInt(auctionPrice) * BigInt(tokenIds.length),
     });
 
     const { data: wData, write, reset } = useContractWrite(config);
