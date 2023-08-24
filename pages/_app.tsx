@@ -10,10 +10,10 @@ import '../styles/home.scss';
 import {
     RainbowKitProvider,
     getDefaultWallets,
-    connectorsForWallets,
+    // connectorsForWallets,
     darkTheme,
 } from '@rainbow-me/rainbowkit';
-import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
+// import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { mainnet } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
@@ -38,23 +38,23 @@ const { chains, publicClient } = configureChains(
 const appName = 'LG';
 const projectId = '2641a6337585c7535add1bc16dffbc2b';
 
-const { wallets } = getDefaultWallets({
+const { connectors } = getDefaultWallets({
     appName,
     projectId,
     chains,
 });
 
-const connectors = connectorsForWallets([
-    ...wallets,
-    {
-        groupName: 'Other',
-        wallets: [
-            argentWallet({ projectId, chains }),
-            trustWallet({ projectId, chains }),
-            ledgerWallet({ projectId, chains }),
-        ],
-    },
-]);
+// const connectors = connectorsForWallets([
+//     ...wallets,
+//     {
+//         groupName: 'Other',
+//         wallets: [
+//             argentWallet({ projectId, chains }),
+//             trustWallet({ projectId, chains }),
+//             ledgerWallet({ projectId, chains }),
+//         ],
+//     },
+// ]);
 
 const wagmiConfig = createConfig({
     autoConnect: true,
