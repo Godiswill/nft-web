@@ -15,22 +15,18 @@ import {
 } from '@rainbow-me/rainbowkit';
 // import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { goerli } from 'wagmi/chains';
+import { mainnet, goerli, sepolia } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
-// import { infuraProvider } from 'wagmi/providers/infura';
+import { infuraProvider } from 'wagmi/providers/infura';
 
 const { chains, publicClient } = configureChains(
+    [mainnet, ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : [])],
     [
-        goerli,
-        // sepolia,
-        // mainnet,
-        // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : []),
-    ],
-    // [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]
-    [
-        // infuraProvider({ apiKey: 'a0cfc190cf6446259c63e19accaaa8f6' }),
-        alchemyProvider({ apiKey: 'fu06SLByP_-1ptf4_jXppDwX8xFDSjup' }),
+        // alchemyProvider({ apiKey: 'fu06SLByP_-1ptf4_jXppDwX8xFDSjup' }),
+        // alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }),
+        alchemyProvider({ apiKey: 'XPJ64xggWC8POp61OxqE759IJoaMHLo5' }),
+        infuraProvider({ apiKey: 'a0cfc190cf6446259c63e19accaaa8f6' }),
         publicProvider(),
     ]
 );

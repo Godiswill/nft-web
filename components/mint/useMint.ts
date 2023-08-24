@@ -19,7 +19,8 @@ const rlABI = rl.abi
     }, {} as Record<string, any>);
 
 // const address = '0x1D33B1b8d3c33c1667603b13d0B38C0325F4f96f';
-const address = '0x31d642E694d5F8D8acB541e53aFd08d0B148Abf0';
+// const address = '0x31d642E694d5F8D8acB541e53aFd08d0B148Abf0';
+const address = '0x7b1641DC64AC67F9b348A456B31e15E69B588251';
 
 function useFreeMint(cnt: number) {
     const { address: addr } = useAccount();

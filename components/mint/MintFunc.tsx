@@ -1,20 +1,14 @@
-import { useState, memo, useMemo } from 'react';
+import { useState, memo } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount } from 'wagmi';
 import { ErrorIcon } from '@/components/svg';
 import Ellipsis from '@/components/common/Ellipsis';
-import { usePublicMint } from './useMint';
+import { useFreeMint } from './useMint';
 
 function MintFunc() {
     const { address } = useAccount();
     const [cnt, setCnt] = useState(2);
-    const selected = useMemo(
-        () =>
-            Array(cnt)
-                .fill(1)
-                .map((it, i) => it + i + 200),
-        [cnt]
-    );
+
     const {
         PRICE,
         MAX,
@@ -29,7 +23,7 @@ function MintFunc() {
         isSuccess,
         errMsg,
         result,
-    } = usePublicMint(selected.length);
+    } = useFreeMint(cnt);
     const disabledMint = isWErr || isLoading;
 
     return (

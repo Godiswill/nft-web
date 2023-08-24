@@ -1,5 +1,5 @@
-import { useState, memo, useEffect } from 'react';
-import { usePublicClient, useAccount } from 'wagmi';
+import { useState, memo, useEffect, Dispatch, SetStateAction } from 'react';
+import { useAccount } from 'wagmi';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import InfoTip from '@/components/common/InfoTip';
 import { CloseIcon2 } from '@/components/svg';
@@ -14,12 +14,16 @@ type IInitDate = {
 
 const dateKey = ['days', 'hours', 'minutes', 'seconds'] as (keyof IInitDate)[];
 
-const mintDate = new Date(Date.UTC(2023, 7, 25, 13, 0, 0)); // free mint
-
-function Countdown() {
+function Countdown({
+    blockTime,
+    mintDate,
+    setTimeIsUp,
+}: {
+    blockTime?: number;
+    mintDate: Date;
+    setTimeIsUp: Dispatch<SetStateAction<boolean | undefined>>;
+}) {
     const { address } = useAccount();
-    const client = usePublicClient();
-    const [blockTime, setBlockTime] = useState<number>();
     const [wlInfo, setWLInfo] = useState(false);
     const [clock, setClock] = useState({
         days: '-',
@@ -27,21 +31,20 @@ function Countdown() {
         minutes: '-',
         seconds: '-',
     });
-    // const [validAddr, setValidAddr] = useState<string>();
-
-    useEffect(() => {
-        client.getBlock().then((block) => {
-            const now = Number(block.timestamp);
-            console.log(now, Math.floor(Date.now() / 1000));
-            setBlockTime(now);
-        });
-    }, [client]);
 
     useEffect(() => {
         if (!blockTime) return;
+        let timer: number | undefined = undefined;
         let now = blockTime * 1000;
         const countdown = () => {
             const gap = mintDate.getTime() - now;
+            if (gap < 1) {
+                window.clearInterval(timer);
+                setTimeIsUp(true);
+                return;
+            } else {
+                setTimeIsUp(false);
+            }
             now += 1000;
             const s = 1000;
             const m = 60 * s;
@@ -58,11 +61,11 @@ function Countdown() {
                 seconds: seconds.toString().padStart(2, '0'),
             });
         };
-        const timer = setInterval(countdown, 1000);
+        timer = window.setInterval(countdown, 1000);
         return () => {
-            clearInterval(timer);
+            window.clearInterval(timer);
         };
-    }, [blockTime]);
+    }, [blockTime, mintDate, setTimeIsUp]);
 
     return (
         <>
