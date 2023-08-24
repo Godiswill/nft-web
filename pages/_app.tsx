@@ -18,6 +18,7 @@ import { configureChains, createConfig, WagmiConfig } from 'wagmi';
 import { goerli } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { infuraProvider } from 'wagmi/providers/infura';
 
 const { chains, publicClient } = configureChains(
     [
@@ -27,7 +28,11 @@ const { chains, publicClient } = configureChains(
         // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : []),
     ],
     // [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]
-    [alchemyProvider({ apiKey: 'fu06SLByP_-1ptf4_jXppDwX8xFDSjup' }), publicProvider()]
+    [
+        infuraProvider({ apiKey: 'a0cfc190cf6446259c63e19accaaa8f6' }),
+        alchemyProvider({ apiKey: 'fu06SLByP_-1ptf4_jXppDwX8xFDSjup' }),
+        publicProvider(),
+    ]
 );
 
 const appName = 'LeopardGod';
