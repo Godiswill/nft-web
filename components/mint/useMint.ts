@@ -27,6 +27,7 @@ function useFreeMint(cnt: number) {
         data,
         isError: isRError,
         isLoading: isRLoading,
+        refetch: rRefetch,
     } = useContractReads({
         contracts: [
             {
@@ -45,10 +46,10 @@ function useFreeMint(cnt: number) {
                 functionName: 'freeCnt',
             },
         ],
-        watch: true,
-        cacheTime: 10_000,
+        // watch: true,
+        // cacheTime: 10_000,
         onSettled(data) {
-            console.log('Settled', data);
+            console.log('Reads Settled', data);
         },
     });
 
@@ -57,9 +58,10 @@ function useFreeMint(cnt: number) {
         { result: undefined },
         { result: undefined },
     ]) as Array<any>;
+    const isEmpty = !data || !data.length;
 
     const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
-        if (isRError || isRLoading) {
+        if (isEmpty || isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
         return [
@@ -69,7 +71,7 @@ function useFreeMint(cnt: number) {
             freeCnt?.toString() || 0,
             0,
         ];
-    }, [MAX_FREE, MAX_PER_FREE, freeCnt, isRError, isRLoading]);
+    }, [isEmpty, MAX_FREE, MAX_PER_FREE, freeCnt, isRError, isRLoading]);
     const {
         config,
         error: wErr,
@@ -83,7 +85,6 @@ function useFreeMint(cnt: number) {
         args: [cnt, getProof(addr)],
     });
     const { data: wData, write, reset } = useContractWrite(config);
-    console.log('data2', wData);
 
     const {
         data: result,
@@ -91,6 +92,9 @@ function useFreeMint(cnt: number) {
         isLoading,
     } = useWaitForTransaction({
         hash: wData?.hash,
+        onSettled(data) {
+            console.log('WaitForTransaction Settled', data);
+        },
     });
     return {
         PRICE,
@@ -105,6 +109,7 @@ function useFreeMint(cnt: number) {
         reset: () => {
             refetch?.();
             reset?.();
+            rRefetch?.();
         },
         isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
@@ -118,6 +123,7 @@ function usePresaleMint(cnt: number) {
         data,
         isError: isRError,
         isLoading: isRLoading,
+        refetch: rRefetch,
     } = useContractReads({
         contracts: [
             {
@@ -141,10 +147,10 @@ function usePresaleMint(cnt: number) {
                 functionName: 'presaleCnt',
             },
         ],
-        watch: true,
-        cacheTime: 10_000,
+        // watch: true,
+        // cacheTime: 10_000,
         onSettled(data) {
-            console.log('Settled', data);
+            console.log('Reads Settled', data);
         },
     });
 
@@ -159,9 +165,10 @@ function usePresaleMint(cnt: number) {
         { result: undefined },
         { result: undefined },
     ]) as Array<any>;
+    const isEmpty = !data || !data.length;
 
     const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
-        if (isRError || isRLoading) {
+        if (isEmpty || isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
         const _price = formatEther(presalePrice);
@@ -173,7 +180,16 @@ function usePresaleMint(cnt: number) {
             presaleCnt?.toString() || 0,
             _cost,
         ];
-    }, [isRError, isRLoading, presalePrice, cnt, presalePerMax, presaleSupply, presaleCnt]);
+    }, [
+        isEmpty,
+        isRError,
+        isRLoading,
+        presalePrice,
+        cnt,
+        presalePerMax,
+        presaleSupply,
+        presaleCnt,
+    ]);
 
     const {
         config,
@@ -190,7 +206,6 @@ function usePresaleMint(cnt: number) {
     });
 
     const { data: wData, write, reset } = useContractWrite(config);
-    console.log('data2', wData);
 
     const {
         data: result,
@@ -198,6 +213,9 @@ function usePresaleMint(cnt: number) {
         isLoading,
     } = useWaitForTransaction({
         hash: wData?.hash,
+        onSettled(data) {
+            console.log('WaitForTransaction Settled', data);
+        },
     });
     return {
         PRICE,
@@ -213,6 +231,7 @@ function usePresaleMint(cnt: number) {
         reset: () => {
             refetch?.();
             reset?.();
+            rRefetch?.();
         },
         isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
@@ -225,6 +244,7 @@ function useAuctionMint(tokenIds: number[]) {
         data,
         isError: isRError,
         isLoading: isRLoading,
+        refetch: rRefetch,
     } = useContractReads({
         contracts: [
             {
@@ -242,50 +262,29 @@ function useAuctionMint(tokenIds: number[]) {
                 abi: rlABI['totalSupply'],
                 functionName: 'totalSupply',
             },
-            {
-                address,
-                abi: rlABI['freeCnt'],
-                functionName: 'freeCnt',
-            },
-            {
-                address,
-                abi: rlABI['presaleCnt'],
-                functionName: 'presaleCnt',
-            },
         ],
-        watch: true,
-        cacheTime: 10_000,
+        // watch: true,
+        // cacheTime: 10_000,
         onSettled(data) {
-            console.log('Settled', data);
+            console.log('Reads Settled', data);
         },
     });
 
-    const [
-        { result: auctionPrice },
-        { result: MAX_PER_WALLET },
-        { result: inventory },
-        { result: presaleCnt },
-    ] = (data || [
-        { result: undefined },
+    const [{ result: auctionPrice }, { result: MAX_PER_WALLET }, { result: inventory }] = (data || [
         { result: undefined },
         { result: undefined },
         { result: undefined },
     ]) as Array<any>;
+    const isEmpty = !data || !data.length;
 
     const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
-        if (isRError || isRLoading) {
+        if (isEmpty || isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
         const _price = formatEther(auctionPrice);
         const _cost = formatEther(auctionPrice * BigInt(tokenIds.length));
-        return [
-            _price,
-            Number(MAX_PER_WALLET || 0),
-            inventory?.toString() || 0,
-            presaleCnt?.toString() || 0,
-            _cost,
-        ];
-    }, [isRError, isRLoading, auctionPrice, tokenIds, MAX_PER_WALLET, inventory, presaleCnt]);
+        return [_price, Number(MAX_PER_WALLET || 0), 6_000, inventory?.toString() || 0, _cost];
+    }, [isEmpty, isRError, isRLoading, auctionPrice, tokenIds, MAX_PER_WALLET, inventory]);
 
     const {
         config,
@@ -299,10 +298,12 @@ function useAuctionMint(tokenIds: number[]) {
         functionName: 'auctionMint',
         args: [tokenIds],
         value: auctionPrice && BigInt(auctionPrice) * BigInt(tokenIds.length),
+        onSettled(data) {
+            console.log('Prepare Settled', data);
+        },
     });
 
     const { data: wData, write, reset } = useContractWrite(config);
-    console.log('data2', wData);
 
     const {
         data: result,
@@ -310,6 +311,9 @@ function useAuctionMint(tokenIds: number[]) {
         isLoading,
     } = useWaitForTransaction({
         hash: wData?.hash,
+        onSettled(data) {
+            console.log('WaitForTransaction Settled', data);
+        },
     });
     return {
         PRICE,
@@ -325,6 +329,7 @@ function useAuctionMint(tokenIds: number[]) {
         reset: () => {
             refetch?.();
             reset?.();
+            rRefetch?.();
         },
         isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
@@ -337,62 +342,46 @@ function usePublicMint(cnt: number) {
         data,
         isError: isRError,
         isLoading: isRLoading,
+        refetch: rRefetch,
     } = useContractReads({
         contracts: [
             {
                 address,
-                abi: rlABI['presalePrice'],
-                functionName: 'presalePrice',
+                abi: rlABI['PRICE'],
+                functionName: 'PRICE',
             },
             {
                 address,
-                abi: rlABI['presalePerMax'],
-                functionName: 'presalePerMax',
+                abi: rlABI['MAX_PER_WALLET'],
+                functionName: 'MAX_PER_WALLET',
             },
             {
                 address,
-                abi: rlABI['presaleSupply'],
-                functionName: 'presaleSupply',
-            },
-            {
-                address,
-                abi: rlABI['presaleCnt'],
-                functionName: 'presaleCnt',
+                abi: rlABI['totalSupply'],
+                functionName: 'totalSupply',
             },
         ],
-        watch: true,
-        cacheTime: 10_000,
         onSettled(data) {
-            console.log('Settled', data);
+            console.log('Reads Settled', data);
         },
     });
 
-    const [
-        { result: presalePrice },
-        { result: presalePerMax },
-        { result: presaleSupply },
-        { result: presaleCnt },
-    ] = (data || [
-        { result: undefined },
+    const [{ result: price }, { result: max }, { result: supply }] = (data || [
         { result: undefined },
         { result: undefined },
         { result: undefined },
     ]) as Array<any>;
 
+    const isEmpty = !data || !data.length;
+
     const [PRICE, MAX, SUPPLY, mintedCnt, cost] = useMemo(() => {
-        if (isRError || isRLoading) {
+        if (isEmpty || isRError || isRLoading) {
             return [0, 0, 0, 0, 0];
         }
-        const _price = formatEther(presalePrice);
-        const _cost = formatEther(presalePrice * BigInt(cnt));
-        return [
-            _price,
-            Number(presalePerMax || 0),
-            presaleSupply?.toString() || 0,
-            presaleCnt?.toString() || 0,
-            _cost,
-        ];
-    }, [isRError, isRLoading, presalePrice, cnt, presalePerMax, presaleSupply, presaleCnt]);
+        const _price = formatEther(price);
+        const _cost = formatEther(price * BigInt(cnt));
+        return [_price, Number(max || 0), 6_000, supply?.toString() || 0, _cost];
+    }, [isEmpty, isRError, isRLoading, price, cnt, max, supply]);
 
     const {
         config,
@@ -402,12 +391,16 @@ function usePublicMint(cnt: number) {
         refetch,
     } = usePrepareContractWrite({
         address,
-        abi: rlABI['presaleMint'],
-        functionName: 'presaleMint',
+        abi: rlABI['publicSaleMint'],
+        functionName: 'publicSaleMint',
+        args: [cnt],
+        value: price && BigInt(price) * BigInt(cnt),
+        onSettled(data) {
+            console.log('Prepare Settled', data);
+        },
     });
 
     const { data: wData, write, reset } = useContractWrite(config);
-    console.log('data2', wData);
 
     const {
         data: result,
@@ -415,6 +408,9 @@ function usePublicMint(cnt: number) {
         isLoading,
     } = useWaitForTransaction({
         hash: wData?.hash,
+        onSettled(data) {
+            console.log('WaitForTransaction Settled', data);
+        },
     });
     return {
         PRICE,
@@ -430,6 +426,7 @@ function usePublicMint(cnt: number) {
         reset: () => {
             refetch?.();
             reset?.();
+            rRefetch?.();
         },
         isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
