@@ -1,9 +1,9 @@
 import { useState, memo } from 'react';
 import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { useAccount } from 'wagmi';
 import { ErrorIcon } from '@/components/svg';
 import Ellipsis from '@/components/common/Ellipsis';
 import { usePresaleMint } from './useMint';
-import { useAccount } from 'wagmi';
 
 function MintFunc() {
     const { address } = useAccount();

@@ -15,16 +15,16 @@ import {
 } from '@rainbow-me/rainbowkit';
 import { argentWallet, trustWallet, ledgerWallet } from '@rainbow-me/rainbowkit/wallets';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { goerli } from 'wagmi/chains';
+import { mainnet } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 import { alchemyProvider } from 'wagmi/providers/alchemy';
 import { infuraProvider } from 'wagmi/providers/infura';
 
 const { chains, publicClient } = configureChains(
     [
-        goerli,
+        // goerli,
         // sepolia,
-        // mainnet,
+        mainnet,
         // ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [goerli, sepolia] : []),
     ],
     // [alchemyProvider({ apiKey: '93Zk3_hUR6teGzq31vKlBWQ3dQOYp_bm' }), publicProvider()]
@@ -35,8 +35,8 @@ const { chains, publicClient } = configureChains(
     ]
 );
 
-const appName = 'LeopardGod';
-const projectId = 'ee3c846d86a16545057c76cea4c6a8d1';
+const appName = 'LG';
+const projectId = '2641a6337585c7535add1bc16dffbc2b';
 
 const { wallets } = getDefaultWallets({
     appName,

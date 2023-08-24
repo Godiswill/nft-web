@@ -1,5 +1,6 @@
 import { useState, memo, useEffect } from 'react';
-import { usePublicClient } from 'wagmi';
+import { usePublicClient, useAccount } from 'wagmi';
+import { ConnectButton } from '@rainbow-me/rainbowkit';
 import InfoTip from '@/components/common/InfoTip';
 import { CloseIcon2 } from '@/components/svg';
 import { getProof } from '@/contract/merkletree';
@@ -16,6 +17,7 @@ const dateKey = ['days', 'hours', 'minutes', 'seconds'] as (keyof IInitDate)[];
 const mintDate = new Date(Date.UTC(2023, 7, 25, 13, 0, 0)); // free mint
 
 function Countdown() {
+    const { address } = useAccount();
     const client = usePublicClient();
     const [blockTime, setBlockTime] = useState<number>();
     const [wlInfo, setWLInfo] = useState(false);
@@ -25,7 +27,7 @@ function Countdown() {
         minutes: '-',
         seconds: '-',
     });
-    const [validAddr, setValidAddr] = useState<string>();
+    // const [validAddr, setValidAddr] = useState<string>();
 
     useEffect(() => {
         client.getBlock().then((block) => {
@@ -119,16 +121,19 @@ function Countdown() {
                 )}
             </div>
 
-            <div className="lg:w-[28.5rem] h-24 mx-auto px-4">
-                <input
+            <div className="lg:w-[28.5rem] h-36 mx-auto px-4">
+                <div className="flex justify-center mt-9 mb-3">
+                    <ConnectButton />
+                </div>
+                {/* <input
                     type="text"
                     placeholder="Enter your wallet address to verify the whitelist"
                     className="bg-black outline-none border border-[#D7C19A] p-2 rounded indent-4 w-full text-xs lg:text-base"
                     onBlur={(e) => setValidAddr(e.target.value)}
-                />
-                {validAddr && (
-                    <div className="text-start h-12 flex items-center">
-                        {!!getProof(validAddr as `0x${string}`)?.length ? (
+                /> */}
+                {address && (
+                    <div>
+                        {!!getProof(address as `0x${string}`)?.length ? (
                             <span className="text-green-500">
                                 Congratulations, you are on the whitelist!
                             </span>
