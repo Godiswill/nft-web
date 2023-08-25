@@ -124,7 +124,7 @@ function Countdown({
                 )}
             </div>
 
-            <div className="lg:w-[28.5rem] h-28 mx-auto px-4">
+            <div className="lg:w-[28.5rem] h-32 mx-auto px-4">
                 <div className="flex justify-center mt-8 mb-3">
                     <ConnectButton />
                 </div>

@@ -68,7 +68,7 @@ function MintFunc() {
                     <div>Total</div>
                     <div>{cost} ETH</div>
                 </div>
-                <div className="min-h-12">
+                <div className="min-h-[3rem]">
                     {isWErr && (
                         <div className="bg-[#030812]/50 text-red-500 py-3 flex items-center">
                             <ErrorIcon className="flex flex-shrink-0" />
@@ -87,11 +87,11 @@ function MintFunc() {
                     )}
                 </div>
             </div>
-            <div className="flex justify-center my-9">
+            <div className="flex justify-center my-6">
                 <ConnectButton />
             </div>
             {address && (
-                <div className="flex justify-center my-9">
+                <div className="flex justify-center my-9 pb-6">
                     <button
                         className={`${
                             disabledMint ? 'opacity-50 cursor-not-allowed ' : ''
