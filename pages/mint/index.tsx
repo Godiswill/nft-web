@@ -8,7 +8,7 @@ import Countdown from '@/components/mint/Countdown';
 // import MintFunc from '@/components/mint/MintFunc';
 
 const MintFunc = dynamic(() => import('@/components/mint/MintFunc'), { ssr: false });
-const mintDate = new Date(Date.UTC(2023, 7, 25, 13, 0, 0)); // free mint
+const mintDate = new Date(Date.UTC(2023, 7, 26, 0, 0, 0)); // free mint
 
 const Mint: NextPage = () => {
     const client = usePublicClient();
