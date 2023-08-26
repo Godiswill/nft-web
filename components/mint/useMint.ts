@@ -46,6 +46,12 @@ function useFreeMint(cnt: number) {
                 abi: rlABI['freeCnt'],
                 functionName: 'freeCnt',
             },
+            {
+                address,
+                abi: rlABI['balanceOf'],
+                functionName: 'balanceOf',
+                args: addr ? [addr] : undefined,
+            },
         ],
         // watch: true,
         // cacheTime: 10_000,
@@ -54,7 +60,13 @@ function useFreeMint(cnt: number) {
         },
     });
 
-    const [{ result: MAX_PER_FREE }, { result: MAX_FREE }, { result: freeCnt }] = (data || [
+    const [
+        { result: MAX_PER_FREE },
+        { result: MAX_FREE },
+        { result: freeCnt },
+        { result: holdCnt },
+    ] = (data || [
+        { result: undefined },
         { result: undefined },
         { result: undefined },
         { result: undefined },
@@ -115,6 +127,7 @@ function useFreeMint(cnt: number) {
         isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
         result,
+        onlyOnce: !!holdCnt && holdCnt > BigInt(0),
     };
 }
 

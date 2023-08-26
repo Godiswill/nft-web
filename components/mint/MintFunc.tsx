@@ -23,8 +23,9 @@ function MintFunc() {
         isSuccess,
         errMsg,
         result,
+        onlyOnce,
     } = useFreeMint(cnt);
-    const disabledMint = isWErr || isLoading;
+    const disabledMint = isWErr || isLoading || onlyOnce;
 
     return (
         <>
@@ -69,11 +70,11 @@ function MintFunc() {
                     <div>{cost} ETH</div>
                 </div>
                 <div className="min-h-[3rem]">
-                    {isWErr && (
+                    {(isWErr || onlyOnce) && (
                         <div className="bg-[#030812]/50 text-red-500 py-3 flex items-center">
                             <ErrorIcon className="flex flex-shrink-0" />
                             <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
-                                {errMsg || wErr?.message}
+                                {errMsg || wErr?.message || (onlyOnce && 'Only mint once')}
                             </span>
                         </div>
                     )}
