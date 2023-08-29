@@ -2,7 +2,7 @@ import { MerkleTree } from 'merkletreejs';
 import keccak256 from 'keccak256';
 import wl from './wl.json';
 
-const free = Array.from(new Set(wl.OG));
+const free = Array.from(new Set(wl.OG)); // OG
 const minted: string[] = []; // Array.from(new Set(wl.minted || []));
 const whitelist = free.filter((it) => !minted.includes(it));
 
