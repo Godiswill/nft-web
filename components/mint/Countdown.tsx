@@ -71,8 +71,8 @@ function Countdown({
         <>
             <h2>Coming soon, stay tuned</h2>
             <div className="my-8 lg:text-lg">
-                <div className="mb-4">600 supply, Max 2 per wallet</div>
-                <div className="mb-4">Maximum 10 NFTs per wallet</div>
+                {/* <div className="mb-4">600 supply, Max 2 per wallet</div> */}
+                {/* <div className="mb-4">Maximum 10 NFTs per wallet</div> */}
                 {/* <div className="mb-4">Fri, 25 Aug 2023 13:00:00 UTC</div> */}
                 <div className="mb-4">{mintDate.toString()}</div>
             </div>
@@ -124,7 +124,7 @@ function Countdown({
                 )}
             </div>
 
-            <div className="lg:w-[28.5rem] h-32 mx-auto px-4">
+            <div className="lg:w-[28.5rem] h-32 mx-auto px-4 hidden">
                 <div className="flex justify-center mt-8 mb-3">
                     <ConnectButton />
                 </div>

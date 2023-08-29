@@ -8,7 +8,8 @@ import Countdown from '@/components/mint/Countdown';
 // import MintFunc from '@/components/mint/MintFunc';
 
 const MintFunc = dynamic(() => import('@/components/mint/MintFunc'), { ssr: false });
-const mintDate = new Date(Date.UTC(2023, 7, 26, 0, 0, 0)); // free mint
+// const mintDate = new Date(Date.UTC(2023, 7, 26, 0, 0, 0)); // free mint
+const mintDate = new Date(Date.UTC(2023, 7, 30, 7, 0, 0)); // presale mint
 
 const Mint: NextPage = () => {
     const client = usePublicClient();
@@ -31,7 +32,7 @@ const Mint: NextPage = () => {
             </Head>
             <div className="text-white text-center px-4 lg:w-[960px] mx-auto leading-normal∂">
                 <h1 id="roadmap" className="pt-10 pb-5">
-                    Free Mint
+                    Presale Mint
                 </h1>
                 {timeIsUp !== undefined && (
                     <>
