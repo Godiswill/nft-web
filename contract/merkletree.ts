@@ -2,8 +2,8 @@ import { MerkleTree } from 'merkletreejs';
 import keccak256 from 'keccak256';
 import wl from './wl.json';
 
-const free = Array.from(new Set(wl.free));
-const minted = Array.from(new Set(wl.minted || []));
+const free = Array.from(new Set(wl.OG));
+const minted: string[] = []; // Array.from(new Set(wl.minted || []));
 const whitelist = free.filter((it) => !minted.includes(it));
 
 // console.log(wl.free.length, free.length, wl.minted?.length, minted.length, whitelist.length);
