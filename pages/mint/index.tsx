@@ -32,7 +32,7 @@ const Mint: NextPage = () => {
             </Head>
             <div className="text-white text-center px-4 lg:w-[960px] mx-auto leading-normal∂">
                 <h1 id="roadmap" className="pt-10 pb-5">
-                    Presale Mint (OG)
+                    Presale Mint
                 </h1>
                 {timeIsUp !== undefined && (
                     <>
