@@ -251,6 +251,7 @@ function usePresaleMint(cnt: number) {
         isSuccess,
         errMsg: Err[(wErr?.cause as any)?.reason],
         result,
+        onlyOnce: false,
     };
 }
 

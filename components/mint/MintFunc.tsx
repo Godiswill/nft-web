@@ -3,7 +3,7 @@ import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount } from 'wagmi';
 import { ErrorIcon } from '@/components/svg';
 import Ellipsis from '@/components/common/Ellipsis';
-import { useFreeMint } from './useMint';
+import { usePresaleMint } from './useMint';
 
 function MintFunc() {
     const { address } = useAccount();
@@ -24,8 +24,8 @@ function MintFunc() {
         errMsg,
         result,
         onlyOnce,
-    } = useFreeMint(cnt);
-    const closed = true;
+    } = usePresaleMint(cnt);
+    const closed = false;
     const disabledMint = isWErr || isLoading || onlyOnce || closed;
 
     return (
@@ -73,14 +73,11 @@ function MintFunc() {
                     <div>{cost} ETH</div>
                 </div>
                 <div className="min-h-[3rem]">
-                    {(isWErr || onlyOnce || disabledMint) && (
+                    {(isWErr || onlyOnce) && (
                         <div className="bg-[#030812]/50 text-red-500 py-3 flex items-center">
                             <ErrorIcon className="flex flex-shrink-0" />
                             <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
-                                {errMsg ||
-                                    wErr?.message ||
-                                    (onlyOnce && 'Only mint once') ||
-                                    (disabledMint && 'Closed')}
+                                {errMsg || wErr?.message || (onlyOnce && 'Only mint once')}
                             </span>
                         </div>
                     )}
