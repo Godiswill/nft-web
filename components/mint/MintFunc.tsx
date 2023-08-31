@@ -25,27 +25,25 @@ function MintFunc() {
         result,
         onlyOnce,
     } = usePresaleMint(cnt);
-    const closed = false;
+    const closed = true;
     const disabledMint = isWErr || isLoading || onlyOnce || closed;
 
     return (
         <>
-            {!closed && (
-                <div className="lg:w-[30rem] mt-10 mb-9 px-8 py-6 mx-auto bg-[#030812] border border-[#d7c19a] rounded-xl">
-                    <div className="flex justify-between mb-7">
-                        <div>Mint Progress</div>
-                        <div>
-                            {mintedCnt}/{SUPPLY}
-                        </div>
-                    </div>
-                    <div className="bg-[#C4C4C4]/[0.18] h-1 rounded-2xl overflow-hidden">
-                        <div
-                            className="bg-[#81FFAB] h-1"
-                            style={{ width: SUPPLY ? `${(mintedCnt / SUPPLY) * 100}%` : 0 }}
-                        ></div>
+            <div className="lg:w-[30rem] mt-10 mb-9 px-8 py-6 mx-auto bg-[#030812] border border-[#d7c19a] rounded-xl">
+                <div className="flex justify-between mb-7">
+                    <div>Mint Progress</div>
+                    <div>
+                        {0 && mintedCnt}/{0 && SUPPLY}
                     </div>
                 </div>
-            )}
+                <div className="bg-[#C4C4C4]/[0.18] h-1 rounded-2xl overflow-hidden">
+                    <div
+                        className="bg-[#81FFAB] h-1"
+                        style={{ width: SUPPLY ? `${100 || (mintedCnt / SUPPLY) * 100}%` : 0 }}
+                    ></div>
+                </div>
+            </div>
             <div className=" lg:w-[30rem] mx-auto">
                 <div className="flex justify-around items-center border-b border-[#d7c19a]/50 py-4">
                     <div
@@ -73,11 +71,14 @@ function MintFunc() {
                     <div>{cost} ETH</div>
                 </div>
                 <div className="min-h-[3rem]">
-                    {(isWErr || onlyOnce) && (
+                    {(isWErr || onlyOnce || closed) && (
                         <div className="bg-[#030812]/50 text-red-500 py-3 flex items-center">
                             <ErrorIcon className="flex flex-shrink-0" />
                             <span className="ml-2 text-start overflow-y-auto max-h-28 break-words">
-                                {errMsg || wErr?.message || (onlyOnce && 'Only mint once')}
+                                {(closed && 'Closed') ||
+                                    errMsg ||
+                                    wErr?.message ||
+                                    (onlyOnce && 'Only mint once')}
                             </span>
                         </div>
                     )}
@@ -91,27 +92,37 @@ function MintFunc() {
                     )}
                 </div>
             </div>
-            <div className="flex justify-center my-6">
-                <ConnectButton />
-            </div>
-            {address && (
-                <div className="flex justify-center my-9 pb-6">
-                    <button
-                        className={`${
-                            disabledMint ? 'opacity-50 cursor-not-allowed ' : ''
-                        }h-10 w-36 flex justify-center items-center px-4 bg-[#D7C19A] text-black rounded font-bold shadow-[0px_4px_12px_rgba(0, 0, 0, 0.1)] transition hover:scale-[1.025]`}
-                        disabled={disabledMint}
-                        onClick={() => {
-                            if (isSuccess) {
-                                reset?.();
-                            } else {
-                                write?.();
-                            }
-                        }}
-                    >
-                        {isSuccess ? 'Reset' : isLoading ? <Ellipsis>Waiting</Ellipsis> : 'Mint'}
-                    </button>
-                </div>
+            {!closed && (
+                <>
+                    <div className="flex justify-center my-6">
+                        <ConnectButton />
+                    </div>
+                    {address && (
+                        <div className="flex justify-center my-9 pb-6">
+                            <button
+                                className={`${
+                                    disabledMint ? 'opacity-50 cursor-not-allowed ' : ''
+                                }h-10 w-36 flex justify-center items-center px-4 bg-[#D7C19A] text-black rounded font-bold shadow-[0px_4px_12px_rgba(0, 0, 0, 0.1)] transition hover:scale-[1.025]`}
+                                disabled={disabledMint}
+                                onClick={() => {
+                                    if (isSuccess) {
+                                        reset?.();
+                                    } else {
+                                        write?.();
+                                    }
+                                }}
+                            >
+                                {isSuccess ? (
+                                    'Reset'
+                                ) : isLoading ? (
+                                    <Ellipsis>Waiting</Ellipsis>
+                                ) : (
+                                    'Mint'
+                                )}
+                            </button>
+                        </div>
+                    )}
+                </>
             )}
         </>
     );
